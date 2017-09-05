@@ -10,3 +10,4 @@ $route['view'] = 'PageController';
 
 $route['new'] = 'PageController/create';
 $route['create'] = 'PageController/create';
+$route['add'] = 'PageController/create';
