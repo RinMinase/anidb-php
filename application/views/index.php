@@ -5,12 +5,12 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-		<link rel="stylesheet" type="text/css" href=<?php echo base_url("resources/bootstrap-3.3.7/bootstrap.min.css") ?>>
-		<style>
+		<link rel="stylesheet" href=<?php echo base_url("resources/bootstrap-3.3.7/bootstrap.min.css") ?>>
+		<link rel="stylesheet" href=<?php echo base_url("resources/font-awesome-4.7.0/font-awesome.min.css") ?>>
 
-			.topbar {
-				padding-top: 15px;
-			}
+		<style>
+			.container { padding-bottom: 15px; }
+			.topbar { padding-top: 15px; }
 
 			.topbar-legend-fhd,
 			.topbar-legend-hd,
@@ -25,7 +25,6 @@
 			.topbar-legend-hd { background-color: skyblue; }
 			.topbar-legend-hq { background-color: orange; }
 			.topbar-legend-lq { border: 1px solid #777777; }
-
 		</style>
 
 		<title></title>
@@ -37,7 +36,10 @@
 
 					<div class="row">
 						<div class="col-md-2">
-							<a class="btn btn-primary btn-block">Add</a>
+							<a class="btn btn-primary btn-block" href=<?php echo base_url("add") ?>>
+								<span class="fa fa-plus"></span>
+								Add
+							</a>
 						</div>
 
 						<div class="col-md-10">
