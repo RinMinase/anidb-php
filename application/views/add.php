@@ -55,11 +55,11 @@
 								<input type="text" class="form-control">
 							</div>
 							<div class="col-md-2 form-group">
-								<label>Specials</label>
+								<label>OVAs</label>
 								<input type="text" class="form-control">
 							</div>
 							<div class="col-md-2 form-group">
-								<label>OVAs</label>
+								<label>Specials</label>
 								<input type="text" class="form-control">
 							</div>
 							<div class="col-md-2 form-group">

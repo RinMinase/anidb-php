@@ -11,4 +11,8 @@ class DefaultModel extends CI_Model {
 		return $this->db->get()->result();
 	}
 
+	public function addAnimeData($data) {
+		$this->db->insert('anime', $data);
+	}
+
 }

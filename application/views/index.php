@@ -1,5 +1,17 @@
 <!DOCTYPE html>
 <html>
+
+	<?php
+		// print_r($animeData);
+		// echo "<br>";
+		// echo json_encode($animeData) . "<br>";
+		// foreach ($animeData as $item):
+		// 	foreach ($item as $subitem):
+		// 		echo $subitem . "<br>";
+		// 	endforeach;
+		// endforeach;
+	?>
+
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,6 +41,7 @@
 
 		<title></title>
 	</head>
+
 	<body>
 		<div class="container-fluid">
 			<div class="row topbar">
@@ -56,7 +69,7 @@
 								<thead>
 									<tr>
 										<th>Title</th>
-										<th class="text-center">E / S / O</th>
+										<th class="text-center">E / O / S</th>
 										<th>File Size</th>
 										<th>Date Finished</th>
 										<th>Season</th>
@@ -70,51 +83,84 @@
 
 								<tbody>
 
-									<tr>
-										<td>
-											<div
-												class="topbar-legend-fhd"
-												data-toggle="tooltip"
-												data-placement="auto"
-												title="FHD 1080p">
-											</div>
-											<span>Kimi no na Wa</span>
-										</td>
-										<td class="text-center">1 / 0 / 0</td>
-										<td>15.12 GB</td>
-										<td>Aug 04, 2017</td>
-										<td>N/A</td>
-										<td>Summer 2016</td>
-										<td>01:51:65</td>
-										<td>Coalgirls</td>
-										<td>KnNW</td>
-										<td></td>
-									</tr>
+									<?php foreach ($animeData as $item): ?>
 
-									<tr>
-										<td>
-											<div
-												class="topbar-legend-lq"
-												data-toggle="tooltip"
-												data-placement="auto"
-												title="LQ 360p">
-											</div>
-											<span>Bleach</span>
-										</td>
-										<td class="text-center">360 / 0 / 0</td>
-										<td>61.50 GB</td>
-										<td>Sep 15, 2015</td>
-										<td>N/A</td>
-										<td>Summer 2005</td>
-										<td>146:35:22</td>
-										<td>Lunar, DB, SGKK</td>
-										<td>BLEACH!</td>
-										<td>
-											<dfn>
-												<small>Redownload 1080p</small>
-											</dfn>
-										</td>
-									</tr>
+										<tr>
+											<td>
+												<?php
+													switch ($item->quality) {
+														case "FHD 1080p":
+															echo "<div class='topbar-legend-fhd'";
+																echo "data-toggle='tooltip'";
+																echo "data-placement='auto'";
+																echo "title='FHD 1080p'>";
+															echo "</div>";
+															break;
+														case "HD 720p":
+															echo "<div class='topbar-legend-hd'";
+																echo "data-toggle='tooltip'";
+																echo "data-placement='auto'";
+																echo "title='HD 720p'>";
+															echo "</div>";
+															break;
+														case "HQ 480p":
+															echo "<div class='topbar-legend-hq'";
+																echo "data-toggle='tooltip'";
+																echo "data-placement='auto'";
+																echo "title='HQ 480p'>";
+															echo "</div>";
+															break;
+														case "LQ 360p":
+															echo "<div class='topbar-legend-lq'";
+																echo "data-toggle='tooltip'";
+																echo "data-placement='auto'";
+																echo "title='LQ 360p'>";
+															echo "</div>";
+															break;
+													}
+												?>
+
+												<span><?php echo $item->title ?></span>
+
+											</td>
+											<td class="text-center">
+												<?php echo $item->episodes . " / " . $item->ovas . " / " . $item->specials; ?>
+											</td>
+											<td>
+												<?php
+													echo round(
+														$item->filesize / 1073741824,
+														2);
+													echo " GB";
+												?>
+											</td>
+											<td>
+												<?php
+													echo date_format(
+														date_create($item->dateFinished),
+														"M d, Y"
+													);
+												?>
+											</td>
+											<td>
+												<?php
+													echo ($item->seasonNumber == "1") ? "N/A" : $item->seasonNumber;
+												?>
+											</td>
+											<td><?php echo $item->releaseSeason . " " . $item->releaseYear ?></td>
+											<td>
+												<?php
+													echo ($item->durationHour < 9) ? "0" . $item->durationHour : $item->durationHour;
+													echo ":" . $item->durationMinute . ":" . $item->durationSecond;
+												?>
+											</td>
+											<td><?php echo $item->encoder ?></td>
+											<td><?php echo $item->variants ?></td>
+											<td><?php echo $item->remarks ?></td>
+										</tr>
+
+									<?php endforeach; ?>
+
 								</tbody>
 							</table>
 						</div>
