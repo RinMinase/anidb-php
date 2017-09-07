@@ -1,5 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+date_default_timezone_set("Asia/Manila");
 
 $config['base_url'] = 'http://localhost/anidb/';
 $config['index_page'] = '';
