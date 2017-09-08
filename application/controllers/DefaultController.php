@@ -29,8 +29,29 @@ class DefaultController extends CI_Controller {
 			$data['dateFinished'] = $this->input->get('dateFinished');
 		}
 
-		if ($this->input->get('filesize')) {
-			$data['filesize'] = $this->input->get('filesize');
+		if ($oldFilesize = $this->input->get('filesize')) {
+
+			for ($i=0, $j=0; $i < strlen($oldFilesize); $i++) {
+				switch ($oldFilesize[$i]) {
+					case '0':
+					case '1':
+					case '2':
+					case '3':
+					case '4':
+					case '5':
+					case '6':
+					case '7':
+					case '8':
+					case '9':
+						$newFilesize[$j++] = $oldFilesize[$i];
+						break;
+				}
+			}
+
+			// echo $oldFilesize;
+			// echo join($newFilesize);
+
+			$data['filesize'] = join($newFilesize);
 		}
 
 		if ($this->input->get('releaseSeason')) {
