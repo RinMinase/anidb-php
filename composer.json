@@ -4,13 +4,10 @@
 	"type": "project",
 	"homepage": "https://anidb.minase.com",
 	"support": {
-		"forum": "",
-		"wiki": "",
-		"irc": "",
-		"source": ""
+		"source": "https://www.github.com/RinMinase/anidb"
 	},
 	"require": {
-		"php": ">=5.2.4"
+		"php": ">=5.6.21"
 	},
 	"suggest": {
 		"paragonie/random_compat": "Provides better randomness in PHP 5.x"
