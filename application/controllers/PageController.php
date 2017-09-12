@@ -12,4 +12,5 @@ class PageController extends CI_Controller {
 	}
 
 	public function create() { $this->load->view('add'); }
+	public function about() { $this->load->view('about'); }
 }

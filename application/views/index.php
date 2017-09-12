@@ -55,11 +55,17 @@
 							</a>
 						</div>
 
-						<div class="col-md-10">
+						<div class="col-md-9">
 							<div class="form-group has-feedback has-feedback-left">
 								<i class="form-control-feedback glyphicon glyphicon-search"></i>
 								<input type="text" class="form-control" placeholder="Search...">
 							</div>
+						</div>
+
+						<div class="col-md-1">
+							<a class="btn btn-primary btn-block" href=<?php echo base_url("about") ?>>
+								<span class="fa fa-question"></span>
+							</a>
 						</div>
 					</div>
 
