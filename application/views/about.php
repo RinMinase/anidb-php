@@ -57,7 +57,9 @@
 			<div class="row">
 
 				<div class="col-md-4">
-					<img src="resources/images/user.jpg" class="img-circle img-responsive">
+					<center>
+						<img src="resources/images/user.jpg" class="img-circle img-responsive">
+					</center>
 
 					<h3 class="text-center user-data-heading">Statistics</h3>
 					<table class="table table-condensed table-statistics">
