@@ -151,7 +151,7 @@
 						<div class="col-md-12">
 							<h3 class="user-data-heading">Programming Skillsets</h3>
 							<div class="row">
-								<div class="col-md-4">
+								<div class="col-sm-6 col-md-4">
 
 									<div class="row">
 										<div class="col-sm-5 col-xs-5 col-md-5 col-lg-5">
@@ -274,7 +274,7 @@
 
 								</div>
 
-								<div class="col-md-4">
+								<div class="col-sm-6 col-md-4">
 
 									<div class="row">
 										<div class="col-sm-5 col-xs-5 col-md-5 col-lg-5">
@@ -363,7 +363,7 @@
 
 								</div>
 
-								<div class="col-md-4">
+								<div class="col-sm-6 col-md-4">
 
 									<div class="row">
 										<div class="col-sm-5 col-xs-5 col-md-5 col-lg-5">
