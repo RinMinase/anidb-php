@@ -85,6 +85,7 @@
 										<th>Encoder</th>
 										<th>Variants</th>
 										<th>Remarks</th>
+										<th colspan="2"></th>
 									</tr>
 								</thead>
 
@@ -171,6 +172,20 @@
 											<td><?php echo $item->encoder ?></td>
 											<td><?php echo $item->variants ?></td>
 											<td><?php echo $item->remarks ?></td>
+											<td>
+												<div data-toggle="tooltip" data-placement="auto" title="Edit">
+													<a class="btn btn-xs btn-success btn-block" href="#">
+														<i class="fa fa-pencil"></i>
+													</a>
+												</div>
+											</td>
+											<td>
+												<div data-toggle="tooltip" data-placement="auto" title="Delete">
+													<a class="btn btn-xs btn-danger btn-block" href="#">
+														<i class="fa fa-trash"></i>
+													</a>
+												</div>
+											</td>
 										</tr>
 
 									<?php endforeach; ?>
