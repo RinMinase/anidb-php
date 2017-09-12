@@ -24,6 +24,7 @@
 			.container { padding-bottom: 15px; }
 			.topbar { padding-top: 15px; }
 
+			.topbar-legend-uhd,
 			.topbar-legend-fhd,
 			.topbar-legend-hd,
 			.topbar-legend-hq,
@@ -33,9 +34,10 @@
 				display: inline-block;
 			}
 
-			.topbar-legend-fhd { background-color: lightgreen; }
-			.topbar-legend-hd { background-color: skyblue; }
-			.topbar-legend-hq { background-color: orange; }
+			.topbar-legend-uhd { background-color: #FF99CC; }
+			.topbar-legend-fhd { background-color: #99FF99; }
+			.topbar-legend-hd { background-color: #99CCFF; }
+			.topbar-legend-hq { background-color: #FFCC66; }
 			.topbar-legend-lq { border: 1px solid #777777; }
 		</style>
 
@@ -94,6 +96,13 @@
 											<td>
 												<?php
 													switch ($item->quality) {
+														case "4K 2160p":
+															echo "<div class='topbar-legend-uhd'";
+																echo "data-toggle='tooltip'";
+																echo "data-placement='auto'";
+																echo "title='4K 2160p'>";
+															echo "</div>";
+															break;
 														case "FHD 1080p":
 															echo "<div class='topbar-legend-fhd'";
 																echo "data-toggle='tooltip'";
