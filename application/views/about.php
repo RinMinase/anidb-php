@@ -38,7 +38,6 @@
 			code.orange { color: #EBA821; }
 			code.blue { color: #00A2E8; }
 
-
 		</style>
 
 		<title>About Page</title>
@@ -47,6 +46,10 @@
 	<body>
 		<div class="container">
 			<div class="jumbotron">
+				<a class="btn btn-primary" href=<?php echo base_url() ?>>
+					<span class="fa fa-chevron-left"></span>&nbsp;&nbsp;Back
+				</a>
+
 				<h2>Rin Minase's Anime Database</h2>
 				<h4>Minase Conglomerate</h4>
 			</div>
@@ -151,10 +154,10 @@
 								<div class="col-md-4">
 
 									<div class="row">
-										<div class="col-md-5">
+										<div class="col-sm-5 col-xs-5 col-md-5 col-lg-5">
 											<p><strong>HTML</strong></p>
 										</div>
-										<div class="col-md-7">
+										<div class="col-sm-7 col-xs-7 col-md-7 col-lg-7">
 											<div class="progress">
 												<div class="progress-bar progress-bar-green"></div>
 												<div class="progress-bar progress-bar-alt-green"></div>
@@ -165,10 +168,10 @@
 									</div>
 
 									<div class="row">
-										<div class="col-md-5">
+										<div class="col-sm-5 col-xs-5 col-md-5 col-lg-5">
 											<p><strong>CSS</strong></p>
 										</div>
-										<div class="col-md-7">
+										<div class="col-sm-7 col-xs-7 col-md-7 col-lg-7">
 											<div class="progress">
 												<div class="progress-bar progress-bar-green"></div>
 												<div class="progress-bar progress-bar-alt-green"></div>
@@ -179,10 +182,10 @@
 									</div>
 
 									<div class="row">
-										<div class="col-md-5">
+										<div class="col-sm-5 col-xs-5 col-md-5 col-lg-5">
 											<p><strong>JavaScript</strong></p>
 										</div>
-										<div class="col-md-7">
+										<div class="col-sm-7 col-xs-7 col-md-7 col-lg-7">
 											<div class="progress">
 												<div class="progress-bar progress-bar-green"></div>
 												<div class="progress-bar progress-bar-alt-green"></div>
@@ -192,10 +195,10 @@
 									</div>
 
 									<div class="row">
-										<div class="col-md-5">
+										<div class="col-sm-5 col-xs-5 col-md-5 col-lg-5">
 											<p><strong>PHP</strong></p>
 										</div>
-										<div class="col-md-7">
+										<div class="col-sm-7 col-xs-7 col-md-7 col-lg-7">
 											<div class="progress">
 												<div class="progress-bar progress-bar-green"></div>
 												<div class="progress-bar progress-bar-alt-green"></div>
@@ -205,10 +208,10 @@
 									</div>
 
 									<div class="row">
-										<div class="col-md-5">
+										<div class="col-sm-5 col-xs-5 col-md-5 col-lg-5">
 											<p><strong>Python</strong></p>
 										</div>
-										<div class="col-md-7">
+										<div class="col-sm-7 col-xs-7 col-md-7 col-lg-7">
 											<div class="progress">
 												<div class="progress-bar progress-bar-green"></div>
 											</div>
@@ -216,10 +219,10 @@
 									</div>
 
 									<div class="row">
-										<div class="col-md-5">
+										<div class="col-sm-5 col-xs-5 col-md-5 col-lg-5">
 											<p><strong>C</strong></p>
 										</div>
-										<div class="col-md-7">
+										<div class="col-sm-7 col-xs-7 col-md-7 col-lg-7">
 											<div class="progress">
 												<div class="progress-bar progress-bar-green"></div>
 												<div class="progress-bar progress-bar-alt-green"></div>
@@ -230,10 +233,10 @@
 									</div>
 
 									<div class="row">
-										<div class="col-md-5">
+										<div class="col-sm-5 col-xs-5 col-md-5 col-lg-5">
 											<p><strong>C++</strong></p>
 										</div>
-										<div class="col-md-7">
+										<div class="col-sm-7 col-xs-7 col-md-7 col-lg-7">
 											<div class="progress">
 												<div class="progress-bar progress-bar-green"></div>
 												<div class="progress-bar progress-bar-alt-green"></div>
@@ -243,10 +246,10 @@
 									</div>
 
 									<div class="row">
-										<div class="col-md-5">
+										<div class="col-sm-5 col-xs-5 col-md-5 col-lg-5">
 											<p><strong>Java</strong></p>
 										</div>
-										<div class="col-md-7">
+										<div class="col-sm-7 col-xs-7 col-md-7 col-lg-7">
 											<div class="progress">
 												<div class="progress-bar progress-bar-green"></div>
 												<div class="progress-bar progress-bar-alt-green"></div>
@@ -256,10 +259,10 @@
 									</div>
 
 									<div class="row">
-										<div class="col-md-5">
+										<div class="col-sm-5 col-xs-5 col-md-5 col-lg-5">
 											<p><strong>Shell</strong></p>
 										</div>
-										<div class="col-md-7">
+										<div class="col-sm-7 col-xs-7 col-md-7 col-lg-7">
 											<div class="progress">
 												<div class="progress-bar progress-bar-green"></div>
 												<div class="progress-bar progress-bar-alt-green"></div>
@@ -274,10 +277,10 @@
 								<div class="col-md-4">
 
 									<div class="row">
-										<div class="col-md-5">
+										<div class="col-sm-5 col-xs-5 col-md-5 col-lg-5">
 											<p><strong>Bootstrap 3</strong></p>
 										</div>
-										<div class="col-md-7">
+										<div class="col-sm-7 col-xs-7 col-md-7 col-lg-7">
 											<div class="progress">
 												<div class="progress-bar progress-bar-green"></div>
 												<div class="progress-bar progress-bar-alt-green"></div>
@@ -288,10 +291,10 @@
 									</div>
 
 									<div class="row">
-										<div class="col-md-5">
+										<div class="col-sm-5 col-xs-5 col-md-5 col-lg-5">
 											<p><strong>NodeJS</strong></p>
 										</div>
-										<div class="col-md-7">
+										<div class="col-sm-7 col-xs-7 col-md-7 col-lg-7">
 											<div class="progress">
 												<div class="progress-bar progress-bar-green"></div>
 												<div class="progress-bar progress-bar-alt-green"></div>
@@ -300,10 +303,10 @@
 									</div>
 
 									<div class="row">
-										<div class="col-md-5">
+										<div class="col-sm-5 col-xs-5 col-md-5 col-lg-5">
 											<p><strong>SailsJS</strong></p>
 										</div>
-										<div class="col-md-7">
+										<div class="col-sm-7 col-xs-7 col-md-7 col-lg-7">
 											<div class="progress">
 												<div class="progress-bar progress-bar-green"></div>
 												<div class="progress-bar progress-bar-alt-green"></div>
@@ -313,10 +316,10 @@
 									</div>
 
 									<div class="row">
-										<div class="col-md-5">
+										<div class="col-sm-5 col-xs-5 col-md-5 col-lg-5">
 											<p><strong>ReactJS</strong></p>
 										</div>
-										<div class="col-md-7">
+										<div class="col-sm-7 col-xs-7 col-md-7 col-lg-7">
 											<div class="progress">
 												<div class="progress-bar progress-bar-green"></div>
 												<div class="progress-bar progress-bar-alt-green"></div>
@@ -325,10 +328,10 @@
 									</div>
 
 									<div class="row">
-										<div class="col-md-5">
+										<div class="col-sm-5 col-xs-5 col-md-5 col-lg-5">
 											<p><strong>AngularJS</strong></p>
 										</div>
-										<div class="col-md-7">
+										<div class="col-sm-7 col-xs-7 col-md-7 col-lg-7">
 											<div class="progress">
 												<div class="progress-bar progress-bar-green"></div>
 											</div>
@@ -336,10 +339,10 @@
 									</div>
 
 									<div class="row">
-										<div class="col-md-5">
+										<div class="col-sm-5 col-xs-5 col-md-5 col-lg-5">
 											<p><strong>CodeIgniter</strong></p>
 										</div>
-										<div class="col-md-7">
+										<div class="col-sm-7 col-xs-7 col-md-7 col-lg-7">
 											<div class="progress">
 												<div class="progress-bar progress-bar-green"></div>
 												<div class="progress-bar progress-bar-alt-green"></div>
@@ -348,10 +351,10 @@
 									</div>
 
 									<div class="row">
-										<div class="col-md-5">
+										<div class="col-sm-5 col-xs-5 col-md-5 col-lg-5">
 											<p><strong>Laravel</strong></p>
 										</div>
-										<div class="col-md-7">
+										<div class="col-sm-7 col-xs-7 col-md-7 col-lg-7">
 											<div class="progress">
 												<div class="progress-bar progress-bar-green"></div>
 											</div>
@@ -363,10 +366,10 @@
 								<div class="col-md-4">
 
 									<div class="row">
-										<div class="col-md-5">
+										<div class="col-sm-5 col-xs-5 col-md-5 col-lg-5">
 											<p><strong>Apache</strong></p>
 										</div>
-										<div class="col-md-7">
+										<div class="col-sm-7 col-xs-7 col-md-7 col-lg-7">
 											<div class="progress">
 												<div class="progress-bar progress-bar-green"></div>
 											</div>
@@ -374,10 +377,10 @@
 									</div>
 
 									<div class="row">
-										<div class="col-md-5">
+										<div class="col-sm-5 col-xs-5 col-md-5 col-lg-5">
 											<p><strong>Nginx</strong></p>
 										</div>
-										<div class="col-md-7">
+										<div class="col-sm-7 col-xs-7 col-md-7 col-lg-7">
 											<div class="progress">
 												<div class="progress-bar progress-bar-green"></div>
 												<div class="progress-bar progress-bar-alt-green"></div>
@@ -387,10 +390,10 @@
 									</div>
 
 									<div class="row">
-										<div class="col-md-5">
+										<div class="col-sm-5 col-xs-5 col-md-5 col-lg-5">
 											<p><strong>MongoDB</strong></p>
 										</div>
-										<div class="col-md-7">
+										<div class="col-sm-7 col-xs-7 col-md-7 col-lg-7">
 											<div class="progress">
 												<div class="progress-bar progress-bar-green"></div>
 												<div class="progress-bar progress-bar-alt-green"></div>
@@ -399,10 +402,10 @@
 									</div>
 
 									<div class="row">
-										<div class="col-md-5">
+										<div class="col-sm-5 col-xs-5 col-md-5 col-lg-5">
 											<p><strong>MySQL</strong></p>
 										</div>
-										<div class="col-md-7">
+										<div class="col-sm-7 col-xs-7 col-md-7 col-lg-7">
 											<div class="progress">
 												<div class="progress-bar progress-bar-green"></div>
 												<div class="progress-bar progress-bar-alt-green"></div>
