@@ -47,7 +47,7 @@
 		<div class="container">
 			<div class="jumbotron">
 				<a class="btn btn-primary" href=<?php echo base_url() ?>>
-					<span class="fa fa-chevron-left"></span>&nbsp;&nbsp;Back
+					<i class="fa fa-chevron-left"></i>&nbsp;&nbsp;Back
 				</a>
 
 				<h2>Rin Minase's Anime Database</h2>
