@@ -52,7 +52,7 @@
 					<div class="row">
 						<div class="col-md-1">
 							<a class="btn btn-primary btn-block" href=<?php echo base_url("add") ?>>
-								<span class="fa fa-plus"></span>&nbsp;&nbsp;&nbsp;Add
+								<i class="fa fa-plus"></i>&nbsp;&nbsp;&nbsp;Add
 							</a>
 						</div>
 
@@ -65,7 +65,7 @@
 
 						<div class="col-md-1">
 							<a class="btn btn-primary btn-block" href=<?php echo base_url("about") ?>>
-								<span class="fa fa-question"></span>&nbsp;&nbsp;&nbsp;About
+								<i class="fa fa-question"></i>&nbsp;&nbsp;&nbsp;About
 							</a>
 						</div>
 					</div>
