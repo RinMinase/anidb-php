@@ -7,6 +7,7 @@ class DefaultModel extends CI_Model {
 	public function getAnimeData()	{
 		$this->db->select('*');
 		$this->db->from('anime');
+		$this->db->order_by('quality', 'ASC');
 
 		return $this->db->get()->result();
 	}
