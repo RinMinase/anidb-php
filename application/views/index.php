@@ -174,14 +174,14 @@
 											<td><?php echo $item->remarks ?></td>
 											<td>
 												<div data-toggle="tooltip" data-placement="auto" title="Edit">
-													<a class="btn btn-xs btn-success btn-block" href="#">
+													<a class="btn btn-xs btn-success btn-block" href=<?php echo base_url("edit/" . $item->id) ?>>
 														<i class="fa fa-pencil"></i>
 													</a>
 												</div>
 											</td>
 											<td>
 												<div data-toggle="tooltip" data-placement="auto" title="Delete">
-													<a class="btn btn-xs btn-danger btn-block" href="#">
+													<a class="btn btn-xs btn-danger btn-block" href=<?php echo base_url("delete/" . $item->id) ?>>
 														<i class="fa fa-trash"></i>
 													</a>
 												</div>
