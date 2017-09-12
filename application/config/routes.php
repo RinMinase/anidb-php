@@ -12,3 +12,5 @@ $route['new'] = 'PageController/create';
 $route['create'] = 'PageController/create';
 $route['add'] = 'PageController/create';
 $route['addEntry'] = 'DefaultController/addEntry';
+
+$route['about'] = 'PageController/about';
