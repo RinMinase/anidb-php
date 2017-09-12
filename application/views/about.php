@@ -435,8 +435,25 @@
 
 									<h4>Future Changes</h4>
 									<ul>
-										<li><code class="red">[IMPORTANT]</code> Sample important change</li>
-										<li><code class="orange">[SEMI-IMPORTANT]</code> Sample semi-important change</li>
+										<li><code class="red">[FEATURE]</code> Last 20 Watched with Statistics</li>
+										<li><code class="red">[FEATURE]</code> Download Lists (By Season)</li>
+										<li><code class="red">[FEATURE]</code> Download Lists (Uncategorized)</li>
+										<li><code class="red">[FEATURE]</code> Hard Drive Statistics</li>
+										<li><code class="red">[FEATURE]</code> Search by Title</li>
+										<li><code class="red">[FEATURE]</code> Edit and Delete an Entry (AniDB)</li>
+										<li><code class="red">[FEATURE]</code> Add, Edit and Delete an Entry (dlDB)</li>
+										<li><code class="orange">[IMPROVEMENT]</code> Summer Lists</li>
+										<li><code class="orange">[IMPROVEMENT]</code> Search using comma-separated keywords</li>
+											<ul>
+												<li>sort: title</li>
+												<li>quality: fhd</li>
+												<li>title (check variants): sample title</li>
+												<li>size: 40-50gb</li>
+												<li>finished: lastweek / lastmonth / august / 2012</li>
+												<li>release: summer / 2016 / summer 2016</li>
+												<li>encoder: coalgirls</li>
+												<li>remarks: redownload</li>
+											</ul>
 									</ul><br>
 								</div>
 							</div>
