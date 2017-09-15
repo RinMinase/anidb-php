@@ -108,126 +108,128 @@
 
 					<div class="row">
 						<div class="col-md-12">
-							<table class="table table-hover">
-								<thead>
-									<tr>
-										<th>Title</th>
-										<th class="text-center">E / O / S</th>
-										<th>File Size</th>
-										<th>Date Finished</th>
-										<th>Season</th>
-										<th>Release</th>
-										<th>Duration</th>
-										<th>Encoder</th>
-										<th>Variants</th>
-										<th>Remarks</th>
-										<th colspan="2"></th>
-									</tr>
-								</thead>
-
-								<tbody>
-
-									<?php foreach ($animeData as $item): ?>
-
+							<div class="table-responsive">
+								<table class="table table-hover">
+									<thead>
 										<tr>
-											<td>
-												<?php
-													switch ($item->quality) {
-														case "4K 2160p":
-															echo "<div class='anime-legend-uhd'";
-																echo "data-toggle='tooltip'";
-																echo "data-placement='auto'";
-																echo "title='4K 2160p'>";
-															echo "</div>";
-															break;
-														case "FHD 1080p":
-															echo "<div class='anime-legend-fhd'";
-																echo "data-toggle='tooltip'";
-																echo "data-placement='auto'";
-																echo "title='FHD 1080p'>";
-															echo "</div>";
-															break;
-														case "HD 720p":
-															echo "<div class='anime-legend-hd'";
-																echo "data-toggle='tooltip'";
-																echo "data-placement='auto'";
-																echo "title='HD 720p'>";
-															echo "</div>";
-															break;
-														case "HQ 480p":
-															echo "<div class='anime-legend-hq'";
-																echo "data-toggle='tooltip'";
-																echo "data-placement='auto'";
-																echo "title='HQ 480p'>";
-															echo "</div>";
-															break;
-														case "LQ 360p":
-															echo "<div class='anime-legend-lq'";
-																echo "data-toggle='tooltip'";
-																echo "data-placement='auto'";
-																echo "title='LQ 360p'>";
-															echo "</div>";
-															break;
-													}
-												?>
-
-												<span><?php echo $item->title ?></span>
-
-											</td>
-											<td class="text-center">
-												<?php echo $item->episodes . " / " . $item->ovas . " / " . $item->specials; ?>
-											</td>
-											<td>
-												<?php
-													echo round(
-														$item->filesize / 1073741824,
-														2);
-													echo " GB";
-												?>
-											</td>
-											<td>
-												<?php
-													echo date_format(
-														date_create($item->dateFinished),
-														"M d, Y"
-													);
-												?>
-											</td>
-											<td>
-												<?php
-													echo ($item->seasonNumber == "1") ? "N/A" : $item->seasonNumber;
-												?>
-											</td>
-											<td><?php echo $item->releaseSeason . " " . $item->releaseYear ?></td>
-											<td>
-												<?php
-													echo ($item->durationHour < 9) ? "0" . $item->durationHour : $item->durationHour;
-													echo ":" . $item->durationMinute . ":" . $item->durationSecond;
-												?>
-											</td>
-											<td><?php echo $item->encoder ?></td>
-											<td><?php echo $item->variants ?></td>
-											<td><?php echo $item->remarks ?></td>
-											<td>
-												<div data-toggle="tooltip" data-placement="auto" title="Edit">
-													<a class="btn btn-xs btn-success btn-block" href=<?php echo base_url("edit/" . $item->id) ?>>
-														<i class="fa fa-pencil"></i>
-													</a>
-												</div>
-											</td>
-											<td>
-												<div data-toggle="tooltip" data-placement="auto" title="Delete">
-													<a class="btn btn-xs btn-danger btn-block" href=<?php echo base_url("delete/" . $item->id) ?>>
-														<i class="fa fa-trash"></i>
-													</a>
-												</div>
-											</td>
+											<th>Title</th>
+											<th class="text-center">E / O / S</th>
+											<th>File Size</th>
+											<th>Date Finished</th>
+											<th>Season</th>
+											<th>Release</th>
+											<th>Duration</th>
+											<th>Encoder</th>
+											<th>Variants</th>
+											<th>Remarks</th>
+											<th colspan="2"></th>
 										</tr>
+									</thead>
 
-									<?php endforeach; ?>
+									<tbody>
 
-								</tbody>
-							</table>
+										<?php foreach ($animeData as $item): ?>
+
+											<tr>
+												<td>
+													<?php
+														switch ($item->quality) {
+															case "4K 2160p":
+																echo "<div class='anime-legend-uhd'";
+																	echo "data-toggle='tooltip'";
+																	echo "data-placement='auto'";
+																	echo "title='4K 2160p'>";
+																echo "</div>";
+																break;
+															case "FHD 1080p":
+																echo "<div class='anime-legend-fhd'";
+																	echo "data-toggle='tooltip'";
+																	echo "data-placement='auto'";
+																	echo "title='FHD 1080p'>";
+																echo "</div>";
+																break;
+															case "HD 720p":
+																echo "<div class='anime-legend-hd'";
+																	echo "data-toggle='tooltip'";
+																	echo "data-placement='auto'";
+																	echo "title='HD 720p'>";
+																echo "</div>";
+																break;
+															case "HQ 480p":
+																echo "<div class='anime-legend-hq'";
+																	echo "data-toggle='tooltip'";
+																	echo "data-placement='auto'";
+																	echo "title='HQ 480p'>";
+																echo "</div>";
+																break;
+															case "LQ 360p":
+																echo "<div class='anime-legend-lq'";
+																	echo "data-toggle='tooltip'";
+																	echo "data-placement='auto'";
+																	echo "title='LQ 360p'>";
+																echo "</div>";
+																break;
+														}
+													?>
+
+													<span><?php echo $item->title ?></span>
+
+												</td>
+												<td class="text-center">
+													<?php echo $item->episodes . " / " . $item->ovas . " / " . $item->specials; ?>
+												</td>
+												<td>
+													<?php
+														echo round(
+															$item->filesize / 1073741824,
+															2);
+														echo " GB";
+													?>
+												</td>
+												<td>
+													<?php
+														echo date_format(
+															date_create($item->dateFinished),
+															"M d, Y"
+														);
+													?>
+												</td>
+												<td>
+													<?php
+														echo ($item->seasonNumber == "1") ? "N/A" : $item->seasonNumber;
+													?>
+												</td>
+												<td><?php echo $item->releaseSeason . " " . $item->releaseYear ?></td>
+												<td>
+													<?php
+														echo ($item->durationHour < 9) ? "0" . $item->durationHour : $item->durationHour;
+														echo ":" . $item->durationMinute . ":" . $item->durationSecond;
+													?>
+												</td>
+												<td><?php echo $item->encoder ?></td>
+												<td><?php echo $item->variants ?></td>
+												<td><?php echo $item->remarks ?></td>
+												<td>
+													<div data-toggle="tooltip" data-placement="auto" title="Edit">
+														<a class="btn btn-xs btn-success btn-block" href=<?php echo base_url("edit/" . $item->id) ?>>
+															<i class="fa fa-pencil"></i>
+														</a>
+													</div>
+												</td>
+												<td>
+													<div data-toggle="tooltip" data-placement="auto" title="Delete">
+														<a class="btn btn-xs btn-danger btn-block" href=<?php echo base_url("delete/" . $item->id) ?>>
+															<i class="fa fa-trash"></i>
+														</a>
+													</div>
+												</td>
+											</tr>
+
+										<?php endforeach; ?>
+
+									</tbody>
+								</table>
+							</div>
 						</div>
 					</div>
 
