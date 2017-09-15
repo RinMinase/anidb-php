@@ -50,21 +50,21 @@
 				<div class="col-md-12">
 
 					<div class="row">
-						<div class="col-xs-3">
+						<div class="col-xs-6 col-sm-3">
 							<div class="form-group">
 								<a class="btn btn-primary btn-block" href=<?php echo base_url("other-lists") ?>>
 									<i class="fa fa-plus"></i>&nbsp;&nbsp;&nbsp;Other Lists
 								</a>
 							</div>
 						</div>
-						<div class="col-xs-3">
+						<div class="col-xs-6 col-sm-3">
 							<div class="form-group">
 								<a class="btn btn-primary btn-block" href=<?php echo base_url("download") ?>>
 									<i class="fa fa-plus"></i>&nbsp;&nbsp;&nbsp;DL List
 								</a>
 							</div>
 						</div>
-						<div class="col-xs-3">
+						<div class="col-xs-6 col-sm-3">
 							<div class="form-group">
 								<a class="btn btn-primary btn-block" href=<?php echo base_url("hdd") ?>>
 									<i class="fa fa-plus"></i>&nbsp;&nbsp;&nbsp;HDD List
@@ -72,7 +72,7 @@
 							</div>
 						</div>
 
-						<div class="col-xs-3">
+						<div class="col-xs-6 col-sm-3">
 							<div class="form-group">
 								<a class="btn btn-primary btn-block" href=<?php echo base_url("about") ?>>
 									<i class="fa fa-question"></i>&nbsp;&nbsp;&nbsp;About
