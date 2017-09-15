@@ -53,14 +53,14 @@
 						<div class="col-xs-6 col-sm-3">
 							<div class="form-group">
 								<a class="btn btn-primary btn-block" href=<?php echo base_url("other-lists") ?>>
-									<i class="fa fa-plus"></i>&nbsp;&nbsp;&nbsp;Other Lists
+									<i class="fa fa-list"></i>&nbsp;&nbsp;&nbsp;Other Lists
 								</a>
 							</div>
 						</div>
 						<div class="col-xs-6 col-sm-3">
 							<div class="form-group">
 								<a class="btn btn-primary btn-block" href=<?php echo base_url("download-list") ?>>
-									<i class="fa fa-plus"></i>&nbsp;&nbsp;&nbsp;DL List
+									<i class="fa fa-arrow-down"></i>&nbsp;&nbsp;&nbsp;DL List
 								</a>
 							</div>
 						</div>
