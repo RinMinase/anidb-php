@@ -47,7 +47,7 @@
 		<div class="container-fluid">
 			<div class="page-header">
 			  <h2>Last 20</h2>
-				<a href="#" class="btn btn-primary">
+				<a class="btn btn-primary" href=<?php echo base_url() ?>>
 					<i class="fa fa-chevron-left"></i>&nbsp;&nbsp;Back
 				</a>
 			</div>
