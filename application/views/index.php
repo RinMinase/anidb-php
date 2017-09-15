@@ -82,7 +82,7 @@
 					</div>
 
 					<div class="row">
-						<div class="col-sm-2">
+						<div class="col-sm-2 hidden-xs">
 							<div class="form-group">
 								<a class="btn btn-primary btn-block" href=<?php echo base_url("add") ?>>
 									<i class="fa fa-plus"></i>&nbsp;&nbsp;&nbsp;Add
@@ -90,7 +90,15 @@
 							</div>
 						</div>
 
-						<div class="col-sm-10">
+						<div class="col-xs-3 visible-xs hidden-sm hidden-md hidden-lg">
+							<div class="form-group">
+								<a class="btn btn-primary btn-block" href=<?php echo base_url("add") ?>>
+									<i class="fa fa-plus"></i>
+								</a>
+							</div>
+						</div>
+
+						<div class="col-xs-9 col-sm-10">
 							<div class="form-group has-feedback has-feedback-left">
 								<i class="form-control-feedback glyphicon glyphicon-search"></i>
 								<input type="text" class="form-control" placeholder="Search...">
