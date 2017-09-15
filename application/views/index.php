@@ -50,23 +50,51 @@
 				<div class="col-md-12">
 
 					<div class="row">
-						<div class="col-md-1">
-							<a class="btn btn-primary btn-block" href=<?php echo base_url("add") ?>>
-								<i class="fa fa-plus"></i>&nbsp;&nbsp;&nbsp;Add
-							</a>
+						<div class="col-xs-3">
+							<div class="form-group">
+								<a class="btn btn-primary btn-block" href=<?php echo base_url("other-lists") ?>>
+									<i class="fa fa-plus"></i>&nbsp;&nbsp;&nbsp;Other Lists
+								</a>
+							</div>
+						</div>
+						<div class="col-xs-3">
+							<div class="form-group">
+								<a class="btn btn-primary btn-block" href=<?php echo base_url("download") ?>>
+									<i class="fa fa-plus"></i>&nbsp;&nbsp;&nbsp;DL List
+								</a>
+							</div>
+						</div>
+						<div class="col-xs-3">
+							<div class="form-group">
+								<a class="btn btn-primary btn-block" href=<?php echo base_url("hdd") ?>>
+									<i class="fa fa-plus"></i>&nbsp;&nbsp;&nbsp;HDD List
+								</a>
+							</div>
 						</div>
 
-						<div class="col-md-10">
+						<div class="col-xs-3">
+							<div class="form-group">
+								<a class="btn btn-primary btn-block" href=<?php echo base_url("about") ?>>
+									<i class="fa fa-question"></i>&nbsp;&nbsp;&nbsp;About
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-sm-2">
+							<div class="form-group">
+								<a class="btn btn-primary btn-block" href=<?php echo base_url("add") ?>>
+									<i class="fa fa-plus"></i>&nbsp;&nbsp;&nbsp;Add
+								</a>
+							</div>
+						</div>
+
+						<div class="col-sm-10">
 							<div class="form-group has-feedback has-feedback-left">
 								<i class="form-control-feedback glyphicon glyphicon-search"></i>
 								<input type="text" class="form-control" placeholder="Search...">
 							</div>
-						</div>
-
-						<div class="col-md-1">
-							<a class="btn btn-primary btn-block" href=<?php echo base_url("about") ?>>
-								<i class="fa fa-question"></i>&nbsp;&nbsp;&nbsp;About
-							</a>
 						</div>
 					</div>
 
