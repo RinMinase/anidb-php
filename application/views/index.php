@@ -24,21 +24,21 @@
 			.container { padding-bottom: 15px; }
 			.topbar { padding-top: 15px; }
 
-			.topbar-legend-uhd,
-			.topbar-legend-fhd,
-			.topbar-legend-hd,
-			.topbar-legend-hq,
-			.topbar-legend-lq {
+			.anime-legend-uhd,
+			.anime-legend-fhd,
+			.anime-legend-hd,
+			.anime-legend-hq,
+			.anime-legend-lq {
 				width: 10px;
 				height: 10px;
 				display: inline-block;
 			}
 
-			.topbar-legend-uhd { background-color: #FF99CC; }
-			.topbar-legend-fhd { background-color: #99FF99; }
-			.topbar-legend-hd { background-color: #99CCFF; }
-			.topbar-legend-hq { background-color: #FFCC66; }
-			.topbar-legend-lq { border: 1px solid #777777; }
+			.anime-legend-uhd { background-color: #FF99CC; }
+			.anime-legend-fhd { background-color: #99FF99; }
+			.anime-legend-hd { background-color: #99CCFF; }
+			.anime-legend-hq { background-color: #FFCC66; }
+			.anime-legend-lq { border: 1px solid #777777; }
 		</style>
 
 		<title></title>
@@ -98,35 +98,35 @@
 												<?php
 													switch ($item->quality) {
 														case "4K 2160p":
-															echo "<div class='topbar-legend-uhd'";
+															echo "<div class='anime-legend-uhd'";
 																echo "data-toggle='tooltip'";
 																echo "data-placement='auto'";
 																echo "title='4K 2160p'>";
 															echo "</div>";
 															break;
 														case "FHD 1080p":
-															echo "<div class='topbar-legend-fhd'";
+															echo "<div class='anime-legend-fhd'";
 																echo "data-toggle='tooltip'";
 																echo "data-placement='auto'";
 																echo "title='FHD 1080p'>";
 															echo "</div>";
 															break;
 														case "HD 720p":
-															echo "<div class='topbar-legend-hd'";
+															echo "<div class='anime-legend-hd'";
 																echo "data-toggle='tooltip'";
 																echo "data-placement='auto'";
 																echo "title='HD 720p'>";
 															echo "</div>";
 															break;
 														case "HQ 480p":
-															echo "<div class='topbar-legend-hq'";
+															echo "<div class='anime-legend-hq'";
 																echo "data-toggle='tooltip'";
 																echo "data-placement='auto'";
 																echo "title='HQ 480p'>";
 															echo "</div>";
 															break;
 														case "LQ 360p":
-															echo "<div class='topbar-legend-lq'";
+															echo "<div class='anime-legend-lq'";
 																echo "data-toggle='tooltip'";
 																echo "data-placement='auto'";
 																echo "title='LQ 360p'>";
