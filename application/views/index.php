@@ -19,26 +19,13 @@
 
 		<link rel="stylesheet" href=<?php echo base_url("resources/bootstrap-3.3.7/bootstrap.min.css") ?>>
 		<link rel="stylesheet" href=<?php echo base_url("resources/font-awesome-4.7.0/font-awesome.min.css") ?>>
+		<link rel="stylesheet" href=<?php echo base_url("resources/css/styles.css") ?>>
 
 		<style>
+
 			.container { padding-bottom: 15px; }
 			.topbar { padding-top: 15px; }
 
-			.anime-legend-uhd,
-			.anime-legend-fhd,
-			.anime-legend-hd,
-			.anime-legend-hq,
-			.anime-legend-lq {
-				width: 10px;
-				height: 10px;
-				display: inline-block;
-			}
-
-			.anime-legend-uhd { background-color: #FF99CC; }
-			.anime-legend-fhd { background-color: #99FF99; }
-			.anime-legend-hd { background-color: #99CCFF; }
-			.anime-legend-hq { background-color: #FFCC66; }
-			.anime-legend-lq { border: 1px solid #777777; }
 		</style>
 
 		<title></title>

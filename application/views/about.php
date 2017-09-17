@@ -7,6 +7,7 @@
 
 		<link rel="stylesheet" href=<?php echo base_url("resources/bootstrap-3.3.7/bootstrap.min.css") ?>>
 		<link rel="stylesheet" href=<?php echo base_url("resources/font-awesome-4.7.0/font-awesome.min.css") ?>>
+		<link rel="stylesheet" href=<?php echo base_url("resources/css/styles.css") ?>>
 
 		<style>
 
@@ -24,13 +25,6 @@
 			table.table-statistics > tbody > tr > td:not(.table-statistics-border) {
 				border-top: 0px;
 				font-weight: bold;
-			}
-
-			div.panel-green { border-color: #7CC87F; }
-			div.panel-green > .panel-heading {
-				border-color: #7CC87F;
-				background-color: #95CE92;
-				color: #555555;
 			}
 
 			code.red { color: #F66060; }
@@ -439,11 +433,11 @@
 										<li><code class="red">[FEATURE]</code> Download Lists (By Season)</li>
 										<li><code class="red">[FEATURE]</code> Download Lists (Uncategorized)</li>
 										<li><code class="red">[FEATURE]</code> Hard Drive Statistics</li>
-										<li><code class="red">[FEATURE]</code> Search by Title</li>
+										<li><code class="red">[FEATURE]</code> Fuzzy Search by Title</li>
 										<li><code class="red">[FEATURE]</code> Edit and Delete an Entry (AniDB)</li>
 										<li><code class="red">[FEATURE]</code> Add, Edit and Delete an Entry (dlDB)</li>
 										<li><code class="orange">[IMPROVEMENT]</code> Summer Lists</li>
-										<li><code class="orange">[IMPROVEMENT]</code> Search using comma-separated keywords</li>
+										<li><code class="orange">[IMPROVEMENT]</code> Fuzzy Search using comma-separated keywords</li>
 											<ul>
 												<li>sort: title</li>
 												<li>quality: fhd</li>
