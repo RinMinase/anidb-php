@@ -14,6 +14,12 @@
 				padding-left: 15px;
 			}
 
+			.label {
+				width: 30px;
+				display: inline-block;
+				padding: .3em .6em;
+			}
+
 		</style>
 
 		<title>Download List</title>
@@ -59,7 +65,7 @@
 											<span class="label label-primary">7</span>
 										</span>
 										<span data-toggle="tooltip" data-placement="auto" title="Queued">
-											<span class="label label-default">81</span>
+											<span class="label label-default">82</span>
 										</span>
 									</span>
 								</li>
@@ -280,7 +286,7 @@
 								<h4 class="panel-title">
 									<a href="#panel-queue" data-toggle="collapse">Queue</a>
 									<div class="pull-right">
-										<span class="label label-default">81</span>
+										<span class="label label-default">82</span>
 									</div>
 								</h4>
 							</div>
