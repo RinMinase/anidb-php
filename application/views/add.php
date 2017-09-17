@@ -7,7 +7,6 @@
 
 		<link rel="stylesheet" href=<?php echo base_url("resources/bootstrap-3.3.7/bootstrap.min.css") ?>>
 		<link rel="stylesheet" href=<?php echo base_url("resources/font-awesome-4.7.0/font-awesome.min.css") ?>>
-		<link rel="stylesheet" href=<?php echo base_url("resources/css/styles.css") ?>>
 
 		<style>
 
