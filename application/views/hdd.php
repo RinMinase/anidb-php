@@ -46,7 +46,7 @@
 					<i class="fa fa-chevron-left"></i>&nbsp;&nbsp;Back
 				</a>
 				<a class="btn btn-primary" href=<?php echo base_url("hdd-list/simulator") ?>>
-					<i class="fa fa-plus"></i>&nbsp;&nbsp;Disk Simulator
+					<i class="fa fa-flask"></i>&nbsp;&nbsp;Disk Simulator
 				</a>
 			</div>
 

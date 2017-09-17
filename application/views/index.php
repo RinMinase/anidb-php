@@ -67,7 +67,7 @@
 						<div class="col-xs-6 col-sm-3">
 							<div class="form-group">
 								<a class="btn btn-primary btn-block" href=<?php echo base_url("hdd-list") ?>>
-									<i class="fa fa-plus"></i>&nbsp;&nbsp;&nbsp;HDD List
+									<i class="fa fa-hdd-o"></i>&nbsp;&nbsp;&nbsp;HDD List
 								</a>
 							</div>
 						</div>
