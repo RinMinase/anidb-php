@@ -28,5 +28,8 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 *.sublime-workspace
 *.sublime-project
 
+## MySQL Workbench Backup Files
+*.mwb.bak
+
 ## Excel Temp Files
 ~$*.xlsx
