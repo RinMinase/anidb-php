@@ -34,7 +34,7 @@
 
 		</style>
 
-		<title></title>
+		<title>Rin's Anime Database</title>
 	</head>
 
 	<body>
