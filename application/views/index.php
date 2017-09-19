@@ -198,9 +198,9 @@
 												</td>
 												<td class="text-center">
 													<?php
-														echo ($item->durationHour < 9) ? "0" . $item->durationHour . ":" : $item->durationHour . ":";
-														echo ($item->durationMinute < 9) ? "0" . $item->durationMinute . ":"  : $item->durationMinute . ":";
-														echo ($item->durationSecond < 9) ? "0" . $item->durationSecond : $item->durationSecond;
+														echo ($item->durationHour < 10) ? "0" . $item->durationHour . ":" : $item->durationHour . ":";
+														echo ($item->durationMinute < 10) ? "0" . $item->durationMinute . ":"  : $item->durationMinute . ":";
+														echo ($item->durationSecond < 10) ? "0" . $item->durationSecond : $item->durationSecond;
 													?>
 												</td>
 												<td><?php echo $item->encoder ?></td>
