@@ -101,11 +101,11 @@
 										<tr>
 											<th>Title</th>
 											<th class="text-center">E / O / S</th>
-											<th>File Size</th>
-											<th>Date Finished</th>
-											<th>Season</th>
+											<th class="text-center">File Size</th>
+											<th class="text-center">Date Finished</th>
+											<th class="text-center">Season</th>
 											<th>Release</th>
-											<th>Duration</th>
+											<th class="text-center">Duration</th>
 											<th>Encoder</th>
 											<th>Variants</th>
 											<th>Remarks</th>
@@ -165,7 +165,7 @@
 												<td class="text-center">
 													<?php echo $item->episodes . " / " . $item->ovas . " / " . $item->specials; ?>
 												</td>
-												<td>
+												<td class="text-center">
 													<?php
 														echo round(
 															$item->filesize / 1073741824,
@@ -173,7 +173,7 @@
 														echo " GB";
 													?>
 												</td>
-												<td>
+												<td class="text-center">
 													<?php
 														echo date_format(
 															date_create($item->dateFinished),
@@ -181,16 +181,15 @@
 														);
 													?>
 												</td>
-												<td>
-													<?php
-														echo ($item->seasonNumber == "1") ? "N/A" : $item->seasonNumber;
-													?>
+												<td class="text-center">
+													<?php echo ($item->seasonNumber == "0") ? "N/A" : $item->seasonNumber; ?>
 												</td>
 												<td><?php echo $item->releaseSeason . " " . $item->releaseYear ?></td>
-												<td>
+												<td class="text-center">
 													<?php
-														echo ($item->durationHour < 9) ? "0" . $item->durationHour : $item->durationHour;
-														echo ":" . $item->durationMinute . ":" . $item->durationSecond;
+														echo ($item->durationHour < 9) ? "0" . $item->durationHour . ":" : $item->durationHour . ":";
+														echo ($item->durationMinute < 9) ? "0" . $item->durationMinute . ":"  : $item->durationMinute . ":";
+														echo ($item->durationSecond < 9) ? "0" . $item->durationSecond : $item->durationSecond;
 													?>
 												</td>
 												<td><?php echo $item->encoder ?></td>
