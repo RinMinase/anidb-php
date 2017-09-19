@@ -190,7 +190,12 @@
 														echo "</div>";
 													?>
 												</td>
-												<td><?php echo $item->releaseSeason . " " . $item->releaseYear ?></td>
+												<td>
+													<?php
+														echo $item->releaseSeason . " ";
+														echo ($item->releaseYear == 0) ? "" : $item->releaseYear;
+													?>
+												</td>
 												<td class="text-center">
 													<?php
 														echo ($item->durationHour < 9) ? "0" . $item->durationHour . ":" : $item->durationHour . ":";
