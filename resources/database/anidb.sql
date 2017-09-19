@@ -26,7 +26,8 @@ CREATE TABLE IF NOT EXISTS `anidb`.`Anime` (
   `ovas` INT UNSIGNED NULL,
   `specials` INT UNSIGNED NULL,
   `filesize` BIGINT(12) NULL,
-  `seasonNumber` INT NULL,
+  `seasonNumber` INT NULL COMMENT '0 - Not Applicable',
+  `firstSeasonTitle` VARCHAR(150) NULL,
   `dateFinished` DATE NULL,
   `releaseSeason` ENUM('Winter', 'Spring', 'Summer', 'Fall') NULL,
   `releaseYear` INT NULL,
@@ -38,6 +39,31 @@ CREATE TABLE IF NOT EXISTS `anidb`.`Anime` (
   `remarks` VARCHAR(150) NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `title_UNIQUE` (`title` ASC))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `anidb`.`Downloads`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `anidb`.`Downloads` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `title` VARCHAR(150) NOT NULL,
+  `status` INT NOT NULL COMMENT '0 - In Queue\n1 - Finished Downloading\n2 - Finished Watching',
+  `category` VARCHAR(20) NULL,
+  `remarks` VARCHAR(150) NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `anidb`.`HDD`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `anidb`.`HDD` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `from` VARCHAR(5) NOT NULL,
+  `to` VARCHAR(5) NOT NULL,
+  `hddSize` BIGINT(12) NOT NULL,
+  PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
 
