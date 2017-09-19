@@ -61,19 +61,23 @@
 							<tr>
 								<td>Watch Time</td>
 								<td>:</td>
-								<td>00 days, 00 hours,<br>00 minutes, 00 seconds</td>
+								<td>
+									<?php echo $totalWatchDays . " days, " . $totalWatchHours . " hours," ?>
+									<br>
+									<?php echo $totalWatchMinutes . " minutes, " . $totalWatchSeconds . " seconds" ?>
+								</td>
 							</tr>
 							<tr><td colspan="3"></td></tr>
 							<tr><td class="table-statistics-border" colspan="3"></td></tr>
 							<tr>
 								<td>Total Size</td>
 								<td>:</td>
-								<td>000.00 GB (00.00 TB)</td>
+								<td><?php echo $totalSizeGB ?> GB (<?php echo $totalSizeTB ?> TB)</td>
 							</tr>
 							<tr>
 								<td>Total Episodes</td>
 								<td>:</td>
-								<td>000 Episodes</td>
+								<td><?php echo $totalEpisodes ?> Episodes</td>
 							</tr>
 							<tr><td colspan="3"></td></tr>
 							<tr><td class="table-statistics-border" colspan="3"></td></tr>
@@ -82,28 +86,28 @@
 							</tr>
 							<tr>
 								<td>4k 2160p</td>
-								<td>:</td>
-								<td>000</td>
+								<td class="text-center">:</td>
+								<td class="text-center"><?php echo $totalUHD ?></td>
 							</tr>
 							<tr>
 								<td>FHD 1080p</td>
-								<td>:</td>
-								<td>000</td>
+								<td class="text-center">:</td>
+								<td class="text-center"><?php echo $totalFHD ?></td>
 							</tr>
 							<tr>
 								<td>HD 720p</td>
-								<td>:</td>
-								<td>000</td>
+								<td class="text-center">:</td>
+								<td class="text-center"><?php echo $totalHD ?></td>
 							</tr>
 							<tr>
 								<td>HQ 480p</td>
-								<td>:</td>
-								<td>000</td>
+								<td class="text-center">:</td>
+								<td class="text-center"><?php echo $totalHQ ?></td>
 							</tr>
 							<tr>
 								<td>LQ 360p</td>
-								<td>:</td>
-								<td>000</td>
+								<td class="text-center">:</td>
+								<td class="text-center"><?php echo $totalLQ ?></td>
 							</tr>
 						</tbody>
 					</table>
