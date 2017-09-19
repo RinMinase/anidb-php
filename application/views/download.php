@@ -58,15 +58,18 @@
 								<li>
 									<a href="#">Uncategorized</a>
 									<span class="pull-right">
-										<span data-toggle="tooltip" data-placement="auto" title="Watched">
-											<span class="label label-success">21</span>
-										</span>
-										<span data-toggle="tooltip" data-placement="auto" title="Downloaded">
-											<span class="label label-primary">7</span>
-										</span>
-										<span data-toggle="tooltip" data-placement="auto" title="Queued">
-											<span class="label label-default">82</span>
-										</span>
+										<span class="label label-success"
+											data-toggle="tooltip"
+											data-placement="auto"
+											title="Watched">21</span>
+										<span class="label label-primary"
+											data-toggle="tooltip"
+											data-placement="auto"
+											title="Downloaded">7</span>
+										<span class="label label-default"
+											data-toggle="tooltip"
+											data-placement="auto"
+											title="Queued">82</span>
 									</span>
 								</li>
 
@@ -79,57 +82,69 @@
 										<li>
 											<a href="#">Winter 2017</a>
 											<span class="pull-right">
-												<span data-toggle="tooltip" data-placement="auto" title="Watched">
-													<span class="label label-success">3</span>
-												</span>
-												<span data-toggle="tooltip" data-placement="auto" title="Downloaded">
-													<span class="label label-primary">5</span>
-												</span>
-												<span data-toggle="tooltip" data-placement="auto" title="Queued">
-													<span class="label label-default">12</span>
-												</span>
+												<span class="label label-success"
+													data-toggle="tooltip"
+													data-placement="auto"
+													title="Watched">3</span>
+												<span class="label label-primary"
+													data-toggle="tooltip"
+													data-placement="auto"
+													title="Downloaded">5</span>
+												<span class="label label-default"
+													data-toggle="tooltip"
+													data-placement="auto"
+													title="Queued">12</span>
 											</span>
 										</li>
 										<li>
 											<a href="#">Spring 2017</a>
 											<span class="pull-right">
-												<span data-toggle="tooltip" data-placement="auto" title="Watched">
-													<span class="label label-success">9</span>
-												</span>
-												<span data-toggle="tooltip" data-placement="auto" title="Downloaded">
-													<span class="label label-primary">1</span>
-												</span>
-												<span data-toggle="tooltip" data-placement="auto" title="Queued">
-													<span class="label label-default">11</span>
-												</span>
+												<span class="label label-success"
+													data-toggle="tooltip"
+													data-placement="auto"
+													title="Watched">9</span>
+												<span class="label label-primary"
+													data-toggle="tooltip"
+													data-placement="auto"
+													title="Downloaded">1</span>
+												<span class="label label-default"
+													data-toggle="tooltip"
+													data-placement="auto"
+													title="Queued">11</span>
 											</span>
 										</li>
 										<li>
 											<a href="#">Summer 2017</a>
 											<span class="pull-right">
-												<span data-toggle="tooltip" data-placement="auto" title="Watched">
-													<span class="label label-success">2</span>
-												</span>
-												<span data-toggle="tooltip" data-placement="auto" title="Downloaded">
-													<span class="label label-primary">9</span>
-												</span>
-												<span data-toggle="tooltip" data-placement="auto" title="Queued">
-													<span class="label label-default">5</span>
-												</span>
+												<span class="label label-success"
+													data-toggle="tooltip"
+													data-placement="auto"
+													title="Watched">2</span>
+												<span class="label label-primary"
+													data-toggle="tooltip"
+													data-placement="auto"
+													title="Downloaded">9</span>
+												<span class="label label-default"
+													data-toggle="tooltip"
+													data-placement="auto"
+													title="Queued">5</span>
 											</span>
 										</li>
 										<li>
 											<a href="#">Fall 2017</a>
 											<span class="pull-right">
-												<span data-toggle="tooltip" data-placement="auto" title="Watched">
-													<span class="label label-success">1</span>
-												</span>
-												<span data-toggle="tooltip" data-placement="auto" title="Downloaded">
-													<span class="label label-primary">2</span>
-												</span>
-												<span data-toggle="tooltip" data-placement="auto" title="Queued">
-													<span class="label label-default">19</span>
-												</span>
+												<span class="label label-success"
+													data-toggle="tooltip"
+													data-placement="auto"
+													title="Watched">1</span>
+												<span class="label label-primary"
+													data-toggle="tooltip"
+													data-placement="auto"
+													title="Downloaded">2</span>
+												<span class="label label-default"
+													data-toggle="tooltip"
+													data-placement="auto"
+													title="Queued">19</span>
 											</span>
 										</li>
 									</ul>
@@ -172,36 +187,42 @@
 													<td>Sample Very Very Very Very Very Long Title</td>
 													<td>
 														<dfn>Redownload 1080p&nbsp;</dfn>
-														<span data-toggle="tooltip" data-placement="auto" title="Edit Remarks">
-															<a href="#" class="btn btn-xs btn-warning">
-																<i class="fa fa-pencil"></i>
-															</a>
-														</span>
+														<a href="#"
+															class="btn btn-xs btn-warning"
+															data-toggle="tooltip"
+															data-placement="auto"
+															title="Edit Remarks">
+															<i class="fa fa-pencil"></i>
+														</a>
 													</td>
 													<td class="text-right">
-														<span data-toggle="tooltip" data-placement="auto" title="Delete Title">
-															<a href="#" class="btn btn-xs btn-danger">
-																<i class="fa fa-trash"></i>
-															</a>
-														</span>
+														<a href="#" class="btn btn-xs btn-danger"
+															data-toggle="tooltip"
+															data-placement="auto"
+															title="Delete Title">
+															<i class="fa fa-trash"></i>
+														</a>
 													</td>
 												</tr>
 
 												<tr>
 													<td>Sample Title</td>
 													<td>
-														<span data-toggle="tooltip" data-placement="auto" title="Edit Remarks">
-															<a href="#" class="btn btn-xs btn-warning">
-																<i class="fa fa-pencil"></i>
-															</a>
+														<a href="#" class="btn btn-xs btn-warning"
+															data-toggle="tooltip"
+															data-placement="auto"
+															title="Edit Remarks">
+															<i class="fa fa-pencil"></i>
+														</a>
 														</span>
 													</td>
 													<td class="text-right">
-														<span data-toggle="tooltip" data-placement="auto" title="Delete Title">
-															<a href="#" class="btn btn-xs btn-danger">
-																<i class="fa fa-trash"></i>
-															</a>
-														</span>
+														<a href="#" class="btn btn-xs btn-danger"
+															data-toggle="tooltip"
+															data-placement="auto"
+															title="Delete Title">
+															<i class="fa fa-trash"></i>
+														</a>
 													</td>
 												</tr>
 
@@ -240,36 +261,42 @@
 													<td>Sample Very Very Very Very Very Long Title</td>
 													<td>
 														<dfn>Redownload 1080p&nbsp;</dfn>
-														<span data-toggle="tooltip" data-placement="auto" title="Edit Remarks">
-															<a href="#" class="btn btn-xs btn-warning">
-																<i class="fa fa-pencil"></i>
-															</a>
-														</span>
+														<a href="#"
+															class="btn btn-xs btn-warning"
+															data-toggle="tooltip"
+															data-placement="auto"
+															title="Edit Remarks">
+															<i class="fa fa-pencil"></i>
+														</a>
 													</td>
 													<td class="text-right">
-														<span data-toggle="tooltip" data-placement="auto" title="Delete Title">
-															<a href="#" class="btn btn-xs btn-danger">
-																<i class="fa fa-trash"></i>
-															</a>
-														</span>
+														<a href="#" class="btn btn-xs btn-danger"
+															data-toggle="tooltip"
+															data-placement="auto"
+															title="Delete Title">
+															<i class="fa fa-trash"></i>
+														</a>
 													</td>
 												</tr>
 
 												<tr>
 													<td>Sample Title</td>
 													<td>
-														<span data-toggle="tooltip" data-placement="auto" title="Edit Remarks">
-															<a href="#" class="btn btn-xs btn-warning">
-																<i class="fa fa-pencil"></i>
-															</a>
+														<a href="#" class="btn btn-xs btn-warning"
+															data-toggle="tooltip"
+															data-placement="auto"
+															title="Edit Remarks">
+															<i class="fa fa-pencil"></i>
+														</a>
 														</span>
 													</td>
 													<td class="text-right">
-														<span data-toggle="tooltip" data-placement="auto" title="Delete Title">
-															<a href="#" class="btn btn-xs btn-danger">
-																<i class="fa fa-trash"></i>
-															</a>
-														</span>
+														<a href="#" class="btn btn-xs btn-danger"
+															data-toggle="tooltip"
+															data-placement="auto"
+															title="Delete Title">
+															<i class="fa fa-trash"></i>
+														</a>
 													</td>
 												</tr>
 
@@ -308,36 +335,42 @@
 													<td>Sample Very Very Very Very Very Long Title</td>
 													<td>
 														<dfn>Redownload 1080p&nbsp;</dfn>
-														<span data-toggle="tooltip" data-placement="auto" title="Edit Remarks">
-															<a href="#" class="btn btn-xs btn-warning">
-																<i class="fa fa-pencil"></i>
-															</a>
-														</span>
+														<a href="#"
+															class="btn btn-xs btn-warning"
+															data-toggle="tooltip"
+															data-placement="auto"
+															title="Edit Remarks">
+															<i class="fa fa-pencil"></i>
+														</a>
 													</td>
 													<td class="text-right">
-														<span data-toggle="tooltip" data-placement="auto" title="Delete Title">
-															<a href="#" class="btn btn-xs btn-danger">
-																<i class="fa fa-trash"></i>
-															</a>
-														</span>
+														<a href="#" class="btn btn-xs btn-danger"
+															data-toggle="tooltip"
+															data-placement="auto"
+															title="Delete Title">
+															<i class="fa fa-trash"></i>
+														</a>
 													</td>
 												</tr>
 
 												<tr>
 													<td>Sample Title</td>
 													<td>
-														<span data-toggle="tooltip" data-placement="auto" title="Edit Remarks">
-															<a href="#" class="btn btn-xs btn-warning">
-																<i class="fa fa-pencil"></i>
-															</a>
+														<a href="#" class="btn btn-xs btn-warning"
+															data-toggle="tooltip"
+															data-placement="auto"
+															title="Edit Remarks">
+															<i class="fa fa-pencil"></i>
+														</a>
 														</span>
 													</td>
 													<td class="text-right">
-														<span data-toggle="tooltip" data-placement="auto" title="Delete Title">
-															<a href="#" class="btn btn-xs btn-danger">
-																<i class="fa fa-trash"></i>
-															</a>
-														</span>
+														<a href="#" class="btn btn-xs btn-danger"
+															data-toggle="tooltip"
+															data-placement="auto"
+															title="Delete Title">
+															<i class="fa fa-trash"></i>
+														</a>
 													</td>
 												</tr>
 
