@@ -64,17 +64,13 @@
 								<label>Episodes</label>
 								<input type="text" class="form-control" name="episodes">
 							</div>
-							<div class="col-md-1 form-group">
+							<div class="col-md-2 form-group">
 								<label>OVAs</label>
 								<input type="text" class="form-control" name="ovas">
 							</div>
-							<div class="col-md-1 form-group">
+							<div class="col-md-2 form-group">
 								<label>Specials</label>
 								<input type="text" class="form-control" name="specials">
-							</div>
-							<div class="col-md-2 form-group">
-								<label>Season #</label>
-								<input type="text" class="form-control" name="seasonNumber">
 							</div>
 							<div class="col-md-3 form-group">
 								<label>Date Finished</label>
@@ -83,6 +79,17 @@
 							<div class="col-md-3 form-group">
 								<label>File Size</label>
 								<input type="text" class="form-control" name="filesize">
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-4 form-group">
+								<label>Season # (N/A if not applicable)</label>
+								<input type="text" class="form-control" name="seasonNumber">
+							</div>
+							<div class="col-md-8 form-group">
+								<label>First Season Title</label>
+								<input type="text" class="form-control" name="title">
 							</div>
 						</div>
 
