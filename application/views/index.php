@@ -170,10 +170,13 @@
 										</td>
 										<td class="text-center">
 											<?php
-												echo round(
-													$item->filesize / 1073741824,
-													2);
-												echo " GB";
+												if ($item->filesize == 0) {
+													echo "-";
+												} else if ($item->filesize < 1073741824) {
+													echo round($item->filesize / 1048576, 2) . " MB";
+												} else {
+													echo round($item->filesize / 1073741824, 2) . " GB";
+												}
 											?>
 										</td>
 										<td class="text-center">
