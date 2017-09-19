@@ -10,9 +10,6 @@
 
 		<style>
 
-			.container { padding-bottom: 15px; }
-			.page-header { border-bottom: none; }
-
 		</style>
 
 		<title>Add</title>
@@ -20,18 +17,18 @@
 	<body>
 
 		<div class="container">
-			<div class="row">
-				<div class="col-md-12 page-header">
-					<a href=<?php echo base_url() ?> class="btn btn-primary">
-						<i class="fa fa-chevron-left"></i>&nbsp;&nbsp;Back
-					</a>
-				</div>
+
+			<div class="page-header">
+				<a href=<?php echo base_url() ?> class="btn btn-primary">
+					<i class="fa fa-chevron-left"></i>&nbsp;&nbsp;Back
+				</a>
+			  <h2>Add New Entry</h2>
 			</div>
 
 			<div class="row">
 				<div class="col-md-12">
+
 					<?php echo form_open('addEntry', array('method' => 'GET')); ?>
-						<legend>Add New Entry</legend>
 
 						<div class="row">
 							<div class="col-md-3 form-group">
@@ -143,11 +140,14 @@
 
 						<div class="row">
 							<div class="col-md-4">
-								<button class="btn btn-primary btn-block">Submit</button>
+								<div class="form-group">
+									<button class="btn btn-primary btn-block">Submit</button>
+								</div>
 							</div>
 						</div>
 
 					<?php echo form_close(); ?>
+
 				</div>
 			</div>
 
