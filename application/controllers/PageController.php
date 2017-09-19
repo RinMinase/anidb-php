@@ -13,7 +13,31 @@ class PageController extends CI_Controller {
 
 	public function add() { $this->load->view('add'); }
 
-	public function other_lists() { $this->load->view('other-lists'); }
+	public function other_lists() {
+		$this->load->model('defaultmodel');
+		$data['last20AnimeData'] = $this->defaultmodel->getLast20AnimeData();
+
+		$data['totalEpisodes'] = 0;
+		foreach ($data['last20AnimeData'] as $item) {
+			$data['totalEpisodes'] += $item->episodes + $item->ovas + $item->specials;
+		}
+
+		$date_today = date_create(date("Y-m-d"));
+		$last20_length = count($data['last20AnimeData']);
+
+		$date_first_entry = date_create($data['last20AnimeData'][0]->dateFinished);
+		$date_last_entry = date_create($data['last20AnimeData'][$last20_length - 1]->dateFinished);
+
+		$date_diff_first = date_diff($date_first_entry, $date_today)->format('%a');
+		$date_diff_last = date_diff($date_last_entry, $date_today)->format('%a');
+
+		$data['titlesPerDay'] = round($last20_length / $date_diff_last, 2);
+		$data['singleSeasonPerDay'] = round(($data['totalEpisodes'] / 12) / $date_diff_last, 2);
+		$data['episodesPerDay'] = round($data['totalEpisodes'] / $date_diff_last,	2);
+		$data['daysSinceLastAnime'] = $date_diff_first;
+
+		$this->load->view('other-lists', $data);
+	}
 
 	public function download_list() { $this->load->view('download'); }
 

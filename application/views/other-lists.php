@@ -34,26 +34,36 @@
 				<div class="col-md-3">
 					<div class="panel panel-green">
 						<div class="panel-heading">
-							<h4>Statistics</h4>
+							<h4>Statistics (Last 20 Watched)</h4>
 						</div>
 						<div class="panel-body">
 							<div class="table-responsive">
 								<table class="table table-condensed table-unbordered">
 									<tbody>
 										<tr>
-											<th>Single Season (12 Episodes) per Day</th>
+											<th>Total Episodes</th>
 											<th>:</th>
-											<th class="text-center">00.00</th>
+											<th class="text-center"><?php echo $totalEpisodes; ?></th>
 										</tr>
 										<tr>
 											<th>Days Since Last Anime</th>
 											<th>:</th>
-											<th class="text-center">00</th>
+											<th class="text-center"><?php echo $daysSinceLastAnime; ?></th>
+										</tr>
+										<tr>
+											<th>Titles per Day</th>
+											<th>:</th>
+											<th class="text-center"><?php echo $titlesPerDay; ?></th>
+										</tr>
+										<tr>
+											<th>Single Season (12 Episodes) per Day</th>
+											<th>:</th>
+											<th class="text-center"><?php echo $singleSeasonPerDay; ?></th>
 										</tr>
 										<tr>
 											<th>Episodes per Day</th>
 											<th>:</th>
-											<th class="text-center">00.00</th>
+											<th class="text-center"><?php echo $episodesPerDay; ?></th>
 										</tr>
 									</tbody>
 								</table>
@@ -70,14 +80,83 @@
 							<thead>
 								<tr>
 									<th>Title</th>
-									<th>File Size</th>
-									<th>Date Finished</th>
+									<th class="text-center">File Size</th>
+									<th class="text-center">Date Finished</th>
 								</tr>
 							</thead>
 							<tbody>
-								<tr>
-									<td>Sample</td>
-								</tr>
+
+								<?php foreach ($last20AnimeData as $item): ?>
+
+									<tr>
+										<td>
+											<?php
+												switch ($item->quality) {
+													case "4K 2160p":
+														echo "<div class='anime-legend-uhd'";
+															echo "data-toggle='tooltip'";
+															echo "data-placement='auto'";
+															echo "title='4K 2160p'>";
+														echo "</div>";
+														break;
+													case "FHD 1080p":
+														echo "<div class='anime-legend-fhd'";
+															echo "data-toggle='tooltip'";
+															echo "data-placement='auto'";
+															echo "title='FHD 1080p'>";
+														echo "</div>";
+														break;
+													case "HD 720p":
+														echo "<div class='anime-legend-hd'";
+															echo "data-toggle='tooltip'";
+															echo "data-placement='auto'";
+															echo "title='HD 720p'>";
+														echo "</div>";
+														break;
+													case "HQ 480p":
+														echo "<div class='anime-legend-hq'";
+															echo "data-toggle='tooltip'";
+															echo "data-placement='auto'";
+															echo "title='HQ 480p'>";
+														echo "</div>";
+														break;
+													case "LQ 360p":
+														echo "<div class='anime-legend-lq'";
+															echo "data-toggle='tooltip'";
+															echo "data-placement='auto'";
+															echo "title='LQ 360p'>";
+														echo "</div>";
+														break;
+												}
+											?>
+
+											<span><?php echo $item->title ?></span>
+
+										</td>
+
+										<td class="text-center">
+											<?php
+												if ($item->filesize == 0) {
+													echo "-";
+												} else if ($item->filesize < 1073741824) {
+													echo round($item->filesize / 1048576, 2) . " MB";
+												} else {
+													echo round($item->filesize / 1073741824, 2) . " GB";
+												}
+											?>
+										</td>
+										<td class="text-center">
+											<?php
+												echo date_format(
+													date_create($item->dateFinished),
+													"M d, Y"
+												);
+											?>
+										</td>
+									</tr>
+
+								<?php endforeach; ?>
+
 							</tbody>
 						</table>
 					</div>
@@ -249,6 +328,12 @@
 
 		<script src=<?php echo base_url("resources/jquery-3.1.1/jquery-3.1.1.min.js") ?>></script>
 		<script src=<?php echo base_url("resources/bootstrap-3.3.7/bootstrap.min.js") ?>></script>
+
+		<script>
+			$(document).ready(function(){
+					$('[data-toggle="tooltip"]').tooltip();
+			});
+		</script>
 
 	</body>
 </html>
