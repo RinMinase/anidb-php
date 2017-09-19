@@ -20,10 +20,10 @@
 		<div class="container-fluid">
 			<div class="page-header">
 				<h2>Disk List</h2>
-				<a class="btn btn-primary" href=<?php echo base_url() ?>>
+				<a href=<?php echo base_url() ?> class="btn btn-primary">
 					<i class="fa fa-chevron-left"></i>&nbsp;&nbsp;Back
 				</a>
-				<a class="btn btn-primary" href=<?php echo base_url("hdd-list/simulator") ?>>
+				<a href=<?php echo base_url("hdd-list/simulator") ?> class="btn btn-primary">
 					<i class="fa fa-flask"></i>&nbsp;&nbsp;Disk Simulator
 				</a>
 			</div>

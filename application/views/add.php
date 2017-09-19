@@ -22,7 +22,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 page-header">
-					<a class="btn btn-primary" href=<?php echo base_url() ?>>
+					<a href=<?php echo base_url() ?> class="btn btn-primary">
 						<i class="fa fa-chevron-left"></i>&nbsp;&nbsp;Back
 					</a>
 				</div>

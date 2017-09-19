@@ -45,21 +45,21 @@
 					<div class="row">
 						<div class="col-xs-6 col-sm-3">
 							<div class="form-group">
-								<a class="btn btn-primary btn-block" href=<?php echo base_url("other-lists") ?>>
+								<a href=<?php echo base_url("other-lists") ?> class="btn btn-primary btn-block">
 									<i class="fa fa-list"></i>&nbsp;&nbsp;&nbsp;Other Lists
 								</a>
 							</div>
 						</div>
 						<div class="col-xs-6 col-sm-3">
 							<div class="form-group">
-								<a class="btn btn-primary btn-block" href=<?php echo base_url("download-list") ?>>
+								<a href=<?php echo base_url("download-list") ?> class="btn btn-primary btn-block">
 									<i class="fa fa-arrow-down"></i>&nbsp;&nbsp;&nbsp;DL List
 								</a>
 							</div>
 						</div>
 						<div class="col-xs-6 col-sm-3">
 							<div class="form-group">
-								<a class="btn btn-primary btn-block" href=<?php echo base_url("hdd-list") ?>>
+								<a href=<?php echo base_url("hdd-list") ?> class="btn btn-primary btn-block">
 									<i class="fa fa-hdd-o"></i>&nbsp;&nbsp;&nbsp;HDD List
 								</a>
 							</div>
@@ -67,7 +67,7 @@
 
 						<div class="col-xs-6 col-sm-3">
 							<div class="form-group">
-								<a class="btn btn-primary btn-block" href=<?php echo base_url("about") ?>>
+								<a href=<?php echo base_url("about") ?> class="btn btn-primary btn-block">
 									<i class="fa fa-question"></i>&nbsp;&nbsp;&nbsp;About
 								</a>
 							</div>
@@ -77,7 +77,7 @@
 					<div class="row">
 						<div class="col-sm-2 hidden-xs">
 							<div class="form-group">
-								<a class="btn btn-primary btn-block" href=<?php echo base_url("add") ?>>
+								<a href=<?php echo base_url("add") ?> class="btn btn-primary btn-block">
 									<i class="fa fa-plus"></i>&nbsp;&nbsp;&nbsp;Add
 								</a>
 							</div>
@@ -85,7 +85,7 @@
 
 						<div class="col-xs-3 visible-xs hidden-sm hidden-md hidden-lg">
 							<div class="form-group">
-								<a class="btn btn-primary btn-block" href=<?php echo base_url("add") ?>>
+								<a href=<?php echo base_url("add") ?> class="btn btn-primary btn-block">
 									<i class="fa fa-plus"></i>
 								</a>
 							</div>
@@ -214,8 +214,8 @@
 												<td><?php echo $item->remarks ?></td>
 												<td>
 													<?php echo form_open("edit/" . $item->id) ?>
-														<a class="btn btn-xs btn-success btn-block"
-															href=<?php echo base_url("edit/" . $item->id) ?>
+														<a href=<?php echo base_url("edit/" . $item->id) ?>
+															class="btn btn-xs btn-success btn-block"
 															data-toggle="tooltip"
 															data-placement="auto"
 															title="Edit">
@@ -225,8 +225,8 @@
 												</td>
 												<td>
 													<?php echo form_open("delete/" . $item->id) ?>
-														<a class="btn btn-xs btn-danger btn-block"
-															href=<?php echo base_url("delete/" . $item->id) ?>
+														<a href=<?php echo base_url("delete/" . $item->id) ?>
+															class="btn btn-xs btn-danger btn-block"
 															data-toggle="tooltip"
 															data-placement="auto"
 															title="Delete">

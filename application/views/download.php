@@ -29,7 +29,7 @@
 		<div class="container-fluid">
 			<div class="page-header">
 			  <h2>Download List</h2>
-				<a class="btn btn-primary" href=<?php echo base_url() ?>>
+				<a href=<?php echo base_url() ?> class="btn btn-primary">
 					<i class="fa fa-chevron-left"></i>&nbsp;&nbsp;Back
 				</a>
 			</div>

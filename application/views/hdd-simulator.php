@@ -22,7 +22,7 @@
 		<div class="container-fluid">
 			<div class="page-header">
 				<h2>Disk Simulator</h2>
-				<a class="btn btn-primary" href=<?php echo base_url("hdd-list") ?>>
+				<a href=<?php echo base_url("hdd-list") ?> class="btn btn-primary">
 					<i class="fa fa-chevron-left"></i>&nbsp;&nbsp;Back
 				</a>
 			</div>
