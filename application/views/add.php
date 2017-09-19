@@ -31,7 +31,7 @@
 					<?php echo form_open('addEntry', array('method' => 'GET')); ?>
 
 						<div class="row">
-							<div class="col-xs-5 col-sm-3 form-group">
+							<div class="col-xs-5 col-sm-3 col-md-3 form-group">
 								<label>Quality</label>
 								<select class="form-control" name="quality">
 									<option>4k 2160p</option>
@@ -71,30 +71,30 @@
 						</div>
 
 						<div class="row">
-							<div class="col-xs-4 col-sm-2 form-group">
+							<div class="col-xs-4 col-sm-2 col-md-2 form-group">
 								<label>Episodes</label>
 								<input type="text" class="form-control" name="episodes">
 							</div>
-							<div class="col-xs-4 col-sm-2 form-group">
+							<div class="col-xs-4 col-sm-2 col-md-2 form-group">
 								<label>OVAs</label>
 								<input type="text" class="form-control" name="ovas">
 							</div>
-							<div class="col-xs-4 col-sm-2 form-group">
+							<div class="col-xs-4 col-sm-2 col-md-2 form-group">
 								<label>Specials</label>
 								<input type="text" class="form-control" name="specials">
 							</div>
-							<div class="col-sm-3 form-group">
+							<div class="col-xs-12 col-sm-3 col-md-3 form-group">
 								<label>Date Finished</label>
 								<input type="date" class="form-control" name="dateFinished">
 							</div>
-							<div class="col-sm-3 form-group">
+							<div class="col-xs-12 col-sm-3 col-md-3 form-group">
 								<label>File Size</label>
 								<input type="text" class="form-control" name="filesize">
 							</div>
 						</div>
 
 						<div class="row">
-							<div class="col-sm-4 form-group hidden-xs">
+							<div class="col-sm-4 col-md-4 form-group hidden-xs">
 								<label>Season # (N/A if not applicable)</label>
 								<input type="text" class="form-control" name="seasonNumber">
 							</div>
@@ -102,7 +102,7 @@
 								<label>Season</label>
 								<input type="text" class="form-control" name="seasonNumber">
 							</div>
-							<div class="col-xs-9 col-sm-8 form-group">
+							<div class="col-xs-9 col-sm-8 col-md-8 form-group">
 								<label>First Season Title</label>
 								<input type="text" class="form-control" name="title">
 							</div>
@@ -112,7 +112,7 @@
 							<div class="col-xs-12 col-sm-6 col-md-5 form-group">
 								<label>Season Released</label>
 								<div class="row">
-									<div class="col-xs-6 col-sm-8">
+									<div class="col-xs-6 col-sm-8 col-md-8">
 										<select class="form-control" name="releaseSeason">
 											<option value="Winter">Winter</option>
 											<option value="Spring">Spring</option>
@@ -120,7 +120,7 @@
 											<option value="Fall">Fall</option>
 										</select>
 									</div>
-									<div class="col-xs-6 col-sm-4">
+									<div class="col-xs-6 col-sm-4 col-md-4">
 										<select class="form-control" name="releaseYear">
 											<option>2010</option>
 											<option>2011</option>
@@ -150,18 +150,18 @@
 						</div>
 
 						<div class="row">
-							<div class="col-md-8 form-group">
+							<div class="col-xs-12 col-sm-12 col-md-8 form-group">
 								<label>Variants</label>
 								<input type="text" class="form-control" name="variants">
 							</div>
-							<div class="col-md-4 form-group">
+							<div class="col-xs-12 col-sm-12 col-md-4 form-group">
 								<label>Remarks</label>
 								<input type="text" class="form-control" name="remarks">
 							</div>
 						</div>
 
 						<div class="row">
-							<div class="col-sm-6 col-sm-offset-6 col-md-4">
+							<div class="col-xs-12 col-sm-6 col-sm-offset-6 col-md-4">
 								<div class="form-group">
 									<button class="btn btn-primary btn-block">Submit</button>
 								</div>
