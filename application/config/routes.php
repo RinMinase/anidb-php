@@ -5,7 +5,7 @@ $route['default_controller'] = 'PageController';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['add'] = 'PageController/create';
+$route['add'] = 'PageController/add';
 $route['addEntry'] = 'DefaultController/addEntry';
 
 $route['other-lists'] = 'PageController/other_lists';

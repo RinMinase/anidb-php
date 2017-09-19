@@ -11,7 +11,7 @@ class PageController extends CI_Controller {
 		$this->load->view('index', $data);
 	}
 
-	public function create() { $this->load->view('add'); }
+	public function add() { $this->load->view('add'); }
 
 	public function other_lists() { $this->load->view('other-lists'); }
 
