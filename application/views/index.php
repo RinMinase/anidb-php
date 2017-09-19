@@ -10,6 +10,12 @@
 		// 		echo $subitem . "<br>";
 		// 	endforeach;
 		// endforeach;
+
+		// $temp = explode(",,","title1,,title2,,title3");
+		// $temp2 = explode(",,","");
+		// print_r($temp);
+		// print_r($temp2);
+		// echo (empty($temp[0])) ? "<br>TRUE" : "<br>FALSE";
 	?>
 
 	<head>
