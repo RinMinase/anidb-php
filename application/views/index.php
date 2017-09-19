@@ -213,26 +213,26 @@
 												<td><?php echo $item->variants ?></td>
 												<td><?php echo $item->remarks ?></td>
 												<td>
-													<div data-toggle="tooltip" data-placement="auto" title="Edit">
-
-														<?php echo form_open("edit/" . $item->id) ?>
-															<a class="btn btn-xs btn-success btn-block" href=<?php echo base_url("edit/" . $item->id) ?>>
-																<i class="fa fa-pencil"></i>
-															</a>
-														<?php echo form_close() ?>
-
-													</div>
+													<?php echo form_open("edit/" . $item->id) ?>
+														<a class="btn btn-xs btn-success btn-block"
+															href=<?php echo base_url("edit/" . $item->id) ?>
+															data-toggle="tooltip"
+															data-placement="auto"
+															title="Edit">
+															<i class="fa fa-pencil"></i>
+														</a>
+													<?php echo form_close() ?>
 												</td>
 												<td>
-													<div data-toggle="tooltip" data-placement="auto" title="Delete">
-
-														<?php echo form_open("delete/" . $item->id) ?>
-															<a class="btn btn-xs btn-danger btn-block" href=<?php echo base_url("delete/" . $item->id) ?>>
-																<i class="fa fa-trash"></i>
-															</a>
-														<?php echo form_close() ?>
-
-													</div>
+													<?php echo form_open("delete/" . $item->id) ?>
+														<a class="btn btn-xs btn-danger btn-block"
+															href=<?php echo base_url("delete/" . $item->id) ?>
+															data-toggle="tooltip"
+															data-placement="auto"
+															title="Delete">
+															<i class="fa fa-trash"></i>
+														</a>
+													<?php echo form_close() ?>
 												</td>
 											</tr>
 
