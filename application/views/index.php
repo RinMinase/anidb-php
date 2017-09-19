@@ -182,7 +182,13 @@
 													?>
 												</td>
 												<td class="text-center">
-													<?php echo ($item->seasonNumber == "0") ? "N/A" : $item->seasonNumber; ?>
+													<?php
+														echo "<div data-toggle='tooltip' data-placement='auto'";
+															echo "title='1st Season : " . $item->firstSeasonTitle . "'>";
+
+															echo ($item->seasonNumber == "0") ? "N/A" : $item->seasonNumber;
+														echo "</div>";
+													?>
 												</td>
 												<td><?php echo $item->releaseSeason . " " . $item->releaseYear ?></td>
 												<td class="text-center">
