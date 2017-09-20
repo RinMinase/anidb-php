@@ -5,6 +5,10 @@ $route['default_controller'] = 'PageController';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+// $route['view/(:num)'] = 'PageController/view/$1';
+// $route['edit/(:num)'] = 'PageController/edit/$1';
+// $route['delete/(:num)'] = 'PageController/delete/$1';
+
 $route['add'] = 'PageController/add';
 $route['addEntry'] = 'DefaultController/addEntry';
 
