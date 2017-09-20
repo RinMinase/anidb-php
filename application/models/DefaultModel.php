@@ -21,6 +21,14 @@ class DefaultModel extends CI_Model {
 		return $this->db->get()->result();
 	}
 
+	public function getAnimeStatisticsNeededData() {
+		$this->db->select('quality, episodes, ovas, specials, filesize, durationHour, durationMinute, durationSecond');
+		$this->db->from('anime');
+		$this->db->order_by('quality', 'ASC');
+
+		return $this->db->get()->result();
+	}
+
 	public function addAnimeData($data) {
 		$this->db->insert('anime', $data);
 	}

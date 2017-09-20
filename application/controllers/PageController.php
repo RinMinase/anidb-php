@@ -47,7 +47,7 @@ class PageController extends CI_Controller {
 
 	public function about() {
 		$this->load->model('defaultmodel');
-		$raw_data = $this->defaultmodel->getAnimeData();
+		$raw_data = $this->defaultmodel->getAnimeStatisticsNeededData();
 
 		$total_hours = $total_minutes = $total_seconds = 0;
 		$total_filesize = 0;
