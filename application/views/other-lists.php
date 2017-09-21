@@ -185,31 +185,319 @@
 										</tr>
 									</thead>
 									<tbody>
-										<tr>
-											<th>A</th>
-											<td class="text-center">15</td>
-											<td class="text-center">00.00 GB</td>
-										</tr>
-										<tr>
-											<th>C</th>
-											<td class="text-center">2</td>
-											<td class="text-center">00.00 GB</td>
-										</tr>
-										<tr>
-											<th>D</th>
-											<td class="text-center">3</td>
-											<td class="text-center">00.00 GB</td>
-										</tr>
-										<tr>
-											<th>F</th>
-											<td class="text-center">7</td>
-											<td class="text-center">00.00 GB</td>
-										</tr>
-										<tr>
-											<th>H</th>
-											<td class="text-center">5</td>
-											<td class="text-center">00.00 GB</td>
-										</tr>
+
+										<?php if (!empty($animeByName_a_filesize)) { ?>
+											<tr>
+												<th>A</th>
+												<td class="text-center">
+													<?php echo count($animeByName_a); ?>
+												</td>
+												<td class="text-center">
+													<?php echo round($animeByName_a_filesize / 1073741824, 2) . " GB"; ?>
+												</td>
+											</tr>
+										<?php } ?>
+
+										<?php if (!empty($animeByName_b_filesize)) { ?>
+											<tr>
+												<th>B</th>
+												<td class="text-center">
+													<?php echo count($animeByName_b); ?>
+												</td>
+												<td class="text-center">
+													<?php echo round($animeByName_b_filesize / 1073741824, 2) . " GB"; ?>
+												</td>
+											</tr>
+										<?php } ?>
+
+										<?php if (!empty($animeByName_c_filesize)) { ?>
+											<tr>
+												<th>C</th>
+												<td class="text-center">
+													<?php echo count($animeByName_c); ?>
+												</td>
+												<td class="text-center">
+													<?php echo round($animeByName_c_filesize / 1073741824, 2) . " GB"; ?>
+												</td>
+											</tr>
+										<?php } ?>
+
+										<?php if (!empty($animeByName_d_filesize)) { ?>
+											<tr>
+												<th>D</th>
+												<td class="text-center">
+													<?php echo count($animeByName_d); ?>
+												</td>
+												<td class="text-center">
+													<?php echo round($animeByName_d_filesize / 1073741824, 2) . " GB"; ?>
+												</td>
+											</tr>
+										<?php } ?>
+
+										<?php if (!empty($animeByName_e_filesize)) { ?>
+											<tr>
+												<th>E</th>
+												<td class="text-center">
+													<?php echo count($animeByName_e); ?>
+												</td>
+												<td class="text-center">
+													<?php echo round($animeByName_e_filesize / 1073741824, 2) . " GB"; ?>
+												</td>
+											</tr>
+										<?php } ?>
+
+										<?php if (!empty($animeByName_f_filesize)) { ?>
+											<tr>
+												<th>F</th>
+												<td class="text-center">
+													<?php echo count($animeByName_f); ?>
+												</td>
+												<td class="text-center">
+													<?php echo round($animeByName_f_filesize / 1073741824, 2) . " GB"; ?>
+												</td>
+											</tr>
+										<?php } ?>
+
+										<?php if (!empty($animeByName_g_filesize)) { ?>
+											<tr>
+												<th>G</th>
+												<td class="text-center">
+													<?php echo count($animeByName_g); ?>
+												</td>
+												<td class="text-center">
+													<?php echo round($animeByName_g_filesize / 1073741824, 2) . " GB"; ?>
+												</td>
+											</tr>
+										<?php } ?>
+
+										<?php if (!empty($animeByName_h_filesize)) { ?>
+											<tr>
+												<th>H</th>
+												<td class="text-center">
+													<?php echo count($animeByName_h); ?>
+												</td>
+												<td class="text-center">
+													<?php echo round($animeByName_h_filesize / 1073741824, 2) . " GB"; ?>
+												</td>
+											</tr>
+										<?php } ?>
+
+										<?php if (!empty($animeByName_i_filesize)) { ?>
+											<tr>
+												<th>I</th>
+												<td class="text-center">
+													<?php echo count($animeByName_i); ?>
+												</td>
+												<td class="text-center">
+													<?php echo round($animeByName_i_filesize / 1073741824, 2) . " GB"; ?>
+												</td>
+											</tr>
+										<?php } ?>
+
+										<?php if (!empty($animeByName_j_filesize)) { ?>
+											<tr>
+												<th>J</th>
+												<td class="text-center">
+													<?php echo count($animeByName_j); ?>
+												</td>
+												<td class="text-center">
+													<?php echo round($animeByName_j_filesize / 1073741824, 2) . " GB"; ?>
+												</td>
+											</tr>
+										<?php } ?>
+
+										<?php if (!empty($animeByName_k_filesize)) { ?>
+											<tr>
+												<th>K</th>
+												<td class="text-center">
+													<?php echo count($animeByName_k); ?>
+												</td>
+												<td class="text-center">
+													<?php echo round($animeByName_k_filesize / 1073741824, 2) . " GB"; ?>
+												</td>
+											</tr>
+										<?php } ?>
+
+										<?php if (!empty($animeByName_l_filesize)) { ?>
+											<tr>
+												<th>L</th>
+												<td class="text-center">
+													<?php echo count($animeByName_l); ?>
+												</td>
+												<td class="text-center">
+													<?php echo round($animeByName_l_filesize / 1073741824, 2) . " GB"; ?>
+												</td>
+											</tr>
+										<?php } ?>
+
+										<?php if (!empty($animeByName_m_filesize)) { ?>
+											<tr>
+												<th>M</th>
+												<td class="text-center">
+													<?php echo count($animeByName_m); ?>
+												</td>
+												<td class="text-center">
+													<?php echo round($animeByName_m_filesize / 1073741824, 2) . " GB"; ?>
+												</td>
+											</tr>
+										<?php } ?>
+
+										<?php if (!empty($animeByName_n_filesize)) { ?>
+											<tr>
+												<th>N</th>
+												<td class="text-center">
+													<?php echo count($animeByName_n); ?>
+												</td>
+												<td class="text-center">
+													<?php echo round($animeByName_n_filesize / 1073741824, 2) . " GB"; ?>
+												</td>
+											</tr>
+										<?php } ?>
+
+										<?php if (!empty($animeByName_o_filesize)) { ?>
+											<tr>
+												<th>O</th>
+												<td class="text-center">
+													<?php echo count($animeByName_o); ?>
+												</td>
+												<td class="text-center">
+													<?php echo round($animeByName_o_filesize / 1073741824, 2) . " GB"; ?>
+												</td>
+											</tr>
+										<?php } ?>
+
+										<?php if (!empty($animeByName_p_filesize)) { ?>
+											<tr>
+												<th>P</th>
+												<td class="text-center">
+													<?php echo count($animeByName_p); ?>
+												</td>
+												<td class="text-center">
+													<?php echo round($animeByName_p_filesize / 1073741824, 2) . " GB"; ?>
+												</td>
+											</tr>
+										<?php } ?>
+
+										<?php if (!empty($animeByName_q_filesize)) { ?>
+											<tr>
+												<th>Q</th>
+												<td class="text-center">
+													<?php echo count($animeByName_q); ?>
+												</td>
+												<td class="text-center">
+													<?php echo round($animeByName_q_filesize / 1073741824, 2) . " GB"; ?>
+												</td>
+											</tr>
+										<?php } ?>
+
+										<?php if (!empty($animeByName_r_filesize)) { ?>
+											<tr>
+												<th>R</th>
+												<td class="text-center">
+													<?php echo count($animeByName_r); ?>
+												</td>
+												<td class="text-center">
+													<?php echo round($animeByName_r_filesize / 1073741824, 2) . " GB"; ?>
+												</td>
+											</tr>
+										<?php } ?>
+
+										<?php if (!empty($animeByName_s_filesize)) { ?>
+											<tr>
+												<th>S</th>
+												<td class="text-center">
+													<?php echo count($animeByName_s); ?>
+												</td>
+												<td class="text-center">
+													<?php echo round($animeByName_s_filesize / 1073741824, 2) . " GB"; ?>
+												</td>
+											</tr>
+										<?php } ?>
+
+										<?php if (!empty($animeByName_t_filesize)) { ?>
+											<tr>
+												<th>T</th>
+												<td class="text-center">
+													<?php echo count($animeByName_t); ?>
+												</td>
+												<td class="text-center">
+													<?php echo round($animeByName_t_filesize / 1073741824, 2) . " GB"; ?>
+												</td>
+											</tr>
+										<?php } ?>
+
+										<?php if (!empty($animeByName_u_filesize)) { ?>
+											<tr>
+												<th>U</th>
+												<td class="text-center">
+													<?php echo count($animeByName_u); ?>
+												</td>
+												<td class="text-center">
+													<?php echo round($animeByName_u_filesize / 1073741824, 2) . " GB"; ?>
+												</td>
+											</tr>
+										<?php } ?>
+
+										<?php if (!empty($animeByName_v_filesize)) { ?>
+											<tr>
+												<th>V</th>
+												<td class="text-center">
+													<?php echo count($animeByName_v); ?>
+												</td>
+												<td class="text-center">
+													<?php echo round($animeByName_v_filesize / 1073741824, 2) . " GB"; ?>
+												</td>
+											</tr>
+										<?php } ?>
+
+										<?php if (!empty($animeByName_w_filesize)) { ?>
+											<tr>
+												<th>W</th>
+												<td class="text-center">
+													<?php echo count($animeByName_w); ?>
+												</td>
+												<td class="text-center">
+													<?php echo round($animeByName_w_filesize / 1073741824, 2) . " GB"; ?>
+												</td>
+											</tr>
+										<?php } ?>
+
+										<?php if (!empty($animeByName_x_filesize)) { ?>
+											<tr>
+												<th>X</th>
+												<td class="text-center">
+													<?php echo count($animeByName_x); ?>
+												</td>
+												<td class="text-center">
+													<?php echo round($animeByName_x_filesize / 1073741824, 2) . " GB"; ?>
+												</td>
+											</tr>
+										<?php } ?>
+
+										<?php if (!empty($animeByName_y_filesize)) { ?>
+											<tr>
+												<th>Y</th>
+												<td class="text-center">
+													<?php echo count($animeByName_y); ?>
+												</td>
+												<td class="text-center">
+													<?php echo round($animeByName_y_filesize / 1073741824, 2) . " GB"; ?>
+												</td>
+											</tr>
+										<?php } ?>
+
+										<?php if (!empty($animeByName_z_filesize)) { ?>
+											<tr>
+												<th>Z</th>
+												<td class="text-center">
+													<?php echo count($animeByName_z); ?>
+												</td>
+												<td class="text-center">
+													<?php echo round($animeByName_z_filesize / 1073741824, 2) . " GB"; ?>
+												</td>
+											</tr>
+										<?php } ?>
+
 									</tbody>
 								</table>
 							</div>
