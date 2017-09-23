@@ -51,19 +51,46 @@ class DefaultModel extends CI_Model {
 					$tempSort = explode(" ", $query['sort'])[0];
 					$tempSortOrder = strtolower(explode(" ", $query['sort'])[1]);
 
-					switch($tempSortOrder) {
-						case "desc": $this->db->order_by($tempSort, 'DESC'); break;
-						default: $this->db->order_by($tempSort, 'ASC'); break;
+					if ($this->isValidOrderColumn($tempSort)) {
+						switch($tempSortOrder) {
+							case "desc": $this->db->order_by($tempSort, 'DESC'); break;
+							default: $this->db->order_by($tempSort, 'ASC'); break;
+						}
+					} else {
+						$this->db->order_by('quality', 'ASC');
 					}
 
 				} else {
-					$this->db->order_by($query['sort'], 'ASC');
+					if ($this->isValidOrderColumn($query['sort'])) {
+						$this->db->order_by($query['sort'], 'ASC');
+					} else {
+						$this->db->order_by('quality', 'ASC');
+					}
 				}
 			} else {
 				$this->db->order_by('quality', 'ASC');
 			}
 
 			return $this->db->get()->result();
+		}
+	}
+
+	private function isValidOrderColumn($columnName) {
+		switch($columnName) {
+			case 'quality':
+			case 'title':
+			case 'episodes':
+			case 'ovas':
+			case 'specials':
+			case 'filesize':
+			case 'datefinished':
+			case 'seasonnumber':
+			case 'releaseseason':
+			case 'releaseyear':
+			case 'encoder':
+				return true;
+			default:
+				return false;
 		}
 	}
 
