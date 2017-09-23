@@ -96,7 +96,7 @@
 								class="form-control"
 								name="q"
 								placeholder="Search..."
-								value=<?php echo $query; ?>
+								value="<?php echo $query; ?>"
 								<?php if (!empty($query)) echo " autofocus"?>>
 							<button class="hidden">Submit</button>
 						</form>
