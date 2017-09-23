@@ -21,6 +21,10 @@ class DefaultModel extends CI_Model {
 		return $this->db->get()->result();
 	}
 
+	public function getAnimeDataNew($select, $order, $like, $limit) {
+
+	}
+
 	public function getLast20AnimeData() {
 		$this->db->select('quality, episodes, ovas, specials, title, filesize, dateFinished');
 		$this->db->from('anime');
