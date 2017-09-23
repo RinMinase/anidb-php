@@ -1,23 +1,5 @@
 <!DOCTYPE html>
 <html>
-
-	<?php
-		// print_r($animeData);
-		// echo "<br>";
-		// echo json_encode($animeData) . "<br>";
-		// foreach ($animeData as $item):
-		// 	foreach ($item as $subitem):
-		// 		echo $subitem . "<br>";
-		// 	endforeach;
-		// endforeach;
-
-		// $temp = explode(",,","title1,,title2,,title3");
-		// $temp2 = explode(",,","");
-		// print_r($temp);
-		// print_r($temp2);
-		// echo (empty($temp[0])) ? "<br>TRUE" : "<br>FALSE";
-	?>
-
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
