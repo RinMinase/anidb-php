@@ -442,14 +442,9 @@
 										<li><code class="orange">[IMPROVEMENT]</code> Summer Lists</li>
 										<li><code class="orange">[IMPROVEMENT]</code> Fuzzy Search using comma-separated keywords</li>
 											<ul>
-												<li>sort: title</li>
-												<li>quality: fhd</li>
-												<li>title (check variants): sample title</li>
 												<li>size: 40-50gb</li>
 												<li>finished: lastweek / lastmonth / august / 2012</li>
-												<li>release: summer / 2016 / summer 2016</li>
-												<li>encoder: coalgirls</li>
-												<li>remarks: redownload</li>
+												<li>remarks: redownload / redl</li>
 											</ul>
 									</ul><br>
 								</div>
