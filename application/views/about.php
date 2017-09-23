@@ -433,7 +433,6 @@
 
 									<h4>Future Changes</h4>
 									<ul>
-										<li><code class="red">[FEATURE]</code> Last 20 Watched with Statistics</li>
 										<li><code class="red">[FEATURE]</code> Download Lists (By Season)</li>
 										<li><code class="red">[FEATURE]</code> Download Lists (Uncategorized)</li>
 										<li><code class="red">[FEATURE]</code> Hard Drive Statistics</li>
