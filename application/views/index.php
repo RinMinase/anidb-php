@@ -91,7 +91,15 @@
 				<div class="col-xs-9 col-sm-10">
 					<div class="form-group has-feedback has-feedback-left">
 						<i class="form-control-feedback glyphicon glyphicon-search"></i>
-						<input type="text" class="form-control" placeholder="Search...">
+						<form method="GET" action=<?php echo base_url("/index") ?>>
+							<input type="text"
+								class="form-control"
+								name="q"
+								placeholder="Search..."
+								value=<?php echo $query; ?>
+								<?php if (!empty($query)) echo " autofocus"?>>
+							<button class="hidden">Submit</button>
+						</form>
 					</div>
 				</div>
 			</div>
@@ -221,6 +229,10 @@
 		<script src=<?php echo base_url("resources/jquery-3.1.1/jquery-3.1.1.min.js") ?>></script>
 		<script src=<?php echo base_url("resources/bootstrap-3.3.7/bootstrap.min.js") ?>></script>
 		<script src=<?php echo base_url("resources/js/scripts.js") ?>></script>
+
+		<script>
+
+		</script>
 
 	</body>
 </html>

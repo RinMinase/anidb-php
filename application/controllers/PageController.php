@@ -6,7 +6,13 @@ class PageController extends CI_Controller {
 
 	public function index()	{
 		$this->load->model('defaultmodel');
-		$data['animeData'] = $this->defaultmodel->getAnimeData();
+
+		$data['query'] = $this->input->get('q');
+		if (empty($query)) {
+			$data['animeData'] = $this->defaultmodel->getAnimeData();
+		} else {
+			$data['animeData'] = $this->defaultmodel->getAnimeDataSearch($data['query']);
+		}
 
 		$this->load->view('index', $data);
 	}

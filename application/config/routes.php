@@ -9,6 +9,8 @@ $route['translate_uri_dashes'] = FALSE;
 // $route['edit/(:num)'] = 'PageController/edit/$1';
 // $route['delete/(:num)'] = 'PageController/delete/$1';
 
+$route['index'] = 'PageController/index';
+
 $route['add'] = 'PageController/add';
 $route['addEntry'] = 'DefaultController/addEntry';
 
