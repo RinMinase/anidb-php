@@ -44,157 +44,263 @@ class PageController extends CI_Controller {
 		 * LIST BY NAME
 		 */
 
-		// $raw_animeByNameData = $this->defaultmodel->getAnimeByNameNeededData();
-		// $data['animeByName_a'];
+		$raw_data = $this->defaultmodel->getAnimeByNameNeededData();
 
-		// foreach ($raw_animeByNameData as $item) {
-		// 	switch (substr($item->title, 0, 1)) {
-		// 		case
-		// 	}
-		// }
-
-		$data['animeByName_a_filesize'] = $data['animeByName_b_filesize'] = 0;
-		$data['animeByName_c_filesize'] = $data['animeByName_d_filesize'] = 0;
-		$data['animeByName_e_filesize'] = $data['animeByName_f_filesize'] = 0;
-		$data['animeByName_g_filesize'] = $data['animeByName_h_filesize'] = 0;
-		$data['animeByName_i_filesize'] = $data['animeByName_j_filesize'] = 0;
-		$data['animeByName_k_filesize'] = $data['animeByName_l_filesize'] = 0;
-		$data['animeByName_m_filesize'] = $data['animeByName_n_filesize'] = 0;
-		$data['animeByName_o_filesize'] = $data['animeByName_p_filesize'] = 0;
-		$data['animeByName_q_filesize'] = $data['animeByName_r_filesize'] = 0;
-		$data['animeByName_s_filesize'] = $data['animeByName_t_filesize'] = 0;
-		$data['animeByName_u_filesize'] = $data['animeByName_v_filesize'] = 0;
-		$data['animeByName_w_filesize'] = $data['animeByName_x_filesize'] = 0;
-		$data['animeByName_y_filesize'] = $data['animeByName_z_filesize'] = 0;
-
-		$data['animeByName_a'] = $this->defaultmodel->getAnimeByNameNeededData('a');
-		foreach ($data['animeByName_a'] as $item) {
-			$data['animeByName_a_filesize'] += $item->filesize;
+		for ($i=0; $i < 27; $i++) {
+			$data['animeDataByName'][$i]['animeFilesize'] = 0;
+			$data['animeDataByName'][$i]['animeData'] = array();
 		}
 
-		$data['animeByName_b'] = $this->defaultmodel->getAnimeByNameNeededData('b');
-		foreach ($data['animeByName_b'] as $item) {
-			$data['animeByName_b_filesize'] += $item->filesize;
-		}
+		foreach ($raw_data as $item) {
+			switch( strtoupper( substr($item->title, 0, 1) ) ) {
+				case '0': case '1':	case '2':
+				case '3':	case '4':	case '5':
+				case '6':	case '7':	case '8':
+				case '9':
+					array_push($data['animeDataByName'][0]['animeData'], $item);
+					$data['animeDataByName'][0]['animeFilesize'] += $item->filesize;
 
-		$data['animeByName_c'] = $this->defaultmodel->getAnimeByNameNeededData('c');
-		foreach ($data['animeByName_c'] as $item) {
-			$data['animeByName_c_filesize'] += $item->filesize;
-		}
+					if (empty($data['animeDataByName'][0]['animeLetter'])) {
+						$data['animeDataByName'][0]['animeLetter'] = strtoupper( substr($item->title, 0, 1) );
+					}
 
-		$data['animeByName_d'] = $this->defaultmodel->getAnimeByNameNeededData('d');
-		foreach ($data['animeByName_d'] as $item) {
-			$data['animeByName_d_filesize'] += $item->filesize;
-		}
+					break;
+				case 'A':
+					array_push($data['animeDataByName'][1]['animeData'], $item);
+					$data['animeDataByName'][1]['animeFilesize'] += $item->filesize;
 
-		$data['animeByName_e'] = $this->defaultmodel->getAnimeByNameNeededData('e');
-		foreach ($data['animeByName_e'] as $item) {
-			$data['animeByName_e_filesize'] += $item->filesize;
-		}
+					if (empty($data['animeDataByName'][1]['animeLetter'])) {
+						$data['animeDataByName'][1]['animeLetter'] = strtoupper( substr($item->title, 0, 1) );
+					}
 
-		$data['animeByName_f'] = $this->defaultmodel->getAnimeByNameNeededData('f');
-		foreach ($data['animeByName_f'] as $item) {
-			$data['animeByName_f_filesize'] += $item->filesize;
-		}
+					break;
+				case 'B':
+					array_push($data['animeDataByName'][2]['animeData'], $item);
+					$data['animeDataByName'][2]['animeFilesize'] += $item->filesize;
 
-		$data['animeByName_g'] = $this->defaultmodel->getAnimeByNameNeededData('g');
-		foreach ($data['animeByName_g'] as $item) {
-			$data['animeByName_g_filesize'] += $item->filesize;
-		}
+					if (empty($data['animeDataByName'][2]['animeLetter'])) {
+						$data['animeDataByName'][2]['animeLetter'] = strtoupper( substr($item->title, 0, 1) );
+					}
 
-		$data['animeByName_h'] = $this->defaultmodel->getAnimeByNameNeededData('h');
-		foreach ($data['animeByName_h'] as $item) {
-			$data['animeByName_h_filesize'] += $item->filesize;
-		}
+					break;
+				case 'C':
+					array_push($data['animeDataByName'][3]['animeData'], $item);
+					$data['animeDataByName'][3]['animeFilesize'] += $item->filesize;
 
-		$data['animeByName_i'] = $this->defaultmodel->getAnimeByNameNeededData('i');
-		foreach ($data['animeByName_i'] as $item) {
-			$data['animeByName_i_filesize'] += $item->filesize;
-		}
+					if (empty($data['animeDataByName'][3]['animeLetter'])) {
+						$data['animeDataByName'][3]['animeLetter'] = strtoupper( substr($item->title, 0, 1) );
+					}
 
-		$data['animeByName_j'] = $this->defaultmodel->getAnimeByNameNeededData('j');
-		foreach ($data['animeByName_j'] as $item) {
-			$data['animeByName_j_filesize'] += $item->filesize;
-		}
+					break;
+				case 'D':
+					array_push($data['animeDataByName'][4]['animeData'], $item);
+					$data['animeDataByName'][4]['animeFilesize'] += $item->filesize;
 
-		$data['animeByName_k'] = $this->defaultmodel->getAnimeByNameNeededData('k');
-		foreach ($data['animeByName_k'] as $item) {
-			$data['animeByName_k_filesize'] += $item->filesize;
-		}
+					if (empty($data['animeDataByName'][4]['animeLetter'])) {
+						$data['animeDataByName'][4]['animeLetter'] = strtoupper( substr($item->title, 0, 1) );
+					}
 
-		$data['animeByName_l'] = $this->defaultmodel->getAnimeByNameNeededData('l');
-		foreach ($data['animeByName_l'] as $item) {
-			$data['animeByName_l_filesize'] += $item->filesize;
-		}
+					break;
+				case 'E':
+					array_push($data['animeDataByName'][5]['animeData'], $item);
+					$data['animeDataByName'][5]['animeFilesize'] += $item->filesize;
 
-		$data['animeByName_m'] = $this->defaultmodel->getAnimeByNameNeededData('m');
-		foreach ($data['animeByName_m'] as $item) {
-			$data['animeByName_m_filesize'] += $item->filesize;
-		}
+					if (empty($data['animeDataByName'][5]['animeLetter'])) {
+						$data['animeDataByName'][5]['animeLetter'] = strtoupper( substr($item->title, 0, 1) );
+					}
 
-		$data['animeByName_n'] = $this->defaultmodel->getAnimeByNameNeededData('n');
-		foreach ($data['animeByName_n'] as $item) {
-			$data['animeByName_n_filesize'] += $item->filesize;
-		}
+					break;
+				case 'F':
+					array_push($data['animeDataByName'][6]['animeData'], $item);
+					$data['animeDataByName'][6]['animeFilesize'] += $item->filesize;
 
-		$data['animeByName_o'] = $this->defaultmodel->getAnimeByNameNeededData('o');
-		foreach ($data['animeByName_o'] as $item) {
-			$data['animeByName_o_filesize'] += $item->filesize;
-		}
+					if (empty($data['animeDataByName'][6]['animeLetter'])) {
+						$data['animeDataByName'][6]['animeLetter'] = strtoupper( substr($item->title, 0, 1) );
+					}
 
-		$data['animeByName_p'] = $this->defaultmodel->getAnimeByNameNeededData('p');
-		foreach ($data['animeByName_p'] as $item) {
-			$data['animeByName_p_filesize'] += $item->filesize;
-		}
+					break;
+				case 'G':
+					array_push($data['animeDataByName'][7]['animeData'], $item);
+					$data['animeDataByName'][7]['animeFilesize'] += $item->filesize;
 
-		$data['animeByName_q'] = $this->defaultmodel->getAnimeByNameNeededData('q');
-		foreach ($data['animeByName_q'] as $item) {
-			$data['animeByName_q_filesize'] += $item->filesize;
-		}
+					if (empty($data['animeDataByName'][7]['animeLetter'])) {
+						$data['animeDataByName'][7]['animeLetter'] = strtoupper( substr($item->title, 0, 1) );
+					}
 
-		$data['animeByName_r'] = $this->defaultmodel->getAnimeByNameNeededData('r');
-		foreach ($data['animeByName_r'] as $item) {
-			$data['animeByName_r_filesize'] += $item->filesize;
-		}
+					break;
+				case 'H':
+					array_push($data['animeDataByName'][8]['animeData'], $item);
+					$data['animeDataByName'][8]['animeFilesize'] += $item->filesize;
 
-		$data['animeByName_s'] = $this->defaultmodel->getAnimeByNameNeededData('s');
-		foreach ($data['animeByName_s'] as $item) {
-			$data['animeByName_s_filesize'] += $item->filesize;
-		}
+					if (empty($data['animeDataByName'][8]['animeLetter'])) {
+						$data['animeDataByName'][8]['animeLetter'] = strtoupper( substr($item->title, 0, 1) );
+					}
 
-		$data['animeByName_t'] = $this->defaultmodel->getAnimeByNameNeededData('t');
-		foreach ($data['animeByName_t'] as $item) {
-			$data['animeByName_t_filesize'] += $item->filesize;
-		}
+					break;
+				case 'I':
+					array_push($data['animeDataByName'][9]['animeData'], $item);
+					$data['animeDataByName'][9]['animeFilesize'] += $item->filesize;
 
-		$data['animeByName_u'] = $this->defaultmodel->getAnimeByNameNeededData('u');
-		foreach ($data['animeByName_u'] as $item) {
-			$data['animeByName_u_filesize'] += $item->filesize;
-		}
+					if (empty($data['animeDataByName'][9]['animeLetter'])) {
+						$data['animeDataByName'][9]['animeLetter'] = strtoupper( substr($item->title, 0, 1) );
+					}
 
-		$data['animeByName_v'] = $this->defaultmodel->getAnimeByNameNeededData('v');
-		foreach ($data['animeByName_v'] as $item) {
-			$data['animeByName_v_filesize'] += $item->filesize;
-		}
+					break;
+				case 'J':
+					array_push($data['animeDataByName'][10]['animeData'], $item);
 
-		$data['animeByName_w'] = $this->defaultmodel->getAnimeByNameNeededData('w');
-		foreach ($data['animeByName_w'] as $item) {
-			$data['animeByName_w_filesize'] += $item->filesize;
-		}
+					if (empty($data['animeDataByName'][10]['animeLetter'])) {
+						$data['animeDataByName'][10]['animeLetter'] = strtoupper( substr($item->title, 0, 1) );
+					}
 
-		$data['animeByName_x'] = $this->defaultmodel->getAnimeByNameNeededData('x');
-		foreach ($data['animeByName_x'] as $item) {
-			$data['animeByName_x_filesize'] += $item->filesize;
-		}
+					$data['animeDataByName'][10]['animeFilesize'] += $item->filesize;
 
-		$data['animeByName_y'] = $this->defaultmodel->getAnimeByNameNeededData('y');
-		foreach ($data['animeByName_y'] as $item) {
-			$data['animeByName_y_filesize'] += $item->filesize;
-		}
+					break;
+				case 'K':
+					array_push($data['animeDataByName'][11]['animeData'], $item);
+					$data['animeDataByName'][11]['animeFilesize'] += $item->filesize;
 
-		$data['animeByName_z'] = $this->defaultmodel->getAnimeByNameNeededData('z');
-		foreach ($data['animeByName_z'] as $item) {
-			$data['animeByName_z_filesize'] += $item->filesize;
+					if (empty($data['animeDataByName'][11]['animeLetter'])) {
+						$data['animeDataByName'][11]['animeLetter'] = strtoupper( substr($item->title, 0, 1) );
+					}
+
+					break;
+				case 'L':
+					array_push($data['animeDataByName'][12]['animeData'], $item);
+					$data['animeDataByName'][12]['animeFilesize'] += $item->filesize;
+
+					if (empty($data['animeDataByName'][12]['animeLetter'])) {
+						$data['animeDataByName'][12]['animeLetter'] = strtoupper( substr($item->title, 0, 1) );
+					}
+
+					break;
+				case 'M':
+					array_push($data['animeDataByName'][13]['animeData'], $item);
+					$data['animeDataByName'][13]['animeFilesize'] += $item->filesize;
+
+					if (empty($data['animeDataByName'][13]['animeLetter'])) {
+						$data['animeDataByName'][13]['animeLetter'] = strtoupper( substr($item->title, 0, 1) );
+					}
+
+					break;
+				case 'N':
+					array_push($data['animeDataByName'][14]['animeData'], $item);
+					$data['animeDataByName'][14]['animeFilesize'] += $item->filesize;
+
+					if (empty($data['animeDataByName'][14]['animeLetter'])) {
+						$data['animeDataByName'][14]['animeLetter'] = strtoupper( substr($item->title, 0, 1) );
+					}
+
+					break;
+				case 'O':
+					array_push($data['animeDataByName'][15]['animeData'], $item);
+					$data['animeDataByName'][15]['animeFilesize'] += $item->filesize;
+
+					if (empty($data['animeDataByName'][15]['animeLetter'])) {
+						$data['animeDataByName'][15]['animeLetter'] = strtoupper( substr($item->title, 0, 1) );
+					}
+
+					break;
+				case 'P':
+					array_push($data['animeDataByName'][16]['animeData'], $item);
+					$data['animeDataByName'][16]['animeFilesize'] += $item->filesize;
+
+					if (empty($data['animeDataByName'][16]['animeLetter'])) {
+						$data['animeDataByName'][16]['animeLetter'] = strtoupper( substr($item->title, 0, 1) );
+					}
+
+					break;
+				case 'Q':
+					array_push($data['animeDataByName'][17]['animeData'], $item);
+					$data['animeDataByName'][17]['animeFilesize'] += $item->filesize;
+
+					if (empty($data['animeDataByName'][17]['animeLetter'])) {
+						$data['animeDataByName'][17]['animeLetter'] = strtoupper( substr($item->title, 0, 1) );
+					}
+
+					break;
+				case 'R':
+					array_push($data['animeDataByName'][18]['animeData'], $item);
+					$data['animeDataByName'][18]['animeFilesize'] += $item->filesize;
+
+					if (empty($data['animeDataByName'][18]['animeLetter'])) {
+						$data['animeDataByName'][18]['animeLetter'] = strtoupper( substr($item->title, 0, 1) );
+					}
+
+					break;
+				case 'S':
+					array_push($data['animeDataByName'][19]['animeData'], $item);
+					$data['animeDataByName'][19]['animeFilesize'] += $item->filesize;
+
+					if (empty($data['animeDataByName'][19]['animeLetter'])) {
+						$data['animeDataByName'][19]['animeLetter'] = strtoupper( substr($item->title, 0, 1) );
+					}
+
+					break;
+				case 'T':
+					array_push($data['animeDataByName'][20]['animeData'], $item);
+					$data['animeDataByName'][20]['animeFilesize'] += $item->filesize;
+
+					if (empty($data['animeDataByName'][20]['animeLetter'])) {
+						$data['animeDataByName'][20]['animeLetter'] = strtoupper( substr($item->title, 0, 1) );
+					}
+
+					break;
+				case 'U':
+					array_push($data['animeDataByName'][21]['animeData'], $item);
+					$data['animeDataByName'][21]['animeFilesize'] += $item->filesize;
+
+					if (empty($data['animeDataByName'][21]['animeLetter'])) {
+						$data['animeDataByName'][21]['animeLetter'] = strtoupper( substr($item->title, 0, 1) );
+					}
+
+					break;
+				case 'V':
+					array_push($data['animeDataByName'][22]['animeData'], $item);
+					$data['animeDataByName'][22]['animeFilesize'] += $item->filesize;
+
+					if (empty($data['animeDataByName'][22]['animeLetter'])) {
+						$data['animeDataByName'][22]['animeLetter'] = strtoupper( substr($item->title, 0, 1) );
+					}
+
+					break;
+				case 'W':
+					array_push($data['animeDataByName'][23]['animeData'], $item);
+					$data['animeDataByName'][23]['animeFilesize'] += $item->filesize;
+
+					if (empty($data['animeDataByName'][23]['animeLetter'])) {
+						$data['animeDataByName'][23]['animeLetter'] = strtoupper( substr($item->title, 0, 1) );
+					}
+
+					break;
+				case 'X':
+					array_push($data['animeDataByName'][24]['animeData'], $item);
+					$data['animeDataByName'][24]['animeFilesize'] += $item->filesize;
+
+					if (empty($data['animeDataByName'][24]['animeLetter'])) {
+						$data['animeDataByName'][24]['animeLetter'] = strtoupper( substr($item->title, 0, 1) );
+					}
+
+					break;
+				case 'Y':
+					array_push($data['animeDataByName'][25]['animeData'], $item);
+					$data['animeDataByName'][25]['animeFilesize'] += $item->filesize;
+
+					if (empty($data['animeDataByName'][25]['animeLetter'])) {
+						$data['animeDataByName'][25]['animeLetter'] = strtoupper( substr($item->title, 0, 1) );
+					}
+
+					break;
+				case 'Z':
+					array_push($data['animeDataByName'][26]['animeData'], $item);
+					$data['animeDataByName'][26]['animeFilesize'] += $item->filesize;
+
+					if (empty($data['animeDataByName'][26]['animeLetter'])) {
+						$data['animeDataByName'][26]['animeLetter'] = strtoupper( substr($item->title, 0, 1) );
+					}
+
+					break;
+			}
 		}
 
 		$this->load->view('other-lists', $data);

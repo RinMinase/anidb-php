@@ -29,18 +29,9 @@ class DefaultModel extends CI_Model {
 		return $this->db->get()->result();
 	}
 
-	// public function getAnimeByNameNeededData() {
-	// 	$this->db->select('quality, title, filesize');
-	// 	$this->db->from('anime');
-	// 	$this->db->order_by('quality', 'ASC');
-
-	// 	return $this->db->get()->result();
-	// }
-
-	public function getAnimeByNameNeededData($letter) {
+	public function getAnimeByNameNeededData() {
 		$this->db->select('quality, title, filesize');
 		$this->db->from('anime');
-		$this->db->like('title', $letter, 'after');
 		$this->db->order_by('title', 'ASC');
 
 		return $this->db->get()->result();
