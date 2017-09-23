@@ -92,21 +92,21 @@
 										<td>
 
 											<?php
-												switch ($subitem->quality) {
+												switch ($item->quality) {
 													case "4K 2160p":
-														echo "<div class='anime-legend-uhd' data-toggle='tooltip' title='4K 2160p'></div>";
+														echo "<div class='anime-legend-uhd' tooltip='tip' title='4K 2160p'></div>";
 														break;
 													case "FHD 1080p":
-														echo "<div class='anime-legend-fhd' data-toggle='tooltip' title='FHD 1080p'></div>";
+														echo "<div class='anime-legend-fhd' tooltip='tip' title='FHD 1080p'></div>";
 														break;
 													case "HD 720p":
-														echo "<div class='anime-legend-hd' data-toggle='tooltip' title='HD 720p'></div>";
+														echo "<div class='anime-legend-hd' tooltip='tip' title='HD 720p'></div>";
 														break;
 													case "HQ 480p":
-														echo "<div class='anime-legend-hq' data-toggle='tooltip' title='HQ 480p'></div>";
+														echo "<div class='anime-legend-hq' tooltip='tip' title='HQ 480p'></div>";
 														break;
 													case "LQ 360p":
-														echo "<div class='anime-legend-lq' data-toggle='tooltip' title='LQ 360p'></div>";
+														echo "<div class='anime-legend-lq' tooltip='tip' title='LQ 360p'></div>";
 														break;
 												}
 											?>
@@ -234,19 +234,19 @@
 																	<?php
 																		switch ($subitem->quality) {
 																			case "4K 2160p":
-																				echo "<div class='anime-legend-uhd' data-toggle='tooltip' title='4K 2160p'></div>";
+																				echo "<div class='anime-legend-uhd' tooltip='tip' title='4K 2160p'></div>";
 																				break;
 																			case "FHD 1080p":
-																				echo "<div class='anime-legend-fhd' data-toggle='tooltip' title='FHD 1080p'></div>";
+																				echo "<div class='anime-legend-fhd' tooltip='tip' title='FHD 1080p'></div>";
 																				break;
 																			case "HD 720p":
-																				echo "<div class='anime-legend-hd' data-toggle='tooltip' title='HD 720p'></div>";
+																				echo "<div class='anime-legend-hd' tooltip='tip' title='HD 720p'></div>";
 																				break;
 																			case "HQ 480p":
-																				echo "<div class='anime-legend-hq' data-toggle='tooltip' title='HQ 480p'></div>";
+																				echo "<div class='anime-legend-hq' tooltip='tip' title='HQ 480p'></div>";
 																				break;
 																			case "LQ 360p":
-																				echo "<div class='anime-legend-lq' data-toggle='tooltip' title='LQ 360p'></div>";
+																				echo "<div class='anime-legend-lq' tooltip='tip' title='LQ 360p'></div>";
 																				break;
 																		}
 																	?>
@@ -288,12 +288,7 @@
 
 		<script src=<?php echo base_url("resources/jquery-3.1.1/jquery-3.1.1.min.js") ?>></script>
 		<script src=<?php echo base_url("resources/bootstrap-3.3.7/bootstrap.min.js") ?>></script>
-
-		<script>
-			$(document).ready(function(){
-					$('[data-toggle="tooltip"]').tooltip();
-			});
-		</script>
+		<script src=<?php echo base_url("resources/js/scripts.js") ?>></script>
 
 	</body>
 </html>
