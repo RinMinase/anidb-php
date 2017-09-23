@@ -14,10 +14,14 @@ class PageController extends CI_Controller {
 			$data['animeData'] = $this->defaultmodel->getAnimeDataSearch($data['query']);
 		}
 
+		$data['activePage'] = "index";
 		$this->load->view('index', $data);
 	}
 
-	public function add() { $this->load->view('add'); }
+	public function add() {
+		$data['activePage'] = "add";
+		$this->load->view('add', $data);
+	}
 
 	public function other_lists() {
 		/**
@@ -309,14 +313,24 @@ class PageController extends CI_Controller {
 			}
 		}
 
+		$data['activePage'] = "other-lists";
 		$this->load->view('other-lists', $data);
 	}
 
-	public function download_list() { $this->load->view('download'); }
+	public function download_list() {
+		$data['activePage'] = "download";
+		$this->load->view('download');
+	}
 
-	public function hdd_list() { $this->load->view('hdd'); }
+	public function hdd_list() {
+		$data['activePage'] = "hdd";
+		$this->load->view('hdd');
+	}
 
-	public function hdd_simulator() { $this->load->view('hdd-simulator'); }
+	public function hdd_simulator() {
+		$data['activePage'] = "hdd-simulator";
+		$this->load->view('hdd-simulator');
+	}
 
 	public function about() {
 		$this->load->model('defaultmodel');
@@ -357,6 +371,7 @@ class PageController extends CI_Controller {
 		$data['totalSizeGB'] = round($total_filesize / 1073741824, 2);
 		$data['totalSizeTB'] = round($total_filesize / 1099511627776, 2);
 
+		$data['activePage'] = "about";
 		$this->load->view('about', $data);
 	}
 }
