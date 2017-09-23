@@ -8,7 +8,7 @@ class PageController extends CI_Controller {
 		$this->load->model('defaultmodel');
 
 		$data['query'] = $this->input->get('q');
-		if (empty($query)) {
+		if (empty($data['query'])) {
 			$data['animeData'] = $this->defaultmodel->getAnimeData();
 		} else {
 			$data['animeData'] = $this->defaultmodel->getAnimeDataSearch($data['query']);
