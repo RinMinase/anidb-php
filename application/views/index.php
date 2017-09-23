@@ -123,21 +123,21 @@
 									<tr>
 										<td>
 											<?php
-												switch ($subitem->quality) {
+												switch ($item->quality) {
 													case "4K 2160p":
-														echo "<div class='anime-legend-uhd' data-toggle='tooltip' title='4K 2160p'></div>";
+														echo "<div class='anime-legend-uhd' tooltip='tip' title='4K 2160p'></div>";
 														break;
 													case "FHD 1080p":
-														echo "<div class='anime-legend-fhd' data-toggle='tooltip' title='FHD 1080p'></div>";
+														echo "<div class='anime-legend-fhd' tooltip='tip' title='FHD 1080p'></div>";
 														break;
 													case "HD 720p":
-														echo "<div class='anime-legend-hd' data-toggle='tooltip' title='HD 720p'></div>";
+														echo "<div class='anime-legend-hd' tooltip='tip' title='HD 720p'></div>";
 														break;
 													case "HQ 480p":
-														echo "<div class='anime-legend-hq' data-toggle='tooltip' title='HQ 480p'></div>";
+														echo "<div class='anime-legend-hq' tooltip='tip' title='HQ 480p'></div>";
 														break;
 													case "LQ 360p":
-														echo "<div class='anime-legend-lq' data-toggle='tooltip' title='LQ 360p'></div>";
+														echo "<div class='anime-legend-lq' tooltip='tip' title='LQ 360p'></div>";
 														break;
 												}
 											?>
@@ -169,9 +169,7 @@
 										</td>
 										<td class="text-center">
 											<?php
-												echo "<div data-toggle='tooltip' data-placement='auto'";
-													echo "title='1st Season : " . $item->firstSeasonTitle . "'>";
-
+												echo "<div tooltip='tip' title='1st Season : " . $item->firstSeasonTitle . "'>";
 													echo ($item->seasonNumber == "0") ? "N/A" : $item->seasonNumber;
 												echo "</div>";
 											?>
@@ -195,10 +193,7 @@
 										<td>
 											<?php echo form_open("edit/" . $item->id) ?>
 												<a href=<?php echo base_url("edit/" . $item->id) ?>
-													class="btn btn-xs btn-success btn-block"
-													data-toggle="tooltip"
-													data-placement="auto"
-													title="Edit">
+													class="btn btn-xs btn-success btn-block" tooltip="tip" title="Edit">
 													<i class="fa fa-pencil"></i>
 												</a>
 											<?php echo form_close() ?>
@@ -206,10 +201,7 @@
 										<td>
 											<?php echo form_open("delete/" . $item->id) ?>
 												<a href=<?php echo base_url("delete/" . $item->id) ?>
-													class="btn btn-xs btn-danger btn-block"
-													data-toggle="tooltip"
-													data-placement="auto"
-													title="Delete">
+													class="btn btn-xs btn-danger btn-block" tooltip="tip" title="Delete">
 													<i class="fa fa-trash"></i>
 												</a>
 											<?php echo form_close() ?>
@@ -228,11 +220,7 @@
 
 		<script src=<?php echo base_url("resources/jquery-3.1.1/jquery-3.1.1.min.js") ?>></script>
 		<script src=<?php echo base_url("resources/bootstrap-3.3.7/bootstrap.min.js") ?>></script>
+		<script src=<?php echo base_url("resources/js/scripts.js") ?>></script>
 
-		<script>
-			$(document).ready(function(){
-					$('[data-toggle="tooltip"]').tooltip();
-			});
-		</script>
 	</body>
 </html>
