@@ -8,10 +8,36 @@ class PageController extends CI_Controller {
 		$this->load->model('defaultmodel');
 
 		$data['query'] = $this->input->get('q');
+
 		if (empty($data['query'])) {
-			$data['animeData'] = $this->defaultmodel->getAnimeData();
+			$data['animeData'] = $this->defaultmodel->getAnimeData(NULL);
 		} else {
-			$data['animeData'] = $this->defaultmodel->getAnimeDataSearch($data['query']);
+
+			$raw_query = explode(',', strtolower($data['query']));
+
+			foreach($raw_query as $query_item) {
+				$query_item_data = explode(':', trim($query_item));
+				if (empty($query_item_data[1])) {
+					$keyword['title'] = $query_item_data[0];
+				} else {
+
+					switch($query_item_data[0]) {
+						case "sort": case "order": $keyword['sort'] = $query_item_data[1]; break;
+						case "quality": $keyword['quality'] = $query_item_data[1]; break;
+						case "release": $keyword['release'] = $query_item_data[1]; break;
+						case "encoder": $keyword['encoder'] = $query_item_data[1]; break;
+						case "remarks": $keyword['remarks'] = $query_item_data[1]; break;
+					}
+
+				}
+			}
+
+			if (empty($keyword)) {
+				$data['animeData'] = $this->defaultmodel->getAnimeData(NULL);
+			} else {
+				$data['animeData'] = $this->defaultmodel->getAnimeData($keyword);
+			}
+
 		}
 
 		$data['activePage'] = "index";
