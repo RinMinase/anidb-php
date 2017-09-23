@@ -172,9 +172,11 @@
 				<div class="col-md-3">
 
 					<div class="panel panel-green">
+
 						<div class="panel-heading">
 							<h4>Statistics</h4>
 						</div>
+
 						<div class="panel-body">
 							<div class="table-responsive">
 								<table class="table table-condensed">
@@ -206,124 +208,120 @@
 								</table>
 							</div>
 						</div>
+
 					</div>
 
 				</div>
 
 				<div class="col-md-9">
+					<div class="panel-group">
 
-					<div class="row">
-						<div class="col-md-12">
-							<div class="panel-group">
+						<?php foreach ($animeDataByName as $item): ?>
+							<?php if (!empty($item['animeFilesize'])): ?>
 
+								<div class="panel panel-default">
 
-								<?php foreach ($animeDataByName as $item): ?>
-									<?php if (!empty($item['animeFilesize'])): ?>
+									<div class="panel-heading">
+										<h4 class="panel-title">
+											<a href=<?php echo "#panel-" . $item['animeLetter'] ?> data-toggle="collapse">
+												<?php echo $item['animeLetter'] ?>&nbsp;&nbsp;
+												<span class="badge"><?php echo count($item['animeData']); ?></span>
+											</a>
+											<p class="pull-right">
+												<?php echo round($item['animeFilesize'] / 1073741824, 2) . " GB"; ?>
+											</p>
+										</h4>
+									</div>
 
-										<div class="panel panel-default">
-											<div class="panel-heading">
-												<h4 class="panel-title">
-													<a href=<?php echo "#panel-" . $item['animeLetter'] ?> data-toggle="collapse">
-														<?php echo $item['animeLetter'] ?>&nbsp;&nbsp;
-														<span class="badge"><?php echo count($item['animeData']); ?></span>
-													</a>
-													<p class="pull-right">
-														<?php echo round($item['animeFilesize'] / 1073741824, 2) . " GB"; ?>
-													</p>
-												</h4>
+									<div id=<?php echo "panel-" . $item['animeLetter'] ?> class="panel-collapse collapse">
+										<div class="panel-body">
+
+											<div class="table-responsive">
+												<table class="table table-condensed">
+													<thead>
+														<tr>
+															<th>Title</th>
+															<th>File Size</th>
+														</tr>
+													</thead>
+													<tbody>
+
+														<?php foreach ($item['animeData'] as $subitem): ?>
+
+															<tr>
+																<td>
+
+																	<?php
+																		switch ($subitem->quality) {
+																			case "4K 2160p":
+																				echo "<div class='anime-legend-uhd'";
+																					echo "data-toggle='tooltip'";
+																					echo "data-placement='auto'";
+																					echo "title='4K 2160p'>";
+																				echo "</div>";
+																				break;
+																			case "FHD 1080p":
+																				echo "<div class='anime-legend-fhd'";
+																					echo "data-toggle='tooltip'";
+																					echo "data-placement='auto'";
+																					echo "title='FHD 1080p'>";
+																				echo "</div>";
+																				break;
+																			case "HD 720p":
+																				echo "<div class='anime-legend-hd'";
+																					echo "data-toggle='tooltip'";
+																					echo "data-placement='auto'";
+																					echo "title='HD 720p'>";
+																				echo "</div>";
+																				break;
+																			case "HQ 480p":
+																				echo "<div class='anime-legend-hq'";
+																					echo "data-toggle='tooltip'";
+																					echo "data-placement='auto'";
+																					echo "title='HQ 480p'>";
+																				echo "</div>";
+																				break;
+																			case "LQ 360p":
+																				echo "<div class='anime-legend-lq'";
+																					echo "data-toggle='tooltip'";
+																					echo "data-placement='auto'";
+																					echo "title='LQ 360p'>";
+																				echo "</div>";
+																				break;
+																		}
+																	?>
+
+																	<span><?php echo $subitem->title ?></span>
+
+																</td>
+																<td>
+																	<?php
+																		if ($subitem->filesize < 1073741824) {
+																			echo round($subitem->filesize / 1048576, 2) . " MB";
+																			echo " (" . round($subitem->filesize / 1073741824, 2) . " GB)";
+																		} else {
+																			echo round($subitem->filesize / 1073741824, 2) . " GB";
+																		}
+																 	?>
+																</td>
+															</tr>
+
+														<?php endforeach; ?>
+
+													</tbody>
+												</table>
 											</div>
-											<div id=<?php echo "panel-" . $item['animeLetter'] ?> class="panel-collapse collapse">
-												<div class="panel-body">
 
-													<div class="table-responsive">
-														<table class="table table-condensed">
-															<thead>
-																<tr>
-																	<th>Title</th>
-																	<th>File Size</th>
-																</tr>
-															</thead>
-															<tbody>
-
-																<?php foreach ($item['animeData'] as $subitem): ?>
-
-																	<tr>
-																		<td>
-
-																			<?php
-																				switch ($subitem->quality) {
-																					case "4K 2160p":
-																						echo "<div class='anime-legend-uhd'";
-																							echo "data-toggle='tooltip'";
-																							echo "data-placement='auto'";
-																							echo "title='4K 2160p'>";
-																						echo "</div>";
-																						break;
-																					case "FHD 1080p":
-																						echo "<div class='anime-legend-fhd'";
-																							echo "data-toggle='tooltip'";
-																							echo "data-placement='auto'";
-																							echo "title='FHD 1080p'>";
-																						echo "</div>";
-																						break;
-																					case "HD 720p":
-																						echo "<div class='anime-legend-hd'";
-																							echo "data-toggle='tooltip'";
-																							echo "data-placement='auto'";
-																							echo "title='HD 720p'>";
-																						echo "</div>";
-																						break;
-																					case "HQ 480p":
-																						echo "<div class='anime-legend-hq'";
-																							echo "data-toggle='tooltip'";
-																							echo "data-placement='auto'";
-																							echo "title='HQ 480p'>";
-																						echo "</div>";
-																						break;
-																					case "LQ 360p":
-																						echo "<div class='anime-legend-lq'";
-																							echo "data-toggle='tooltip'";
-																							echo "data-placement='auto'";
-																							echo "title='LQ 360p'>";
-																						echo "</div>";
-																						break;
-																				}
-																			?>
-
-																			<span><?php echo $subitem->title ?></span>
-
-																		</td>
-																		<td>
-																			<?php
-																				if ($subitem->filesize < 1073741824) {
-																					echo round($subitem->filesize / 1048576, 2) . " MB";
-																					echo " (" . round($subitem->filesize / 1073741824, 2) . " GB)";
-																				} else {
-																					echo round($subitem->filesize / 1073741824, 2) . " GB";
-																				}
-																		 	?>
-																		</td>
-																	</tr>
-
-																<?php endforeach; ?>
-
-															</tbody>
-														</table>
-													</div>
-
-												</div>
-											</div>
 										</div>
+									</div>
+								</div>
 
-									<?php endif; ?>
-								<?php endforeach; ?>
+							<?php endif; ?>
+						<?php endforeach; ?>
 
-							</div>
-						</div>
 					</div>
-
-
 				</div>
+
 			</div>
 
 		</div>
