@@ -45,7 +45,9 @@
 					<ul class="nav navbar-nav">
 
 						<li <?php if($activePage == "index") echo "class='active'"; ?>>
-							<a href=<?php echo base_url() ?>>Home</a>
+							<a href=<?php echo base_url() ?>>
+								<i class="fa fa-home"></i>&nbsp;&nbsp;&nbsp;Home
+							</a>
 						</li>
 
 						<li class="dropdown
@@ -59,7 +61,10 @@
 								}
 							?>
 						">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Anime Lists <b class="caret"></b></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<i class="fa fa-list"></i>&nbsp;&nbsp;&nbsp;Anime Lists
+								&nbsp;&nbsp;&nbsp;<i class="fa fa-caret-down"></i>
+							</a>
 							<ul class="dropdown-menu">
 								<li <?php if($activePage == "last-watch") echo "class='active'"; ?>>
 									<a href=<?php echo base_url("last-watch") ?>>
@@ -102,7 +107,10 @@
 								}
 							?>
 						">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Manage <b class="caret"></b></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<i class="fa fa-pencil"></i>&nbsp;&nbsp;&nbsp;Manage
+								&nbsp;&nbsp;&nbsp;<i class="fa fa-caret-down"></i>
+							</a>
 							<ul class="dropdown-menu">
 								<li <?php if($activePage == "last-watch") echo "class='active'"; ?>>
 									<a href=<?php echo base_url("last-watch") ?>>
@@ -154,10 +162,14 @@
 
 					<ul class="nav navbar-nav navbar-right">
 						<li <?php if($activePage == "about") echo "class='active'"; ?>>
-							<a href=<?php echo base_url("about") ?>>Settings</a>
+							<a href=<?php echo base_url("about") ?>>
+								<i class="fa fa-gear"></i>&nbsp;&nbsp;&nbsp;Settings
+							</a>
 						</li>
 						<li <?php if($activePage == "about") echo "class='active'"; ?>>
-							<a href=<?php echo base_url("about") ?>>About</a>
+							<a href=<?php echo base_url("about") ?>>
+								<i class="fa fa-question"></i>&nbsp;&nbsp;&nbsp;About
+								</a>
 						</li>
 					</ul>
 				</div>
