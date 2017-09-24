@@ -73,7 +73,7 @@
 		<div class="col-md-8 user-data-column">
 
 			<h3 class="user-data-heading">Developer</h3>
-			<h2><strong>Rin Minase</strong></h2>
+			<h2><strong>Rin Minase</strong> <small>(Kristian Alunan)</small></h2>
 			<h4>Minase Conglomerate</h4>
 			<div class="row">
 				<div class="col-md-6">
@@ -85,12 +85,20 @@
 									<td>rin.black.raison.detre@gmail.com</td>
 								</tr>
 								<tr>
+									<td class="text-center"><i class="fa fa-phone"></i></td>
+									<td>(+63) 942 008 2942</td>
+								</tr>
+								<tr>
 									<td class="text-center"><i class="fa fa-facebook"></i></td>
 									<td>facebook.com/RinMinase666</td>
 								</tr>
 								<tr>
 									<td class="text-center"><i class="fa fa-github"></i></td>
 									<td>github.com/RinMinase</td>
+								</tr>
+								<tr>
+									<td class="text-center"><i class="fa fa-bitbucket"></i></td>
+									<td>bitbucket.com/kralunan</td>
 								</tr>
 							</tbody>
 						</table>
