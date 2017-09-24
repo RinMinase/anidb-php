@@ -33,7 +33,17 @@
 
 					<ul class="nav navbar-nav">
 						<li <?php if($activePage == "index") echo "class='active'"; ?>><a href="#">Home</a></li>
-						<li class="dropdown">
+						<li class="dropdown
+							<?php
+								if($activePage == "last-watch" ||
+									$activePage == "by-name" ||
+									$activePage == "download" ||
+									$activePage == "hdd" ||
+									$activePage == "hdd-simulator") {
+									echo " active";
+								}
+							?>
+						">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Anime Lists <b class="caret"></b></a>
 							<ul class="dropdown-menu">
 								<li <?php if($activePage == "last-watch") echo "class='active'"; ?>>
