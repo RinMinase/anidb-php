@@ -14,6 +14,7 @@ $route['index'] = 'PageController/index';
 $route['add'] = 'PageController/add';
 $route['addEntry'] = 'DefaultController/addEntry';
 
+$route['last-watch'] = 'PageController/last_watch';
 $route['other-lists'] = 'PageController/other_lists';
 
 $route['download-list'] = 'PageController/download_list';

@@ -50,11 +50,7 @@ class PageController extends CI_Controller {
 		$this->load->view('add', $data);
 	}
 
-	public function other_lists() {
-		/**
-		 * LAST 20
-		 */
-
+	public function last_watch() {
 		$this->load->model('defaultmodel');
 		$data['last20AnimeData'] = $this->defaultmodel->getLast20AnimeData();
 
@@ -77,10 +73,13 @@ class PageController extends CI_Controller {
 		$data['episodesPerDay'] = round($data['totalEpisodes'] / $date_diff_last,	2);
 		$data['daysSinceLastAnime'] = $date_diff_first;
 
-		/**
-		 * LIST BY NAME
-		 */
+		$navbar['activePage'] = "last-watch";
+		$this->load->view('navbar', $navbar);
+		$this->load->view('last-watch', $data);
+	}
 
+	public function other_lists() {
+		$this->load->model('defaultmodel');
 		$raw_data = $this->defaultmodel->getAnimeByNameNeededData();
 
 		for ($i=0; $i < 27; $i++) {
