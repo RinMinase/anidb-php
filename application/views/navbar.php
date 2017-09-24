@@ -15,6 +15,14 @@
 			}
 		?>
 
+		<?php
+			if(!empty($customTitle)) {
+				echo "<title>" . $customTitle . "</title>";
+			} else {
+				echo "<title>Rin's Anime Database</title>";
+			}
+		?>
+
 	</head>
 
 	<body>
