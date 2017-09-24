@@ -11,7 +11,7 @@
 
 		<?php
 			if(!empty($customCSS)) {
-				echo "<link rel='stylesheet' href='<?php echo base_url(" . $customCSS . ") ?>'>";
+				echo "<link rel='stylesheet' href='" . base_url($customCSS) . "'>";
 			}
 		?>
 
@@ -90,7 +90,7 @@
 					</ul>
 
 					<ul class="nav navbar-nav navbar-right">
-						<li>
+						<li <?php if($activePage == "about") echo "class='active'"; ?>>
 							<a href=<?php echo base_url("about") ?>>About</a>
 						</li>
 					</ul>
