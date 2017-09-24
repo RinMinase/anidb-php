@@ -1,0 +1,9 @@
+.season-list {
+	padding-left: 15px;
+}
+
+.label {
+	width: 30px;
+	display: inline-block;
+	padding: .3em .6em;
+}
