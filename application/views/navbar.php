@@ -98,7 +98,7 @@
 
 						<li class="dropdown
 							<?php
-								if($activePage == "last-watch" ||
+								if($activePage == "add" ||
 									$activePage == "by-name" ||
 									$activePage == "download-list" ||
 									$activePage == "hdd-list" ||
@@ -112,8 +112,8 @@
 								&nbsp;&nbsp;&nbsp;<i class="fa fa-caret-down"></i>
 							</a>
 							<ul class="dropdown-menu">
-								<li <?php if($activePage == "last-watch") echo "class='active'"; ?>>
-									<a href=<?php echo base_url("last-watch") ?>>
+								<li <?php if($activePage == "add") echo "class='active'"; ?>>
+									<a href=<?php echo base_url("add") ?>>
 										<i class="fa fa-plus"></i>&nbsp;&nbsp;&nbsp;Add an Entry
 									</a>
 								</li>
