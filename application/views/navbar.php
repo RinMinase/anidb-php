@@ -59,19 +59,19 @@
 										<i class="fa fa-list"></i>&nbsp;&nbsp;&nbsp;Anime List by Name
 									</a>
 								</li>
-								<li <?php if($activePage == "download") echo "class='active'"; ?>>
-									<a href=<?php echo base_url("download") ?>>
+								<li <?php if($activePage == "download-list") echo "class='active'"; ?>>
+									<a href=<?php echo base_url("download-list") ?>>
 										<i class="fa fa-arrow-down"></i>&nbsp;&nbsp;&nbsp;Download List
 									</a>
 								</li>
 								<li class="divider"></li>
-								<li <?php if($activePage == "hdd") echo "class='active'"; ?>>
-									<a href=<?php echo base_url("hdd") ?>>
+								<li <?php if($activePage == "hdd-list") echo "class='active'"; ?>>
+									<a href=<?php echo base_url("hdd-list") ?>>
 										<i class="fa fa-hdd-o"></i>&nbsp;&nbsp;&nbsp;Hard Drive List
 									</a>
 								</li>
 								<li <?php if($activePage == "hdd-simulator") echo "class='active'"; ?>>
-									<a href=<?php echo base_url("hdd-simulator") ?>>
+									<a href=<?php echo base_url("hdd-list/simulator") ?>>
 										<i class="fa fa-flask"></i>&nbsp;&nbsp;&nbsp;Hard Drive Simulator
 									</a>
 								</li>
