@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-		<link rel="stylesheet" href=<?php echo base_url("resources/bootstrap-3.3.7/bootstrap.min.css") ?>>
-		<link rel="stylesheet" href=<?php echo base_url("resources/font-awesome-4.7.0/font-awesome.min.css") ?>>
-		<link rel="stylesheet" href=<?php echo base_url("resources/css/styles.css") ?>>
+		<link rel="stylesheet" href=<?php //echo base_url("resources/bootstrap-3.3.7/bootstrap.min.css") ?>>
+		<link rel="stylesheet" href=<?php //echo base_url("resources/font-awesome-4.7.0/font-awesome.min.css") ?>>
+		<link rel="stylesheet" href=<?php //echo base_url("resources/css/styles.css") ?>>
 
 		<style>
 
@@ -18,7 +18,7 @@
 		<title>Rin's Anime Database</title>
 	</head>
 
-	<body>
+	<body> -->
 		<div class="container-fluid">
 
 			<div class="row">

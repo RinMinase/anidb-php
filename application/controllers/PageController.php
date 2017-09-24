@@ -40,7 +40,8 @@ class PageController extends CI_Controller {
 
 		}
 
-		$data['activePage'] = "index";
+		$navbar['activePage'] = "index";
+		$this->load->view('navbar', $navbar);
 		$this->load->view('index', $data);
 	}
 
