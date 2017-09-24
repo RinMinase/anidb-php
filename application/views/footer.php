@@ -5,7 +5,7 @@
 
 		<?php
 			if(!empty($customJS)) {
-				echo "<script src='<?php echo base_url(" . $customJS . ") ?>'></script>";
+				echo "<script src='" . base_url($customJS) . "'></script>";
 			}
 		?>
 
