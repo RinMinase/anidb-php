@@ -80,7 +80,7 @@ class PageController extends CI_Controller {
 		$this->load->view('footer');
 	}
 
-	public function other_lists() {
+	public function by_name() {
 		$this->load->model('defaultmodel');
 		$raw_data = $this->defaultmodel->getAnimeByNameNeededData();
 
@@ -341,8 +341,10 @@ class PageController extends CI_Controller {
 			}
 		}
 
-		$data['activePage'] = "other-lists";
-		$this->load->view('other-lists', $data);
+		$navbar['activePage'] = "by-name";
+		$this->load->view('navbar', $navbar);
+		$this->load->view('by-name', $data);
+		$this->load->view('footer');
 	}
 
 	public function download_list() {
