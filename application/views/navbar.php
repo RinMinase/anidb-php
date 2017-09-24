@@ -49,7 +49,7 @@
 							<?php
 								if($activePage == "last-watch" ||
 									$activePage == "by-name" ||
-									$activePage == "download" ||
+									$activePage == "download-list" ||
 									$activePage == "hdd" ||
 									$activePage == "hdd-simulator") {
 									echo " active";
