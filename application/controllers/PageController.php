@@ -401,7 +401,11 @@ class PageController extends CI_Controller {
 		$data['totalSizeGB'] = round($total_filesize / 1073741824, 2);
 		$data['totalSizeTB'] = round($total_filesize / 1099511627776, 2);
 
-		$data['activePage'] = "about";
+		$navbar['activePage'] = "about";
+		$navbar['customCSS'] = "resources/css/about/styles.css";
+		$navbar['customTitle'] = "About Page";
+		$this->load->view('navbar', $navbar);
 		$this->load->view('about', $data);
+		$this->load->view('footer');
 	}
 }
