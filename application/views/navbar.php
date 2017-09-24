@@ -43,9 +43,11 @@
 				<div class="collapse navbar-collapse anidb-navbar-collapse">
 
 					<ul class="nav navbar-nav">
+
 						<li <?php if($activePage == "index") echo "class='active'"; ?>>
 							<a href=<?php echo base_url() ?>>Home</a>
 						</li>
+
 						<li class="dropdown
 							<?php
 								if($activePage == "last-watch" ||
@@ -88,9 +90,72 @@
 								</li>
 							</ul>
 						</li>
+
+						<li class="dropdown
+							<?php
+								if($activePage == "last-watch" ||
+									$activePage == "by-name" ||
+									$activePage == "download-list" ||
+									$activePage == "hdd-list" ||
+									$activePage == "hdd-simulator") {
+									echo " active";
+								}
+							?>
+						">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Manage <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li <?php if($activePage == "last-watch") echo "class='active'"; ?>>
+									<a href=<?php echo base_url("last-watch") ?>>
+										<i class="fa fa-plus"></i>&nbsp;&nbsp;&nbsp;Add an Entry
+									</a>
+								</li>
+								<li <?php if($activePage == "by-name") echo "class='active'"; ?>>
+									<a href=<?php echo base_url("by-name") ?>>
+										<i class="fa fa-minus"></i>&nbsp;&nbsp;&nbsp;Remove an Entry
+									</a>
+								</li>
+								<li <?php if($activePage == "download-list") echo "class='active'"; ?>>
+									<a href=<?php echo base_url("download-list") ?>>
+										<i class="fa fa-pencil"></i>&nbsp;&nbsp;&nbsp;Edit an Entry
+									</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li <?php if($activePage == "hdd-list") echo "class='active'"; ?>>
+									<a href=<?php echo base_url("hdd-list") ?>>
+										<i class="fa fa-plus"></i>&nbsp;&nbsp;&nbsp;Add an Entry in Download List
+									</a>
+								</li>
+								<li <?php if($activePage == "hdd-simulator") echo "class='active'"; ?>>
+									<a href=<?php echo base_url("hdd-list/simulator") ?>>
+										<i class="fa fa-minus"></i>&nbsp;&nbsp;&nbsp;Remove an Entry in Download List
+									</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li <?php if($activePage == "hdd-simulator") echo "class='active'"; ?>>
+									<a href=<?php echo base_url("hdd-list/simulator") ?>>
+										<i class="fa fa-list"></i>&nbsp;&nbsp;&nbsp;Create a Download List
+									</a>
+								</li>
+								<li <?php if($activePage == "hdd-simulator") echo "class='active'"; ?>>
+									<a href=<?php echo base_url("hdd-list/simulator") ?>>
+										<i class="fa fa-list"></i>&nbsp;&nbsp;&nbsp;Create a Summer List
+									</a>
+								</li>
+
+							</ul>
+						</li>
+
+
 					</ul>
 
 					<ul class="nav navbar-nav navbar-right">
+						<li <?php if($activePage == "about") echo "class='active'"; ?>>
+							<a href=<?php echo base_url("about") ?>>Settings</a>
+						</li>
 						<li <?php if($activePage == "about") echo "class='active'"; ?>>
 							<a href=<?php echo base_url("about") ?>>About</a>
 						</li>
