@@ -1,9 +1,5 @@
 <div class="container">
 	<div class="jumbotron">
-		<a class="btn btn-primary" href=<?php echo base_url() ?>>
-			<i class="fa fa-chevron-left"></i>&nbsp;&nbsp;Back
-		</a>
-
 		<h2>Rin Minase's Anime Database</h2>
 		<h4>Minase Conglomerate</h4>
 	</div>
