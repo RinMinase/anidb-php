@@ -1,7 +1,6 @@
 <div class="container-fluid">
-
-
 	<div class="row">
+
 		<div class="col-md-3">
 			<div class="panel panel-green">
 				<div class="panel-heading">
@@ -41,8 +40,6 @@
 					</div>
 				</div>
 			</div>
-
-
 		</div>
 
 		<div class="col-md-9">
