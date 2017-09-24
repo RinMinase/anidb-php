@@ -43,6 +43,7 @@ class PageController extends CI_Controller {
 		$navbar['activePage'] = "index";
 		$this->load->view('navbar', $navbar);
 		$this->load->view('index', $data);
+		$this->load->view('footer');
 	}
 
 	public function add() {
@@ -76,6 +77,7 @@ class PageController extends CI_Controller {
 		$navbar['activePage'] = "last-watch";
 		$this->load->view('navbar', $navbar);
 		$this->load->view('last-watch', $data);
+		$this->load->view('footer');
 	}
 
 	public function other_lists() {
