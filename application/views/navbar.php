@@ -68,7 +68,7 @@
 							<ul class="dropdown-menu">
 								<li <?php if($activePage == "last-watch") echo "class='active'"; ?>>
 									<a href=<?php echo base_url("last-watch") ?>>
-										<i class="fa fa-list"></i>&nbsp;&nbsp;&nbsp;Last 20 Watched
+										<i class="fa fa-play"></i>&nbsp;&nbsp;&nbsp;Last 20 Watched
 									</a>
 								</li>
 								<li class="divider"></li>
@@ -145,6 +145,19 @@
 
 								<li <?php if($activePage == "hdd-simulator") echo "class='active'"; ?>>
 									<a href=<?php echo base_url("hdd-list/simulator") ?>>
+										<i class="fa fa-file"></i>&nbsp;&nbsp;&nbsp;Export List (.csv)
+									</a>
+								</li>
+								<li <?php if($activePage == "hdd-simulator") echo "class='active'"; ?>>
+									<a href=<?php echo base_url("hdd-list/simulator") ?>>
+										<i class="fa fa-file"></i>&nbsp;&nbsp;&nbsp;Export List (.xlsx)
+									</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li <?php if($activePage == "hdd-simulator") echo "class='active'"; ?>>
+									<a href=<?php echo base_url("hdd-list/simulator") ?>>
 										<i class="fa fa-list"></i>&nbsp;&nbsp;&nbsp;Create a Download List
 									</a>
 								</li>
@@ -161,14 +174,14 @@
 					</ul>
 
 					<ul class="nav navbar-nav navbar-right">
-						<li <?php if($activePage == "about") echo "class='active'"; ?>>
-							<a href=<?php echo base_url("about") ?>>
+						<li <?php if($activePage == "settings") echo "class='active'"; ?>>
+							<a href=<?php echo base_url("settings") ?>>
 								<i class="fa fa-gear"></i>&nbsp;&nbsp;&nbsp;Settings
 							</a>
 						</li>
 						<li <?php if($activePage == "about") echo "class='active'"; ?>>
 							<a href=<?php echo base_url("about") ?>>
-								<i class="fa fa-question"></i>&nbsp;&nbsp;&nbsp;About
+								<i class="fa fa-question"></i>&nbsp;&nbsp;&nbsp;About&nbsp;
 								</a>
 						</li>
 					</ul>
