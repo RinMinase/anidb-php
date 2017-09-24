@@ -2,4 +2,8 @@
 	.navbar-collapse {
 		padding-right: 0px
 	}
+
+	.navbar {
+		 border-radius: 0px;
+	}
 }
