@@ -358,8 +358,8 @@ class PageController extends CI_Controller {
 
 	public function download_list() {
 		$navbar['activePage'] = "download-list";
-		$navbar['customCSS'] = "resources/css/download-list/styles.css";
 		$navbar['customTitle'] = "Download List";
+		$navbar['customCSS'] = "resources/css/download-list/styles.css";
 
 		$this->load->view('navbar', $navbar);
 		$this->load->view('download-list');
@@ -377,7 +377,8 @@ class PageController extends CI_Controller {
 
 	public function hdd_simulator() {
 		$navbar['activePage'] = "hdd-simulator";
-		$navbar['customTitle'] = "HDD Simulator";
+		$navbar['customTitle'] = "Disk Simulator";
+		$navbar['customCSS'] = "resources/css/hdd-simulator/styles.css";
 
 		$this->load->view('navbar', $navbar);
 		$this->load->view('hdd-simulator');
@@ -424,8 +425,8 @@ class PageController extends CI_Controller {
 		$data['totalSizeTB'] = round($total_filesize / 1099511627776, 2);
 
 		$navbar['activePage'] = "about";
-		$navbar['customCSS'] = "resources/css/about/styles.css";
 		$navbar['customTitle'] = "About Page";
+		$navbar['customCSS'] = "resources/css/about/styles.css";
 
 		$this->load->view('navbar', $navbar);
 		$this->load->view('about', $data);
