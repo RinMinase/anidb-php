@@ -5,8 +5,9 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-		<link rel="stylesheet" href="resources/bootstrap-3.3.7/bootstrap.min.css">
-		<link rel="stylesheet" href="resources/font-awesome-4.7.0/font-awesome.min.css">
+		<link rel="stylesheet" href=<?php echo base_url("resources/bootstrap-3.3.7/bootstrap.min.css") ?>>
+		<link rel="stylesheet" href=<?php echo base_url("resources/font-awesome-4.7.0/font-awesome.min.css") ?>>
+		<link rel="stylesheet" href=<?php echo base_url("resources/css/styles.css") ?>>
 
 		<style>
 
@@ -31,15 +32,27 @@
 				<div class="collapse navbar-collapse anidb-navbar-collapse">
 
 					<ul class="nav navbar-nav">
-						<li class="active"><a href="#">Home</a></li>
+						<li <?php if($activePage == "index") echo "class='active'"; ?>><a href="#">Home</a></li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Anime Lists <b class="caret"></b></a>
 							<ul class="dropdown-menu">
-								<li><a href="#">Last 20 Watched</a></li>
+								<li <?php if($activePage == "last-watch") echo "class='active'"; ?>>
+									<a href=<?php echo base_url("last-watch") ?>>Last 20 Watched</a>
+								</li>
 								<li class="divider"></li>
-								<li><a href="#">Anime List by Name</a></li>
-								<li><a href="#">Download List</a></li>
-								<li><a href="#">Hard Drive List</a></li>
+								<li <?php if($activePage == "by-name") echo "class='active'"; ?>>
+									<a href=<?php echo base_url("by-name") ?>>Anime List by Name</a>
+								</li>
+								<li <?php if($activePage == "download") echo "class='active'"; ?>>
+									<a href=<?php echo base_url("download") ?>>Download List</a>
+								</li>
+								<li class="divider"></li>
+								<li <?php if($activePage == "hdd") echo "class='active'"; ?>>
+									<a href=<?php echo base_url("hdd") ?>>Hard Drive List</a>
+								</li>
+								<li <?php if($activePage == "hdd-simulator") echo "class='active'"; ?>>
+									<a href=<?php echo base_url("hdd-simulator") ?>>Hard Drive Simulator</a>
+								</li>
 							</ul>
 						</li>
 					</ul>
@@ -52,8 +65,8 @@
 			</div>
 		</nav>
 
-		<script src="resources/jquery-3.1.1/jquery-3.1.1.min.js"></script>
+		<!-- <script src="resources/jquery-3.1.1/jquery-3.1.1.min.js"></script>
 		<script src="resources/bootstrap-3.3.7/bootstrap.min.js"></script>
 
 	</body>
-</html>
+</html> -->
