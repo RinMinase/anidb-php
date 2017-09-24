@@ -348,12 +348,12 @@ class PageController extends CI_Controller {
 	}
 
 	public function download_list() {
-		$data['activePage'] = "download";
+		$data['activePage'] = "download-list";
 		$this->load->view('download');
 	}
 
 	public function hdd_list() {
-		$data['activePage'] = "hdd";
+		$data['activePage'] = "hdd-list";
 		$this->load->view('hdd');
 	}
 
