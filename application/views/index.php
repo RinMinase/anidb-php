@@ -1,38 +1,6 @@
 <div class="container-fluid">
 
 	<div class="row">
-		<div class="col-xs-6 col-sm-3">
-			<div class="form-group">
-				<a href=<?php echo base_url("other-lists") ?> class="btn btn-primary btn-block">
-					<i class="fa fa-list"></i>&nbsp;&nbsp;&nbsp;Other Lists
-				</a>
-			</div>
-		</div>
-		<div class="col-xs-6 col-sm-3">
-			<div class="form-group">
-				<a href=<?php echo base_url("download-list") ?> class="btn btn-primary btn-block">
-					<i class="fa fa-arrow-down"></i>&nbsp;&nbsp;&nbsp;DL List
-				</a>
-			</div>
-		</div>
-		<div class="col-xs-6 col-sm-3">
-			<div class="form-group">
-				<a href=<?php echo base_url("hdd-list") ?> class="btn btn-primary btn-block">
-					<i class="fa fa-hdd-o"></i>&nbsp;&nbsp;&nbsp;HDD List
-				</a>
-			</div>
-		</div>
-
-		<div class="col-xs-6 col-sm-3">
-			<div class="form-group">
-				<a href=<?php echo base_url("about") ?> class="btn btn-primary btn-block">
-					<i class="fa fa-question"></i>&nbsp;&nbsp;&nbsp;About
-				</a>
-			</div>
-		</div>
-	</div>
-
-	<div class="row">
 		<div class="col-sm-2 hidden-xs">
 			<div class="form-group">
 				<a href=<?php echo base_url("add") ?> class="btn btn-primary btn-block">
