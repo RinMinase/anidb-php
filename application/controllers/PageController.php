@@ -41,14 +41,19 @@ class PageController extends CI_Controller {
 		}
 
 		$navbar['activePage'] = "index";
+
 		$this->load->view('navbar', $navbar);
 		$this->load->view('index', $data);
 		$this->load->view('footer');
 	}
 
 	public function add() {
-		$data['activePage'] = "add";
-		$this->load->view('add', $data);
+		$navbar['activePage'] = "add";
+		$navbar['customTitle'] = "Add an Entry";
+
+		$this->load->view('navbar', $navbar);
+		$this->load->view('add');
+		$this->load->view('footer');
 	}
 
 	public function last_watch() {
@@ -75,6 +80,8 @@ class PageController extends CI_Controller {
 		$data['daysSinceLastAnime'] = $date_diff_first;
 
 		$navbar['activePage'] = "last-watch";
+		$navbar['customTitle'] = "Last 20 Watched";
+
 		$this->load->view('navbar', $navbar);
 		$this->load->view('last-watch', $data);
 		$this->load->view('footer');
@@ -342,24 +349,39 @@ class PageController extends CI_Controller {
 		}
 
 		$navbar['activePage'] = "by-name";
+		$navbar['customTitle'] = "Anime List by Name";
+
 		$this->load->view('navbar', $navbar);
 		$this->load->view('by-name', $data);
 		$this->load->view('footer');
 	}
 
 	public function download_list() {
-		$data['activePage'] = "download-list";
-		$this->load->view('download');
+		$navbar['activePage'] = "download-list";
+		$navbar['customCSS'] = "resources/css/download-list/styles.css";
+		$navbar['customTitle'] = "Download List";
+
+		$this->load->view('navbar', $navbar);
+		$this->load->view('download-list');
+		$this->load->view('footer');
 	}
 
 	public function hdd_list() {
-		$data['activePage'] = "hdd-list";
+		$navbar['activePage'] = "hdd-list";
+		$navbar['customTitle'] = "HDD List";
+
+		$this->load->view('navbar', $navbar);
 		$this->load->view('hdd');
+		$this->load->view('footer');
 	}
 
 	public function hdd_simulator() {
-		$data['activePage'] = "hdd-simulator";
+		$navbar['activePage'] = "hdd-simulator";
+		$navbar['customTitle'] = "HDD Simulator";
+
+		$this->load->view('navbar', $navbar);
 		$this->load->view('hdd-simulator');
+		$this->load->view('footer');
 	}
 
 	public function about() {
@@ -404,6 +426,7 @@ class PageController extends CI_Controller {
 		$navbar['activePage'] = "about";
 		$navbar['customCSS'] = "resources/css/about/styles.css";
 		$navbar['customTitle'] = "About Page";
+
 		$this->load->view('navbar', $navbar);
 		$this->load->view('about', $data);
 		$this->load->view('footer');
