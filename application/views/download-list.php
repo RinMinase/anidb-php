@@ -104,7 +104,7 @@
 							</div>
 						</h4>
 					</div>
-					<div id="panel-finished-watching" class="panel-collapse collapse">
+					<div id="panel-finished-watching" class="panel-collapse collapse in">
 						<div class="panel-body">
 
 							<div class="table-responsive">
@@ -165,7 +165,7 @@
 							</div>
 						</h4>
 					</div>
-					<div id="panel-finished-downloading" class="panel-collapse collapse">
+					<div id="panel-finished-downloading" class="panel-collapse collapse in">
 						<div class="panel-body">
 
 							<div class="table-responsive">
@@ -226,7 +226,7 @@
 							</div>
 						</h4>
 					</div>
-					<div id="panel-queue" class="panel-collapse">
+					<div id="panel-queue" class="panel-collapse collapse in">
 						<div class="panel-body">
 
 							<div class="table-responsive">
