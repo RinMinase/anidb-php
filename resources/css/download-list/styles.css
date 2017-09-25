@@ -12,3 +12,38 @@
 	display: inline-block;
 	padding: .3em .6em;
 }
+
+.download-legend-watched,
+.download-legend-downloaded,
+.download-legend-queued,
+.download-legend-prio-high,
+.download-legend-prio-normal,
+.download-legend-prio-low {
+	width: 10px;
+	height: 10px;
+	display: inline-block;
+}
+
+.download-legend-watched { /*violet*/
+	background-color: #CC6699;
+}
+
+.download-legend-downloaded { /*lightblue*/
+	background-color: #99CCFF;
+}
+
+.download-legend-queued { /*orange*/
+	background-color: #FFCC66;
+}
+
+.download-legend-prio-high { /*green*/
+ background-color: #99FF99;
+}
+
+.download-legend-prio-normal { /*no color*/
+ border: 1px solid #777777;
+}
+
+.download-legend-prio-low { /*red*/
+ background-color: #CC6666;
+}
