@@ -1,5 +1,10 @@
+.list-group-item {
+	padding-top: 3px;
+	padding-bottom: 5px;
+}
+
 .season-list {
-	padding-left: 15px;
+	padding-left: 35px;
 }
 
 .label {

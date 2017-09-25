@@ -19,9 +19,8 @@
 			<div class="row">
 				<div class="col-md-12">
 
-					<ul class="list-unstyled">
-						<li>
-							<a href="#">Uncategorized</a>
+					<div class="list-group">
+						<a href="#" class="list-group-item">Uncategorized
 							<span class="pull-right">
 								<span class="label label-success" tooltip="tip" title="Watched">
 									<?php echo $downloadUnsorted['Watched'] ?>
@@ -33,40 +32,31 @@
 									<?php echo $downloadUnsorted['Queued'] ?>
 								</span>
 							</span>
-						</li>
-
-						<li><br></li>
+						</a>
 
 						<?php foreach ($downloadSorted as $item): ?>
-							<li>
+							<span class="list-group-item"><?php echo $item['Year'] ?></span>
 
-								<span><?php echo $item['Year'] ?></span>
+							<?php foreach ($item['Stats'] as $subitem): ?>
+								<?php if (!empty($subitem)): ?>
+									<a href="#" class="list-group-item season-list"><?php echo $subitem['Season'] . " " . $item['Year']; ?>
+										<span class="pull-right">
+											<span class="label label-success" tooltip="tip" title="Watched">
+												<?php echo $subitem['Watched']; ?>
+											</span>
+											<span class="label label-primary" tooltip="tip" title="Downloaded">
+												<?php echo $subitem['Downloaded']; ?>
+											</span>
+											<span class="label label-default" tooltip="tip" title="Queued">
+												<?php echo $subitem['Queued']; ?>
+											</span>
+										</span>
+									</a>
+								<?php endif; ?>
+							<?php endforeach; ?>
 
-								<ul class="list-unstyled season-list">
-									<?php foreach ($item['Stats'] as $subitem): ?>
-										<?php if (!empty($subitem)): ?>
-											<li>
-												<a href="#"><?php echo $subitem['Season'] . " " . $item['Year']; ?></a>
-												<span class="pull-right">
-													<span class="label label-success" tooltip="tip" title="Watched">
-														<?php echo $subitem['Watched']; ?>
-													</span>
-													<span class="label label-primary" tooltip="tip" title="Downloaded">
-														<?php echo $subitem['Downloaded']; ?>
-													</span>
-													<span class="label label-default" tooltip="tip" title="Queued">
-														<?php echo $subitem['Queued']; ?>
-													</span>
-												</span>
-											</li>
-										<?php endif; ?>
-									<?php endforeach; ?>
-								</ul>
-
-							</li>
 						<?php endforeach; ?>
-
-					</ul>
+					</div>
 
 				</div>
 			</div>
