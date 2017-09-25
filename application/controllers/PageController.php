@@ -117,7 +117,7 @@ class PageController extends CI_Controller {
 		}
 
 		$navbar['activePage'] = "by-name";
-		$navbar['customTitle'] = "Anime List by Name";
+		$navbar['customTitle'] = "Anime by Name";
 
 		$this->display_page($navbar, 'by-name', $data, NULL);
 	}
