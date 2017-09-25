@@ -404,6 +404,7 @@
 								<li><code class="red">[FEATURE]</code> Edit and Delete an Entry (AniDB)</li>
 								<li><code class="red">[FEATURE]</code> Add, Edit and Delete an Entry (dlDB)</li>
 								<li><code class="orange">[IMPROVEMENT]</code> Summer Lists</li>
+								<li><code class="orange">[IMPROVEMENT]</code> Better 404 Page</li>
 								<li><code class="orange">[IMPROVEMENT]</code> Fuzzy Search using comma-separated keywords</li>
 									<ul>
 										<li>size: 40-50gb</li>
