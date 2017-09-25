@@ -125,64 +125,59 @@ class PageController extends CI_Controller {
 	public function download_list($year = NULL, $season = NULL) {
 		$this->load->model('defaultmodel');
 
-		if (empty($year) && empty($season)) {
-			$raw_query = $this->defaultmodel->getDownloadData();
-			$currentLength = 1;
+		$raw_stats_query = $this->defaultmodel->getDownloadData();
 
-			foreach($raw_query as $item) {
+		foreach($raw_stats_query as $item) {
 
-				if (empty($item->season) && empty($item->year)) {
+			if (empty($item->season) && empty($item->year)) {
 
-					if (empty($data['downloadUnsorted']['Watched'])) {
-						$data['downloadUnsorted']['Watched'] = 0;
-					}
-					if (empty($data['downloadUnsorted']['Downloaded'])) {
-						$data['downloadUnsorted']['Downloaded'] = 0;
-					}
-					if (empty($data['downloadUnsorted']['Queued'])) {
-						$data['downloadUnsorted']['Queued'] = 0;
-					}
+				if (empty($data['downloadUnsorted']['Watched'])) {
+					$data['downloadUnsorted']['Watched'] = 0;
+				}
+				if (empty($data['downloadUnsorted']['Downloaded'])) {
+					$data['downloadUnsorted']['Downloaded'] = 0;
+				}
+				if (empty($data['downloadUnsorted']['Queued'])) {
+					$data['downloadUnsorted']['Queued'] = 0;
+				}
 
-					switch($item->status) {
-						case 1: $data['downloadUnsorted']['Watched']++; break;
-						case 2: $data['downloadUnsorted']['Downloaded']++; break;
-						case 3: $data['downloadUnsorted']['Queued']++; break;
-					}
+				switch($item->status) {
+					case 1: $data['downloadUnsorted']['Watched']++; break;
+					case 2: $data['downloadUnsorted']['Downloaded']++; break;
+					case 3: $data['downloadUnsorted']['Queued']++; break;
+				}
 
-				} else {
+			} else {
 
-					if (empty($data['downloadSorted'][$item->year]['Year'])) {
-						$data['downloadSorted'][$item->year]['Year'] = $item->year;
+				if (empty($data['downloadSorted'][$item->year]['Year'])) {
+					$data['downloadSorted'][$item->year]['Year'] = $item->year;
+				}
+				if (empty($data['downloadSorted'][$item->year]['Stats'][$item->season]['Season'])) {
+					switch($item->season) {
+						case 0: $data['downloadSorted'][$item->year]['Stats'][$item->season]['Season'] = "Winter"; break;
+						case 1: $data['downloadSorted'][$item->year]['Stats'][$item->season]['Season'] = "Spring"; break;
+						case 2: $data['downloadSorted'][$item->year]['Stats'][$item->season]['Season'] = "Summer"; break;
+						case 3: $data['downloadSorted'][$item->year]['Stats'][$item->season]['Season'] = "Fall"; break;
 					}
-					if (empty($data['downloadSorted'][$item->year]['Stats'][$item->season]['Season'])) {
-						switch($item->season) {
-							case 0: $data['downloadSorted'][$item->year]['Stats'][$item->season]['Season'] = "Winter"; break;
-							case 1: $data['downloadSorted'][$item->year]['Stats'][$item->season]['Season'] = "Spring"; break;
-							case 2: $data['downloadSorted'][$item->year]['Stats'][$item->season]['Season'] = "Summer"; break;
-							case 3: $data['downloadSorted'][$item->year]['Stats'][$item->season]['Season'] = "Fall"; break;
-						}
-					}
-					if (empty($data['downloadSorted'][$item->year]['Stats'][$item->season]['Watched'])) {
-						$data['downloadSorted'][$item->year]['Stats'][$item->season]['Watched'] = 0;
-					}
-					if (empty($data['downloadSorted'][$item->year]['Stats'][$item->season]['Downloaded'])) {
-						$data['downloadSorted'][$item->year]['Stats'][$item->season]['Downloaded'] = 0;
-					}
-					if (empty($data['downloadSorted'][$item->year]['Stats'][$item->season]['Queued'])) {
-						$data['downloadSorted'][$item->year]['Stats'][$item->season]['Queued'] = 0;
-					}
+				}
+				if (empty($data['downloadSorted'][$item->year]['Stats'][$item->season]['Watched'])) {
+					$data['downloadSorted'][$item->year]['Stats'][$item->season]['Watched'] = 0;
+				}
+				if (empty($data['downloadSorted'][$item->year]['Stats'][$item->season]['Downloaded'])) {
+					$data['downloadSorted'][$item->year]['Stats'][$item->season]['Downloaded'] = 0;
+				}
+				if (empty($data['downloadSorted'][$item->year]['Stats'][$item->season]['Queued'])) {
+					$data['downloadSorted'][$item->year]['Stats'][$item->season]['Queued'] = 0;
+				}
 
-					switch($item->status) {
-						case 1: $data['downloadSorted'][$item->year]['Stats'][$item->season]['Watched']++; break;
-						case 2: $data['downloadSorted'][$item->year]['Stats'][$item->season]['Downloaded']++; break;
-						case 3: $data['downloadSorted'][$item->year]['Stats'][$item->season]['Queued']++; break;
-					}
-
+				switch($item->status) {
+					case 1: $data['downloadSorted'][$item->year]['Stats'][$item->season]['Watched']++; break;
+					case 2: $data['downloadSorted'][$item->year]['Stats'][$item->season]['Downloaded']++; break;
+					case 3: $data['downloadSorted'][$item->year]['Stats'][$item->season]['Queued']++; break;
 				}
 
 			}
-		} else {
-			// echo $year . "<br>" . $season;
+
 		}
 
 		$navbar['activePage'] = "download-list";
