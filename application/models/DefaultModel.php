@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class DefaultModel extends CI_Model {
 	public function __construct() { parent::__construct(); }
 
-	public function getAnimeData($query) {
+	public function getAnimeData($query = NULL) {
 		if (empty($query)) {
 			$this->db->select('*');
 			$this->db->from('anime');

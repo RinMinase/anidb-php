@@ -16,7 +16,7 @@ class PageController extends CI_Controller {
 		$data['query'] = $this->input->get('q');
 
 		if (empty($data['query'])) {
-			$data['animeData'] = $this->defaultmodel->getAnimeData(NULL);
+			$data['animeData'] = $this->defaultmodel->getAnimeData();
 		} else {
 
 			$raw_query = explode(',', strtolower($data['query']));
@@ -39,7 +39,7 @@ class PageController extends CI_Controller {
 			}
 
 			if (empty($keyword)) {
-				$data['animeData'] = $this->defaultmodel->getAnimeData(NULL);
+				$data['animeData'] = $this->defaultmodel->getAnimeData();
 			} else {
 				$data['animeData'] = $this->defaultmodel->getAnimeData($keyword);
 			}
