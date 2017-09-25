@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class PageController extends CI_Controller {
 	public function __construct() { parent::__construct(); }
 
-	public function display_page($navbar_data, $page, $page_data, $footer_data) {
+	public function display_page($page, $navbar_data = NULL, $page_data = NULL, $footer_data = NULL) {
 		$this->load->view('navbar', $navbar_data);
 		$this->load->view($page, $page_data);
 		$this->load->view('footer', $footer_data);
@@ -48,14 +48,14 @@ class PageController extends CI_Controller {
 
 		$navbar['activePage'] = "index";
 
-		$this->display_page($navbar, 'index', $data, NULL);
+		$this->display_page('index', $navbar, $data);
 	}
 
 	public function add() {
 		$navbar['activePage'] = "add";
 		$navbar['customTitle'] = "Add an Entry";
 
-		$this->display_page($navbar, 'add', NULL, NULL);
+		$this->display_page('add', $navbar);
 	}
 
 	public function last_watch() {
@@ -84,7 +84,7 @@ class PageController extends CI_Controller {
 		$navbar['activePage'] = "last-watch";
 		$navbar['customTitle'] = "Last 20 Watched";
 
-		$this->display_page($navbar, 'last-watch', $data, NULL);
+		$this->display_page('last-watch', $navbar, $data);
 	}
 
 	public function by_name() {
@@ -119,7 +119,7 @@ class PageController extends CI_Controller {
 		$navbar['activePage'] = "by-name";
 		$navbar['customTitle'] = "Anime by Name";
 
-		$this->display_page($navbar, 'by-name', $data, NULL);
+		$this->display_page('by-name', $navbar, $data);
 	}
 
 	public function download_list() {
@@ -127,14 +127,14 @@ class PageController extends CI_Controller {
 		$navbar['customTitle'] = "Download List";
 		$navbar['customCSS'] = "resources/css/download-list/styles.css";
 
-		$this->display_page($navbar, 'download-list', NULL, NULL);
+		$this->display_page('download-list', $navbar);
 	}
 
 	public function hdd_list() {
 		$navbar['activePage'] = "hdd-list";
 		$navbar['customTitle'] = "HDD List";
 
-		$this->display_page($navbar, 'hdd-list', NULL, NULL);
+		$this->display_page('hdd-list', $navbar);
 	}
 
 	public function hdd_simulator() {
@@ -142,7 +142,7 @@ class PageController extends CI_Controller {
 		$navbar['customTitle'] = "Disk Simulator";
 		$navbar['customCSS'] = "resources/css/hdd-simulator/styles.css";
 
-		$this->display_page($navbar, 'hdd-simulator', NULL, NULL);
+		$this->display_page('hdd-simulator', $navbar);
 	}
 
 	public function about() {
@@ -188,6 +188,6 @@ class PageController extends CI_Controller {
 		$navbar['customTitle'] = "About Page";
 		$navbar['customCSS'] = "resources/css/about/styles.css";
 
-		$this->display_page($navbar, 'about', $data, NULL);
+		$this->display_page('about', $navbar, $data);
 	}
 }
