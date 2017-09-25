@@ -123,6 +123,31 @@ class DefaultModel extends CI_Model {
 		return $this->db->get()->result();
 	}
 
+	public function getDownloadData($year = NULL, $season = NULL) {
+		if (empty($year) && empty($season)) {
+			$this->db->select('status, season, year');
+			$this->db->from('downloads');
+
+			$this->db->order_by('year', 'ASC');
+			$this->db->order_by('season', 'ASC');
+			$this->db->order_by('status', 'DESC');
+		} else {
+			$this->db->select('*');
+			$this->db->from('downloads');
+
+			$this->db->where('year', $year);
+			$this->db->where('season', $season);
+
+			$this->db->order_by('year', 'ASC');
+			$this->db->order_by('season', 'ASC');
+			$this->db->order_by('status', 'DESC');
+			$this->db->order_by('priority', 'DESC');
+			$this->db->order_by('title', 'ASC');
+		}
+
+		return $this->db->get()->result();
+	}
+
 	public function addAnimeData($data) {
 		$this->db->insert('anime', $data);
 	}

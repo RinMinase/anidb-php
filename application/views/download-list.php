@@ -23,68 +23,48 @@
 						<li>
 							<a href="#">Uncategorized</a>
 							<span class="pull-right">
-								<span class="label label-success" tooltip="tip" title="Watched">21</span>
-								<span class="label label-primary" tooltip="tip" title="Downloaded">7</span>
-								<span class="label label-default" tooltip="tip" title="Queued">82</span>
+								<span class="label label-success" tooltip="tip" title="Watched">
+									<?php echo $downloadUnsorted['Watched'] ?>
+								</span>
+								<span class="label label-primary" tooltip="tip" title="Downloaded">
+									<?php echo $downloadUnsorted['Downloaded'] ?>
+								</span>
+								<span class="label label-default" tooltip="tip" title="Queued">
+									<?php echo $downloadUnsorted['Queued'] ?>
+								</span>
 							</span>
 						</li>
 
 						<li><br></li>
 
-						<li>
-							<span>2017</span>
+						<?php foreach ($downloadSorted as $item): ?>
+							<li>
 
-							<ul class="list-unstyled season-list">
-								<li>
-									<a href="#">Winter 2017</a>
-									<span class="pull-right">
-										<span class="label label-success" tooltip="tip" title="Watched">3</span>
-										<span class="label label-primary" tooltip="tip" title="Downloaded">5</span>
-										<span class="label label-default" tooltip="tip" title="Queued">12</span>
-									</span>
-								</li>
-								<li>
-									<a href="#">Spring 2017</a>
-									<span class="pull-right">
-										<span class="label label-success" tooltip="tip" title="Watched">9</span>
-										<span class="label label-primary" tooltip="tip" title="Downloaded">1</span>
-										<span class="label label-default" tooltip="tip" title="Queued">11</span>
-									</span>
-								</li>
-								<li>
-									<a href="#">Summer 2017</a>
-									<span class="pull-right">
-										<span class="label label-success"
-											tooltip="tip"
-											title="Watched">2</span>
-										<span class="label label-primary"
-											tooltip="tip"
-											title="Downloaded">9</span>
-										<span class="label label-default"
-											tooltip="tip"
-											title="Queued">5</span>
-									</span>
-								</li>
-								<li>
-									<a href="#">Fall 2017</a>
-									<span class="pull-right">
-										<span class="label label-success"
-											tooltip="tip"
-											data-placement="auto"
-											title="Watched">1</span>
-										<span class="label label-primary"
-											tooltip="tip"
-											data-placement="auto"
-											title="Downloaded">2</span>
-										<span class="label label-default"
-											tooltip="tip"
-											data-placement="auto"
-											title="Queued">19</span>
-									</span>
-								</li>
-							</ul>
+								<span><?php echo $item['Year'] ?></span>
 
-						</li>
+								<ul class="list-unstyled season-list">
+									<?php foreach ($item['Stats'] as $subitem): ?>
+										<?php if (!empty($subitem)): ?>
+											<li>
+												<a href="#"><?php echo $subitem['Season'] . " " . $item['Year']; ?></a>
+												<span class="pull-right">
+													<span class="label label-success" tooltip="tip" title="Watched">
+														<?php echo $subitem['Watched']; ?>
+													</span>
+													<span class="label label-primary" tooltip="tip" title="Downloaded">
+														<?php echo $subitem['Downloaded']; ?>
+													</span>
+													<span class="label label-default" tooltip="tip" title="Queued">
+														<?php echo $subitem['Queued']; ?>
+													</span>
+												</span>
+											</li>
+										<?php endif; ?>
+									<?php endforeach; ?>
+								</ul>
+
+							</li>
+						<?php endforeach; ?>
 
 					</ul>
 
