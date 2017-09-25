@@ -366,7 +366,7 @@ class PageController extends CI_Controller {
 		$navbar['activePage'] = "hdd-list";
 		$navbar['customTitle'] = "HDD List";
 
-		$this->display_page($navbar, 'hdd', NULL, NULL);
+		$this->display_page($navbar, 'hdd-list', NULL, NULL);
 	}
 
 	public function hdd_simulator() {
