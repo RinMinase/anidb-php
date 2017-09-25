@@ -132,7 +132,7 @@ class DefaultModel extends CI_Model {
 			$this->db->order_by('season', 'ASC');
 			$this->db->order_by('status', 'DESC');
 		} else {
-			$this->db->select('*');
+			$this->db->select('id, title, status, priority, remarks');
 			$this->db->from('downloads');
 
 			$this->db->where('year', $year);
