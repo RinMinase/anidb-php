@@ -124,7 +124,7 @@ class DefaultModel extends CI_Model {
 	}
 
 	public function getDownloadData($year = NULL, $season = NULL) {
-		if (empty($year) && empty($season)) {
+		if (is_null($year) && is_null($season)) {
 			$this->db->select('status, season, year');
 			$this->db->from('downloads');
 
