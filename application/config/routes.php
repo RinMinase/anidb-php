@@ -18,6 +18,7 @@ $route['last-watch'] = 'PageController/last_watch';
 $route['by-name'] = 'PageController/by_name';
 
 $route['download-list'] = 'PageController/download_list';
+$route['download-list/(:num)/(:any)'] = 'PageController/download_list/$1/$2';
 
 $route['hdd-list'] = 'PageController/hdd_list';
 $route['hdd-list/simulator'] = 'PageController/hdd_simulator';
