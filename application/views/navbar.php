@@ -167,6 +167,14 @@
 									</a>
 								</li>
 
+								<li class="divider"></li>
+
+								<li <?php if($activePage == "hdd-simulator") echo "class='active'"; ?>>
+									<a href=<?php echo base_url("hdd-list/simulator") ?>>
+										<i class="fa fa-list"></i>&nbsp;&nbsp;&nbsp;Manage Bugs, Future Changes, and Changelog
+									</a>
+								</li>
+
 							</ul>
 						</li>
 
