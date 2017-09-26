@@ -65,218 +65,125 @@
 		<div class="col-md-9">
 			<div class="panel-group">
 
-				<?php if (!empty($downloadData['Watched'])): ?>
+				<?php $list_number = 0; ?>
+				<?php foreach ($downloadData as $item): ?>
+					<?php if (!empty($item)): ?>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a href=
+										<?php
+											switch ($list_number) {
+												case 0: echo "'#panel-finished-watching'"; break;
+												case 1: echo "'#panel-finished-downloading'"; break;
+												case 2: echo "'#panel-queue'"; break;
+											}
+										?>
+									data-toggle="collapse">
+										<?php
+											switch ($list_number) {
+												case 0: echo "Finished Watching"; break;
+												case 1: echo "Finished Downloading"; break;
+												case 2: echo "Queue"; break;
+											}
+										?>
+									</a>
+									<div class="pull-right">
+										<span class="label
+											<?php
+												switch ($list_number) {
+													case 0: echo " label-success"; break;
+													case 1: echo " label-primary"; break;
+													case 2: echo " label-default"; break;
+												}
+											?>
+										">
+											<?php
+												switch ($list_number) {
+													case 0: echo $downloadDataStats['Watched']; break;
+													case 1: echo $downloadDataStats['Downloaded']; break;
+													case 2: echo $downloadDataStats['Queued']; break;
+												}
+											?>
+										</span>
+									</div>
+								</h4>
+							</div>
+							<div id=
+								<?php
+									switch ($list_number) {
+										case 0: echo "'panel-finished-watching'"; break;
+										case 1: echo "'panel-finished-downloading'"; break;
+										case 2: echo "'panel-queue'"; break;
+									}
+								?>
+							class="panel-collapse collapse in">
+								<div class="panel-body">
 
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<h4 class="panel-title">
-								<a href="#panel-finished-watching" data-toggle="collapse">Finished Watching</a>
-								<div class="pull-right">
-									<span class="label label-success">
-										<?php echo $downloadDataStats['Watched'] ?>
-									</span>
-								</div>
-							</h4>
-						</div>
-						<div id="panel-finished-watching" class="panel-collapse collapse in">
-							<div class="panel-body">
-
-								<div class="table-responsive">
-									<table class="table table-condensed">
-										<thead>
-											<tr>
-												<th>Title</th>
-												<th>Remarks</th>
-												<th></th>
-											</tr>
-										</thead>
-										<tbody>
-
-											<?php foreach ($downloadData['Watched'] as $item): ?>
-
+									<div class="table-responsive">
+										<table class="table table-condensed">
+											<thead>
 												<tr>
-													<td>
-														<?php
-															switch ($item->priority) {
-																case 1:
-																	echo "<div class='download-legend-prio-low' tooltip='tip' title='Low Priority'></div>";
-																	break;
-																case 2:
-																	echo "<div class='download-legend-prio-normal' tooltip='tip' title='Normal Priority'></div>";
-																	break;
-																case 3:
-																	echo "<div class='download-legend-prio-high' tooltip='tip' title='High Priority'></div>";
-																	break;
-															}
-														?>
-														<span><?php echo $item->title ?></span>
-													</td>
-													<td>
-														<dfn><?php echo $item->remarks . " "; ?></dfn>
-														<a href="#" class="btn btn-xs btn-warning" tooltip="tip" title="Edit Remarks">
-															<i class="fa fa-pencil"></i>
-														</a>
-													</td>
-													<td class="text-right">
-														<a href="#" class="btn btn-xs btn-danger" tooltip="tip" title="Delete Title">
-															<i class="fa fa-trash"></i>
-														</a>
-													</td>
+													<th>Title</th>
+													<th>Remarks</th>
+													<th></th>
 												</tr>
+											</thead>
+											<tbody>
 
-											<?php endforeach; ?>
+												<?php foreach ($item as $subitem): ?>
 
-										</tbody>
-									</table>
+													<tr>
+														<td>
+															<?php
+																switch ($subitem->priority) {
+																	case 1:
+																		echo "<div class='download-legend-prio-low'";
+																			echo " tooltip='tip'";
+																			echo " title='Low Priority'>";
+																		echo "</div>";
+																		break;
+																	case 2:
+																		echo "<div class='download-legend-prio-normal'";
+																			echo " tooltip='tip'";
+																			echo " title='Normal Priority'>";
+																		echo "</div>";
+																		break;
+																	case 3:
+																		echo "<div class='download-legend-prio-high'";
+																			echo " tooltip='tip'";
+																			echo " title='High Priority'>";
+																		echo "</div>";
+																		break;
+																}
+															?>
+															<span><?php echo $subitem->title ?></span>
+														</td>
+														<td>
+															<dfn><?php echo $subitem->remarks . " "; ?></dfn>
+															<a href="#" class="btn btn-xs btn-warning" tooltip="tip" title="Edit Remarks">
+																<i class="fa fa-pencil"></i>
+															</a>
+														</td>
+														<td class="text-right">
+															<a href="#" class="btn btn-xs btn-danger" tooltip="tip" title="Delete Title">
+																<i class="fa fa-trash"></i>
+															</a>
+														</td>
+													</tr>
+
+												<?php endforeach; ?>
+
+											</tbody>
+										</table>
+									</div>
+
 								</div>
-
 							</div>
 						</div>
-					</div>
-
-				<?php endif ?>
-
-				<?php if (!empty($downloadData['Downloaded'])): ?>
-
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<h4 class="panel-title">
-								<a href="#panel-finished-watching" data-toggle="collapse">Finished Downloading</a>
-								<div class="pull-right">
-									<span class="label label-primary">
-										<?php echo $downloadDataStats['Downloaded'] ?>
-									</span>
-								</div>
-							</h4>
-						</div>
-						<div id="panel-finished-watching" class="panel-collapse collapse in">
-							<div class="panel-body">
-
-								<div class="table-responsive">
-									<table class="table table-condensed">
-										<thead>
-											<tr>
-												<th>Title</th>
-												<th>Remarks</th>
-												<th></th>
-											</tr>
-										</thead>
-										<tbody>
-
-											<?php foreach ($downloadData['Downloaded'] as $item): ?>
-
-												<tr>
-													<td>
-														<?php
-															switch ($item->priority) {
-																case 1:
-																	echo "<div class='download-legend-prio-low' tooltip='tip' title='Low Priority'></div>";
-																	break;
-																case 2:
-																	echo "<div class='download-legend-prio-normal' tooltip='tip' title='Normal Priority'></div>";
-																	break;
-																case 3:
-																	echo "<div class='download-legend-prio-high' tooltip='tip' title='High Priority'></div>";
-																	break;
-															}
-														?>
-														<span><?php echo $item->title ?></span>
-													</td>
-													<td>
-														<dfn><?php echo $item->remarks . " "; ?></dfn>
-														<a href="#" class="btn btn-xs btn-warning" tooltip="tip" title="Edit Remarks">
-															<i class="fa fa-pencil"></i>
-														</a>
-													</td>
-													<td class="text-right">
-														<a href="#" class="btn btn-xs btn-danger" tooltip="tip" title="Delete Title">
-															<i class="fa fa-trash"></i>
-														</a>
-													</td>
-												</tr>
-
-											<?php endforeach; ?>
-
-										</tbody>
-									</table>
-								</div>
-
-							</div>
-						</div>
-					</div>
-
-				<?php endif ?>
-
-				<?php if (!empty($downloadData['Queued'])): ?>
-
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<h4 class="panel-title">
-								<a href="#panel-finished-watching" data-toggle="collapse">Queue</a>
-								<div class="pull-right">
-									<span class="label label-default">
-										<?php echo $downloadDataStats['Queued'] ?>
-									</span>
-								</div>
-							</h4>
-						</div>
-						<div id="panel-finished-watching" class="panel-collapse collapse in">
-							<div class="panel-body">
-
-								<div class="table-responsive">
-									<table class="table table-condensed">
-										<thead>
-											<tr>
-												<th>Title</th>
-												<th>Remarks</th>
-												<th></th>
-											</tr>
-										</thead>
-										<tbody>
-
-											<?php foreach ($downloadData['Queued'] as $item): ?>
-
-												<tr>
-													<td>
-														<?php
-															switch ($item->priority) {
-																case 1:
-																	echo "<div class='download-legend-prio-low' tooltip='tip' title='Low Priority'></div>";
-																	break;
-																case 2:
-																	echo "<div class='download-legend-prio-normal' tooltip='tip' title='Normal Priority'></div>";
-																	break;
-																case 3:
-																	echo "<div class='download-legend-prio-high' tooltip='tip' title='High Priority'></div>";
-																	break;
-															}
-														?>
-														<span><?php echo $item->title ?></span>
-													</td>
-													<td>
-														<dfn><?php echo $item->remarks . " "; ?></dfn>
-														<a href="#" class="btn btn-xs btn-warning" tooltip="tip" title="Edit Remarks">
-															<i class="fa fa-pencil"></i>
-														</a>
-													</td>
-													<td class="text-right">
-														<a href="#" class="btn btn-xs btn-danger" tooltip="tip" title="Delete Title">
-															<i class="fa fa-trash"></i>
-														</a>
-													</td>
-												</tr>
-
-											<?php endforeach; ?>
-
-										</tbody>
-									</table>
-								</div>
-
-							</div>
-						</div>
-					</div>
-
-				<?php endif ?>
+					<?php endif; ?>
+					<?php $list_number++; ?>
+				<?php endforeach; ?>
 
 			</div>
 		</div>
