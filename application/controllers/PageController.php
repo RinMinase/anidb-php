@@ -234,6 +234,10 @@ class PageController extends CI_Controller {
 		$this->display_page('download-list', $navbar, $data);
 	}
 
+	public function download_list_add() {
+		echo "no value";
+	}
+
 	public function hdd_list() {
 		$navbar['activePage'] = "hdd-list";
 		$navbar['customTitle'] = "HDD List";
