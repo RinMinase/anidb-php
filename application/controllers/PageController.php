@@ -142,9 +142,9 @@ class PageController extends CI_Controller {
 				}
 
 				switch($item->status) {
-					case 1: $data['downloadUnsorted']['Watched']++; break;
+					case 1: $data['downloadUnsorted']['Queued']++; break;
 					case 2: $data['downloadUnsorted']['Downloaded']++; break;
-					case 3: $data['downloadUnsorted']['Queued']++; break;
+					case 3: $data['downloadUnsorted']['Watched']++; break;
 				}
 
 			} else {
@@ -171,9 +171,9 @@ class PageController extends CI_Controller {
 				}
 
 				switch($item->status) {
-					case 1: $data['downloadSorted'][$item->year]['Stats'][$item->season]['Watched']++; break;
+					case 1: $data['downloadSorted'][$item->year]['Stats'][$item->season]['Queued']++; break;
 					case 2: $data['downloadSorted'][$item->year]['Stats'][$item->season]['Downloaded']++; break;
-					case 3: $data['downloadSorted'][$item->year]['Stats'][$item->season]['Queued']++; break;
+					case 3: $data['downloadSorted'][$item->year]['Stats'][$item->season]['Watched']++; break;
 				}
 
 			}
@@ -213,16 +213,16 @@ class PageController extends CI_Controller {
 
 			switch($item->status) {
 				case 1:
-					$data['downloadDataStats']['Watched']++;
-					array_push($data['downloadData']['Watched'], $item);
+					$data['downloadDataStats']['Queued']++;
+					array_push($data['downloadData']['Queued'], $item);
 					break;
 				case 2:
 					$data['downloadDataStats']['Downloaded']++;
 					array_push($data['downloadData']['Downloaded'], $item);
 					break;
 				case 3:
-					$data['downloadDataStats']['Queued']++;
-					array_push($data['downloadData']['Queued'], $item);
+					$data['downloadDataStats']['Watched']++;
+					array_push($data['downloadData']['Watched'], $item);
 					break;
 			}
 		}
