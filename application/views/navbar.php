@@ -141,18 +141,22 @@
 									</a>
 								</li>
 
-								<li class="divider"></li>
+								<?php if ($activePage == "index"): ?>
 
-								<li <?php if($activePage == "hdd-simulator") echo "class='active'"; ?>>
-									<a href=<?php echo base_url("hdd-list/simulator") ?>>
-										<i class="fa fa-file"></i>&nbsp;&nbsp;&nbsp;Export List (.csv)
-									</a>
-								</li>
-								<li <?php if($activePage == "hdd-simulator") echo "class='active'"; ?>>
-									<a href=<?php echo base_url("hdd-list/simulator") ?>>
-										<i class="fa fa-file"></i>&nbsp;&nbsp;&nbsp;Export List (.xlsx)
-									</a>
-								</li>
+									<li class="divider"></li>
+
+									<li <?php if($activePage == "hdd-simulator") echo "class='active'"; ?>>
+										<a href=<?php echo base_url("hdd-list/simulator") ?>>
+											<i class="fa fa-file"></i>&nbsp;&nbsp;&nbsp;Export List (.csv)
+										</a>
+									</li>
+									<li <?php if($activePage == "hdd-simulator") echo "class='active'"; ?>>
+										<a href=<?php echo base_url("hdd-list/simulator") ?>>
+											<i class="fa fa-file"></i>&nbsp;&nbsp;&nbsp;Export List (.xlsx)
+										</a>
+									</li>
+
+								<?php endif; ?>
 
 								<li class="divider"></li>
 
