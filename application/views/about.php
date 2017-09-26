@@ -397,8 +397,6 @@
 
 							<h4>Future Changes</h4>
 							<ul>
-								<li><code class="red">[FEATURE]</code> Download Lists (By Season)</li>
-								<li><code class="red">[FEATURE]</code> Download Lists (Uncategorized)</li>
 								<li><code class="red">[FEATURE]</code> Hard Drive Statistics</li>
 								<li><code class="red">[FEATURE]</code> Fuzzy Search by Title</li>
 								<li><code class="red">[FEATURE]</code> Edit and Delete an Entry (AniDB)</li>
