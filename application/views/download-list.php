@@ -4,7 +4,7 @@
 		<div class="col-md-3">
 			<div class="row">
 				<div class="col-xs-3 col-sm-2 col-md-3">
-					<a href="#" class="btn btn-primary btn-block">
+					<a href="<?php echo base_url("download-list/add"); ?>" class="btn btn-primary btn-block">
 						<i class="fa fa-plus"></i>
 					</a>
 				</div>
