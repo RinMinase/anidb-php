@@ -180,6 +180,53 @@ class PageController extends CI_Controller {
 
 		}
 
+		if (empty($year) && empty($season)) {
+			$raw_data_query = $this->defaultmodel->getDownloadData(0, 0);
+		} else {
+			switch (strtolower($season)) {
+				case "winter": $raw_data_query = $this->defaultmodel->getDownloadData($year, 0); break;
+				case "spring": $raw_data_query = $this->defaultmodel->getDownloadData($year, 1); break;
+				case "summer": $raw_data_query = $this->defaultmodel->getDownloadData($year, 2); break;
+				case "fall": $raw_data_query = $this->defaultmodel->getDownloadData($year, 3); break;
+			}
+		}
+
+		foreach($raw_data_query as $item) {
+			if (empty($data['downloadDataStats']['Watched'])) {
+				$data['downloadDataStats']['Watched'] = 0;
+			}
+			if (empty($data['downloadDataStats']['Downloaded'])) {
+				$data['downloadDataStats']['Downloaded'] = 0;
+			}
+			if (empty($data['downloadDataStats']['Queued'])) {
+				$data['downloadDataStats']['Queued'] = 0;
+			}
+			if (empty($data['downloadData']['Watched'])) {
+				$data['downloadData']['Watched'] = Array();
+			}
+			if (empty($data['downloadData']['Downloaded'])) {
+				$data['downloadData']['Downloaded'] = Array();
+			}
+			if (empty($data['downloadData']['Queued'])) {
+				$data['downloadData']['Queued'] = Array();
+			}
+
+			switch($item->status) {
+				case 1:
+					$data['downloadDataStats']['Watched']++;
+					array_push($data['downloadData']['Watched'], $item);
+					break;
+				case 2:
+					$data['downloadDataStats']['Downloaded']++;
+					array_push($data['downloadData']['Downloaded'], $item);
+					break;
+				case 3:
+					$data['downloadDataStats']['Queued']++;
+					array_push($data['downloadData']['Queued'], $item);
+					break;
+			}
+		}
+
 		$navbar['activePage'] = "download-list";
 		$navbar['customTitle'] = "Download List";
 		$navbar['customCSS'] = "resources/css/download-list/styles.css";
