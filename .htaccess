@@ -1,22 +1,22 @@
 <IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteBase /anidb/
+	RewriteEngine On
+	RewriteBase /anidb/
 
-    # Prevents access to the system folder
-    RewriteCond %{REQUEST_URI} ^system.*
-    RewriteRule ^(.*)$ /index.php?/$1 [L]
+	# Prevents access to the system folder
+	# RewriteCond %{REQUEST_URI} ^system.*
+	# RewriteRule ^(.*)$ /index.php?/$1 [L]
 
-    # Prevents user access to the application folder
-    RewriteCond %{REQUEST_URI} ^application.*
-    RewriteRule ^(.*)$ /index.php?/$1 [L]
+	# Prevents user access to the application folder
+	# RewriteCond %{REQUEST_URI} ^application.*
+	# RewriteRule ^(.*)$ /index.php?/$1 [L]
 
-    # Checks if user is accessing a valid file, if not sends request to index.php
-    RewriteCond $1 !^(index\.php|img|font|css|temp|js|robots\.txt|favicon\.ico)
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^(.*)$ index.php?/$1 [L]
+	# Checks if user is accessing a valid file, if not sends request to index.php
+	RewriteCond $1 !^(index\.php|assets|font|css|js|favicon\.ico)
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule ^(.*)$ index.php?/$1 [L]
 </IfModule>
 
 <IfModule !mod_rewrite.c>
-    ErrorDocument 404 /index.php
+	ErrorDocument 404 /index.php
 </IfModule>
