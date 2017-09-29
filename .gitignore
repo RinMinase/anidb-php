@@ -1,5 +1,6 @@
 .DS_Store
 
+## CodeIgniter Files
 application/cache/*
 !application/cache/index.html
 !application/cache/.htaccess
@@ -8,16 +9,13 @@ application/logs/*
 !application/logs/index.html
 !application/logs/.htaccess
 
-composer.lock
-
-user_guide_src/build/*
-user_guide_src/cilexer/build/*
-user_guide_src/cilexer/dist/*
-user_guide_src/cilexer/pycilexer.egg-info/*
+## Vendor Folder
 /vendor/
 
-# IDE Files
-#-------------------------
+## Composer Lock Files
+composer.lock
+
+## IDE Files
 /nbproject/
 .idea/*
 
