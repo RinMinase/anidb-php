@@ -63,19 +63,19 @@
 										switch ($item->quality) {
 											case "4K 2160p":
 												echo "<div class='anime-legend-uhd' tooltip='tip' title='4K 2160p'></div>";
-												break;
+											break;
 											case "FHD 1080p":
 												echo "<div class='anime-legend-fhd' tooltip='tip' title='FHD 1080p'></div>";
-												break;
+											break;
 											case "HD 720p":
 												echo "<div class='anime-legend-hd' tooltip='tip' title='HD 720p'></div>";
-												break;
+											break;
 											case "HQ 480p":
 												echo "<div class='anime-legend-hq' tooltip='tip' title='HQ 480p'></div>";
-												break;
+											break;
 											case "LQ 360p":
 												echo "<div class='anime-legend-lq' tooltip='tip' title='LQ 360p'></div>";
-												break;
+											break;
 										}
 									?>
 

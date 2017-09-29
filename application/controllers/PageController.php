@@ -4,10 +4,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class PageController extends CI_Controller {
 	public function __construct() { parent::__construct(); }
 
-	private function display_page($page, $navbar_data = NULL, $page_data = NULL, $footer_data = NULL) {
+	private function display_page(
+		$page,
+		$navbar_data = NULL,
+		$page_data = NULL,
+		$footer_data = NULL) {
+
 		$this->load->view('navbar', $navbar_data);
 		$this->load->view($page, $page_data);
 		$this->load->view('footer', $footer_data);
+	}
+
+	private function print_pretty($data = NULL) {
+		echo "<pre><code>";
+		print_r($data);
+		echo "</code></pre>";
 	}
 
 	public function index()	{
@@ -215,15 +226,15 @@ class PageController extends CI_Controller {
 				case 1:
 					$data['downloadDataStats']['Queued']++;
 					array_push($data['downloadData']['Queued'], $item);
-					break;
+				break;
 				case 2:
 					$data['downloadDataStats']['Downloaded']++;
 					array_push($data['downloadData']['Downloaded'], $item);
-					break;
+				break;
 				case 3:
 					$data['downloadDataStats']['Watched']++;
 					array_push($data['downloadData']['Watched'], $item);
-					break;
+				break;
 			}
 		}
 
@@ -235,7 +246,10 @@ class PageController extends CI_Controller {
 	}
 
 	public function download_list_add() {
-		echo "no value";
+		$this->load->model('defaultmodel');
+		$data = $this->defaultmodel->getAnimeData();
+
+		$this->print_pretty($data);
 	}
 
 	public function hdd_list() {

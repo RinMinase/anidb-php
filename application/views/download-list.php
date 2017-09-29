@@ -155,19 +155,19 @@
 																			echo " tooltip='tip'";
 																			echo " title='Low Priority'>";
 																		echo "</div>";
-																		break;
+																	break;
 																	case 2:
 																		echo "<div class='download-legend-prio-normal'";
 																			echo " tooltip='tip'";
 																			echo " title='Normal Priority'>";
 																		echo "</div>";
-																		break;
+																	break;
 																	case 3:
 																		echo "<div class='download-legend-prio-high'";
 																			echo " tooltip='tip'";
 																			echo " title='High Priority'>";
 																		echo "</div>";
-																		break;
+																	break;
 																}
 															?>
 															<span><?php echo $subitem->title ?></span>
