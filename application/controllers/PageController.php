@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class PageController extends CI_Controller {
 	public function __construct() { parent::__construct(); }
 
-	public function display_page($page, $navbar_data = NULL, $page_data = NULL, $footer_data = NULL) {
+	private function display_page($page, $navbar_data = NULL, $page_data = NULL, $footer_data = NULL) {
 		$this->load->view('navbar', $navbar_data);
 		$this->load->view($page, $page_data);
 		$this->load->view('footer', $footer_data);
