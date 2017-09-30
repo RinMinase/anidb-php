@@ -4,14 +4,55 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class DefaultModel extends CI_Model {
 
 	public function getAnimeData($query = NULL) {
+		$this->output->enable_profiler(TRUE);
 		if (empty($query)) {
-			$this->db->select('*');
+			$this->db->select('
+				id,
+				watchStatus,
+				quality,
+				title,
+				episodes,
+				ovas,
+				specials,
+				filesize,
+				seasonNumber,
+				firstSeasonTitle,
+				dateFinished,
+				releaseSeason,
+				releaseYear,
+				durationHour,
+				durationMinute,
+				durationSecond,
+				encoder,
+				variants,
+				remarks
+			');
 			$this->db->from('anime');
 			$this->db->order_by('quality', 'ASC');
 
 			return $this->db->get()->result();
 		} else {
-			$this->db->select('*');
+			$this->db->select('
+				id,
+				watchStatus,
+				quality,
+				title,
+				episodes,
+				ovas,
+				specials,
+				filesize,
+				seasonNumber,
+				firstSeasonTitle,
+				dateFinished,
+				releaseSeason,
+				releaseYear,
+				durationHour,
+				durationMinute,
+				durationSecond,
+				encoder,
+				variants,
+				remarks
+			');
 			$this->db->from('anime');
 
 			if (!empty($query['title'])) {
