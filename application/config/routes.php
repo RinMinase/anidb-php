@@ -5,7 +5,7 @@ $route['default_controller'] = 'LandingPageController';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-// $route['view/(:num)'] = 'LandingPageController/view/$1';
+$route['view/(:num)'] = 'LandingPageController/view/$1';
 // $route['edit/(:num)'] = 'LandingPageController/edit/$1';
 // $route['delete/(:num)'] = 'LandingPageController/delete/$1';
 
