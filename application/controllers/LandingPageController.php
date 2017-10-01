@@ -84,9 +84,11 @@ class LandingPageController extends CI_Controller {
 		if ($this->input->get('releaseYear')) $data['releaseYear'] = $this->input->get('releaseYear');
 
 		if ($this->input->get('duration')) {
-			$data['durationHour'] = explode(":", $this->input->get('duration'))[0];
-			$data['durationMinute'] = explode(":", $this->input->get('duration'))[1];
-			$data['durationSecond'] = explode(":", $this->input->get('duration'))[2];
+			$raw_duration = explode(":", $this->input->get('duration'));
+
+			$data['durationHour'] = $raw_duration[0];
+			$data['durationMinute'] = $raw_duration[1];
+			$data['durationSecond'] = $raw_duration[2];
 		}
 
 		if ($this->input->get('encoder')) $data['encoder'] = $this->input->get('encoder');
