@@ -16,11 +16,11 @@
 					<div class="col-xs-5 col-sm-3 col-md-3 form-group">
 						<label>Quality</label>
 						<select class="form-control" name="quality">
-							<option>4k 2160p</option>
-							<option>FHD 1080p</option>
-							<option>HD 720p</option>
-							<option>HQ 480p</option>
-							<option>LQ 480p</option>
+							<option value="4k 2160p">4k 2160p</option>
+							<option value="FHD 1080p" selected>FHD 1080p</option>
+							<option value="HD 720p">HD 720p</option>
+							<option value="HQ 480p">HQ 480p</option>
+							<option value="LQ 480p">LQ 480p</option>
 						</select>
 					</div>
 
@@ -104,14 +104,14 @@
 							</div>
 							<div class="col-xs-6 col-sm-4 col-md-4">
 								<select class="form-control" name="releaseYear">
-									<option>2010</option>
-									<option>2011</option>
-									<option>2012</option>
-									<option>2013</option>
-									<option>2014</option>
-									<option>2015</option>
-									<option>2016</option>
-									<option selected>2017</option>
+									<option value="2011">2010</option>
+									<option value="2012">2011</option>
+									<option value="2013">2012</option>
+									<option value="2014">2013</option>
+									<option value="2015">2014</option>
+									<option value="2016">2015</option>
+									<option value="2017">2016</option>
+									<option value="2017" selected>2017</option>
 								</select>
 							</div>
 						</div>
@@ -132,13 +132,72 @@
 				</div>
 
 				<div class="row">
-					<div class="col-xs-12 col-sm-12 col-md-8 form-group">
+					<div class="col-xs-12 col-sm-12 col-md-6 form-group">
 						<label>Variants</label>
 						<input type="text" class="form-control" name="variants">
 					</div>
-					<div class="col-xs-12 col-sm-12 col-md-4 form-group">
+					<div class="col-xs-12 col-sm-8 col-md-4 form-group">
 						<label>Remarks</label>
 						<input type="text" class="form-control" name="remarks">
+					</div>
+					<div class="col-xs-12 col-sm-4 col-md-2">
+						<label>In HDD</label>
+						<select class="form-control" name="inHDD">
+							<option value="true">Yes</option>
+							<option value="false">No</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-4 form-group">
+						<label>Prequel</label>
+						<select class="form-control" name="prequel">
+							<?php foreach ($titleData as $item): ?>
+								<option value="<?php echo $item->title; ?>">
+									<?php echo $item->title; ?>
+								</option>
+							<?php endforeach; ?>
+						</select>
+					</div>
+					<div class="col-xs-12 col-sm-12 col-md-4 form-group">
+						<label>Sequel</label>
+						<select class="form-control" name="sequel">
+							<?php foreach ($titleData as $item): ?>
+								<option value="<?php echo $item->title; ?>">
+									<?php echo $item->title; ?>
+								</option>
+							<?php endforeach; ?>
+						</select>
+					</div>
+					<div class="col-xs-12 col-sm-12 col-md-4 form-group">
+						<label>Side-Story (comma-separated)</label>
+						<select multiple class="form-control" name="offquel">
+							<?php foreach ($titleData as $item): ?>
+								<option value="<?php echo $item->title; ?>">
+									<?php echo $item->title; ?>
+								</option>
+							<?php endforeach; ?>
+						</select>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-xs-6 col-sm-3 col-md-3 form-group">
+						<label>Audio Rating</label>
+						<input type="text" class="form-control" name="ratingAudio">
+					</div>
+					<div class="col-xs-6 col-sm-3 col-md-3 form-group">
+						<label>Enjoyment Rating</label>
+						<input type="text" class="form-control" name="ratingAudio">
+					</div>
+					<div class="col-xs-6 col-sm-3 col-md-3 form-group">
+						<label>Graphics Rating</label>
+						<input type="text" class="form-control" name="ratingAudio">
+					</div>
+					<div class="col-xs-6 col-sm-3 col-md-3 form-group">
+						<label>Plot Rating</label>
+						<input type="text" class="form-control" name="ratingAudio">
 					</div>
 				</div>
 

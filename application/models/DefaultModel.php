@@ -146,6 +146,16 @@ class DefaultModel extends CI_Model {
 
 	}
 
+	public function getAnimeDataAddNeededData() {
+		$this->db->select('title');
+		$this->db->from('anime');
+		$this->db->where('seasonNumber !=', 0);
+		$this->db->order_by('firstSeasonTitle', 'ASC');
+		$this->db->order_by('seasonNumber', 'ASC');
+
+		return $this->db->get()->result();
+	}
+
 	public function getLast20AnimeData() {
 		$this->db->select('quality, episodes, ovas, specials, title, filesize, dateFinished');
 		$this->db->from('anime');

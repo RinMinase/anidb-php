@@ -65,10 +65,13 @@ class PageController extends CI_Controller {
 	}
 
 	public function add() {
+		$this->load->model('defaultmodel');
+		$data['titleData'] = $this->defaultmodel->getAnimeDataAddNeededData();
+
 		$navbar['activePage'] = "add";
 		$navbar['customTitle'] = "Add an Entry";
 
-		$this->display_page('add', $navbar);
+		$this->display_page('add', $navbar, $data);
 	}
 
 	public function last_watch() {
