@@ -3,26 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class PageController extends CI_Controller {
 
-	private function display_page(
-		$page,
-		$navbar_data = NULL,
-		$page_data = NULL,
-		$footer_data = NULL) {
-
-		$this->load->view('navbar', $navbar_data);
-		$this->load->view($page, $page_data);
-		$this->load->view('footer', $footer_data);
-	}
-
-	private function print_pretty($data = NULL) {
-		echo "<pre><code>";
-		print_r($data);
-		echo "</code></pre>";
-	}
-
 	public function index()	{
-		$this->load->model('defaultmodel');
-
 		$data['query'] = $this->input->get('q');
 
 		if (empty($data['query'])) {
@@ -61,21 +42,19 @@ class PageController extends CI_Controller {
 		$navbar['customCSS'] = "resources/data-tables-1.10.16/jquery.data-tables.min.css";
 		$footer['customJS'] = "resources/js/index/scripts.js";
 
-		$this->display_page('index', $navbar, $data, $footer);
+		$this->displaylibrary->display_page('index', $navbar, $data, $footer);
 	}
 
 	public function add() {
-		$this->load->model('defaultmodel');
 		$data['titleData'] = $this->defaultmodel->getAnimeDataAddNeededData();
 
 		$navbar['activePage'] = "add";
 		$navbar['customTitle'] = "Add an Entry";
 
-		$this->display_page('add', $navbar, $data);
+		$this->displaylibrary->display_page('add', $navbar, $data);
 	}
 
 	public function last_watch() {
-		$this->load->model('defaultmodel');
 		$data['last20AnimeData'] = $this->defaultmodel->getLast20AnimeData();
 
 		$data['totalEpisodes'] = 0;
@@ -100,11 +79,10 @@ class PageController extends CI_Controller {
 		$navbar['activePage'] = "last-watch";
 		$navbar['customTitle'] = "Last 20 Watched";
 
-		$this->display_page('last-watch', $navbar, $data);
+		$this->displaylibrary->display_page('last-watch', $navbar, $data);
 	}
 
 	public function by_name() {
-		$this->load->model('defaultmodel');
 		$raw_data = $this->defaultmodel->getAnimeByNameNeededData();
 
 		for ($i=0; $i < 27; $i++) {
@@ -135,12 +113,10 @@ class PageController extends CI_Controller {
 		$navbar['activePage'] = "by-name";
 		$navbar['customTitle'] = "Anime by Name";
 
-		$this->display_page('by-name', $navbar, $data);
+		$this->displaylibrary->display_page('by-name', $navbar, $data);
 	}
 
 	public function download_list($year = NULL, $season = NULL) {
-		$this->load->model('defaultmodel');
-
 		$raw_stats_query = $this->defaultmodel->getDownloadData();
 
 		foreach($raw_stats_query as $item) {
@@ -251,21 +227,20 @@ class PageController extends CI_Controller {
 		$navbar['customTitle'] = "Download List";
 		$navbar['customCSS'] = "resources/css/download-list/styles.css";
 
-		$this->display_page('download-list', $navbar, $data);
+		$this->displaylibrary->display_page('download-list', $navbar, $data);
 	}
 
 	public function download_list_add() {
-		$this->load->model('defaultmodel');
 		$data = $this->defaultmodel->getAnimeData();
 
-		$this->print_pretty($data);
+		$this->displaylibrary->print_pretty($data);
 	}
 
 	public function hdd_list() {
 		$navbar['activePage'] = "hdd-list";
 		$navbar['customTitle'] = "HDD List";
 
-		$this->display_page('hdd-list', $navbar);
+		$this->displaylibrary->display_page('hdd-list', $navbar);
 	}
 
 	public function hdd_simulator() {
@@ -273,11 +248,10 @@ class PageController extends CI_Controller {
 		$navbar['customTitle'] = "Disk Simulator";
 		$navbar['customCSS'] = "resources/css/hdd-simulator/styles.css";
 
-		$this->display_page('hdd-simulator', $navbar);
+		$this->displaylibrary->display_page('hdd-simulator', $navbar);
 	}
 
 	public function about() {
-		$this->load->model('defaultmodel');
 		$raw_data = $this->defaultmodel->getAnimeStatisticsNeededData();
 
 		$total_hours = $total_minutes = $total_seconds = 0;
@@ -319,7 +293,7 @@ class PageController extends CI_Controller {
 		$navbar['customTitle'] = "About Page";
 		$navbar['customCSS'] = "resources/css/about/styles.css";
 
-		$this->display_page('about', $navbar, $data);
+		$this->displaylibrary->display_page('about', $navbar, $data);
 	}
 
 }
