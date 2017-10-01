@@ -114,7 +114,7 @@ class DownloadListController extends CI_Controller {
 		$navbar['customTitle'] = "Download List";
 		$navbar['customCSS'] = "resources/css/download-list/styles.css";
 
-		$this->displaylibrary->display_page('download-list', $navbar, $data);
+		$this->displaylibrary->display_page('download-list/download-list', $navbar, $data);
 	}
 
 	public function download_list_add() {
