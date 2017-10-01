@@ -156,6 +156,22 @@ class DefaultModel extends CI_Model {
 		return $this->db->get()->result();
 	}
 
+	public function getAnimeDataViewById($id) {
+		$this->db->select('*');
+		$this->db->from('anime');
+		$this->db->where('id', $id);
+
+		return $this->db->get()->row();
+	}
+
+	public function getAnimeDataViewByTitle($title) {
+		$this->db->select('id');
+		$this->db->from('anime');
+		$this->db->where('title', $title);
+
+		return $this->db->get()->row()->id;
+	}
+
 	public function getLast20AnimeData() {
 		$this->db->select('quality, episodes, ovas, specials, title, filesize, dateFinished');
 		$this->db->from('anime');

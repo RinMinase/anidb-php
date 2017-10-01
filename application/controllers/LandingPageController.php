@@ -54,6 +54,22 @@ class LandingPageController extends CI_Controller {
 		$this->displaylibrary->display_page('add', $navbar, $data);
 	}
 
+	public function view($id)	{
+		$data['animeData'] = $this->defaultmodel->getAnimeDataViewById($id);
+		if (!empty($data['animeData']->prequel)) {
+			$data['prequelId'] = $this->defaultmodel->getAnimeDataViewByTitle($data['animeData']->prequel);
+		}
+
+		if (!empty($data['animeData']->sequel)) {
+			$data['sequelId'] = $this->defaultmodel->getAnimeDataViewByTitle($data['animeData']->sequel);
+		}
+
+		$navbar['activePage'] = "view";
+		$navbar['customTitle'] = $data['animeData']->title;
+
+		$this->displaylibrary->display_page('view', $navbar, $data);
+	}
+
 	public function addEntry() {
 		$data['watchStatus'] = $this->input->get('watchStatus');
 		$data['quality'] = $this->input->get('quality');
