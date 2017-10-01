@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class PageController extends CI_Controller {
+class LandingPageController extends CI_Controller {
 
 	public function index()	{
 		$data['query'] = $this->input->get('q');
