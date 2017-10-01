@@ -58,8 +58,10 @@ class PageController extends CI_Controller {
 		}
 
 		$navbar['activePage'] = "index";
+		$navbar['customCSS'] = "resources/data-tables-1.10.16/jquery.data-tables.min.css";
+		$footer['customJS'] = "resources/js/index/scripts.js";
 
-		$this->display_page('index', $navbar, $data);
+		$this->display_page('index', $navbar, $data, $footer);
 	}
 
 	public function add() {
