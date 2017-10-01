@@ -198,6 +198,7 @@ class PageController extends CI_Controller {
 
 		if (empty($year) && empty($season)) {
 			$raw_data_query = $this->defaultmodel->getDownloadData(0, 0);
+			$data['currentList'] = "unsorted";
 		} else {
 			switch (strtolower($season)) {
 				case "winter": $raw_data_query = $this->defaultmodel->getDownloadData($year, 0); break;
@@ -205,6 +206,9 @@ class PageController extends CI_Controller {
 				case "summer": $raw_data_query = $this->defaultmodel->getDownloadData($year, 2); break;
 				case "fall": $raw_data_query = $this->defaultmodel->getDownloadData($year, 3); break;
 			}
+
+			if (empty($raw_data_query)) show_404();
+			$data['currentList'] = ucfirst($season) . " " . $year;
 		}
 
 		foreach($raw_data_query as $item) {

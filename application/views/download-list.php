@@ -26,7 +26,16 @@
 				<div class="col-md-12">
 
 					<div class="list-group">
-						<a href="<?php echo base_url("download-list"); ?>" class="list-group-item">Uncategorized
+						<a
+							<?php
+								if ($currentList != "unsorted") {
+									echo " href='" . base_url("download-list");
+									echo "' class='list-group-item'";
+								} else {
+									echo " class='list-group-item list-group-item-info'";
+								}
+							?>
+						>Uncategorized
 							<span class="pull-right">
 								<span class="label label-success" tooltip="tip" title="Watched">
 									<?php echo $downloadUnsorted['Watched'] ?>
@@ -46,8 +55,17 @@
 							<?php foreach ($item['Stats'] as $subitem): ?>
 								<?php if (!empty($subitem)): ?>
 
-									<a href="<?php echo base_url("download-list/" . $item['Year'] . "/" . $subitem['Season']); ?>"
-										class="list-group-item season-list">
+									<a
+										<?php
+											if ($currentList != $subitem['Season'] . " " . $item['Year']) {
+												echo " href='";
+												echo base_url("download-list/" . $item['Year'] . "/" . $subitem['Season']);
+												echo "' class='list-group-item season-list'";
+											} else {
+												echo " class='list-group-item season-list list-group-item-info'";
+											}
+										?>
+									>
 
 										<?php echo $subitem['Season'] . " " . $item['Year']; ?>
 
