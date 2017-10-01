@@ -5,7 +5,13 @@
 
 		<?php
 			if(!empty($customJS)) {
-				echo "<script src='" . base_url($customJS) . "'></script>";
+				if (is_array($customJS)) {
+					foreach ($customJS as $jsItem) {
+						echo "<script src='" . base_url($jsItem) . "'></script>";
+					}
+				} else {
+					echo "<script src='" . base_url($customJS) . "'></script>";
+				}
 			}
 		?>
 
