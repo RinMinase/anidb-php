@@ -12,7 +12,13 @@
 
 		<?php
 			if(!empty($customCSS)) {
-				echo "<link rel='stylesheet' href='" . base_url($customCSS) . "'>";
+				if (is_array($customCSS)) {
+					foreach ($customCSS as $cssItem) {
+						echo "<link rel='stylesheet' href='" . base_url($cssItem) . "'>";
+					}
+				} else {
+					echo "<link rel='stylesheet' href='" . base_url($customCSS) . "'>";
+				}
 			}
 		?>
 
