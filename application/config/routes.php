@@ -12,7 +12,7 @@ $route['translate_uri_dashes'] = FALSE;
 $route['index'] = 'LandingPageController/index';
 
 $route['add'] = 'LandingPageController/add';
-$route['addEntry'] = 'DefaultController/addEntry';
+$route['addEntry'] = 'LandingPageController/addEntry';
 
 $route['last-watch'] = 'OtherListsController/last_watch';
 $route['by-name'] = 'OtherListsController/by_name';
