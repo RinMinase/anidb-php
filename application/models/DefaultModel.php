@@ -4,7 +4,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class DefaultModel extends CI_Model {
 
 	public function getAnimeData($query = NULL) {
-		$this->output->enable_profiler(TRUE);
 		if (empty($query)) {
 			$this->db->select('
 				id,
@@ -25,7 +24,8 @@ class DefaultModel extends CI_Model {
 				durationSecond,
 				encoder,
 				variants,
-				remarks
+				remarks,
+				inHDD
 			');
 			$this->db->from('anime');
 			$this->db->order_by('quality', 'ASC');
@@ -51,7 +51,8 @@ class DefaultModel extends CI_Model {
 				durationSecond,
 				encoder,
 				variants,
-				remarks
+				remarks,
+				inHDD
 			');
 			$this->db->from('anime');
 
@@ -109,6 +110,13 @@ class DefaultModel extends CI_Model {
 				}
 			} else {
 				$this->db->order_by('quality', 'ASC');
+			}
+
+			if (!empty($query['inhdd']) || $query['inhdd'] == 'false') {
+				switch($query['inhdd']) {
+					case 'true': $this->db->where('inhdd', TRUE); break;
+					case 'false': $this->db->where('inhdd', FALSE); break;
+				}
 			}
 
 			return $this->db->get()->result();

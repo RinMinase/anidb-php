@@ -24,7 +24,7 @@
 					<input type="text"
 						class="form-control"
 						name="q"
-						placeholder="Keywords (comma-separated): sort/order, quality, release, encoder, remarks"
+						placeholder="Keywords (comma-separated): sort/order, quality, release, encoder, remarks, inhdd"
 						value="<?php echo $query; ?>"
 						<?php if (!empty($query)) echo " autofocus"?>>
 					<button class="hidden">Submit</button>

@@ -43,6 +43,7 @@ class PageController extends CI_Controller {
 						case "release": $keyword['release'] = $query_item_data[1]; break;
 						case "encoder": $keyword['encoder'] = $query_item_data[1]; break;
 						case "remarks": $keyword['remarks'] = $query_item_data[1]; break;
+						case "inhdd": $keyword['inhdd'] = $query_item_data[1]; break;
 					}
 
 				}
