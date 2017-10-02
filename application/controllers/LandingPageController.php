@@ -39,10 +39,11 @@ class LandingPageController extends CI_Controller {
 		}
 
 		$navbar['activePage'] = "index";
-		$navbar['customCSS'] = "resources/data-tables-1.10.16/jquery.data-tables.min.css";
-		$footer['customJS'] = "resources/js/index/scripts.js";
+		// $navbar['customCSS'] = "resources/data-tables-1.10.16/jquery.data-tables.min.css";
+		// $footer['customJS'][0] = "resources/data-tables-1.10.16/jquery.data-tables.min.js";
+		// $footer['customJS'][1] = "resources/js/index/scripts.js";
 
-		$this->displaylibrary->display_page('landing/index', $navbar, $data, $footer);
+		$this->displaylibrary->display_page('landing/index', $navbar, $data);
 	}
 
 	public function add() {
