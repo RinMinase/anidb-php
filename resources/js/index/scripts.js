@@ -1,3 +1,3 @@
 $(document).ready(function() {
-	// $('#animeTable').DataTable();
+	$('#animeTable').DataTable();
 });
