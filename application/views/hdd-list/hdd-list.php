@@ -26,9 +26,15 @@
 								</div>
 								<div class="col-xs-10 col-sm-10 col-md-8 col-lg-8">
 									<div class="progress">
-										<div class="progress-bar progress-bar-success"
-											style="width:<?php echo round($percentJQ,0); ?>%">
-											<?php echo $percentJQ; ?>%
+										<div class=
+											<?php
+												if ($percentJQ >= 0 && $percentJQ < 80) echo "'progress-bar progress-bar-success'";
+												else if ($percentJQ >= 80 && $percentJQ < 90) echo "'progress-bar progress-bar-warning'";
+												else echo "'progress-bar progress-bar-danger'";
+											?>
+											style="width:<?php echo round($percentJQ, 0); ?>%">
+
+											<?php echo $percentJQ . "%"; ?>
 										</div>
 									</div>
 								</div>
@@ -40,8 +46,13 @@
 								</div>
 								<div class="col-xs-10 col-sm-10 col-md-8 col-lg-8">
 									<div class="progress">
-										<div class="progress-bar progress-bar-success"
-											style="width:<?php echo round($percentRZ,0); ?>%">
+										<div class=
+											<?php
+												if ($percentRZ >= 0 && $percentRZ < 80) echo "'progress-bar progress-bar-success'";
+												else if ($percentRZ >= 80 && $percentRZ < 90) echo "'progress-bar progress-bar-warning'";
+												else echo "'progress-bar progress-bar-danger'";
+											?>
+											style="width:<?php echo round($percentRZ, 0); ?>%">
 											<?php echo $percentRZ; ?>%
 										</div>
 									</div>
