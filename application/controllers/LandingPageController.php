@@ -39,7 +39,8 @@ class LandingPageController extends CI_Controller {
 		}
 
 		$navbar['activePage'] = "index";
-		// $navbar['customCSS'] = "resources/data-tables-1.10.16/jquery.data-tables.min.css";
+		$navbar['customCSS'] = "resources/css/index/styles.css";
+		// $navbar['customCSS'][1] = "resources/data-tables-1.10.16/jquery.data-tables.min.css";
 		// $footer['customJS'][0] = "resources/data-tables-1.10.16/jquery.data-tables.min.js";
 		// $footer['customJS'][1] = "resources/js/index/scripts.js";
 

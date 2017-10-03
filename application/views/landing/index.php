@@ -54,58 +54,83 @@
 
 							<tr>
 								<td>
-									<?php
-										switch ($item->quality) {
-											case "4K 2160p":
-												echo "<div class='anime-legend-uhd' tooltip='tip' title='4K 2160p'></div>";
-											break;
-											case "FHD 1080p":
-												echo "<div class='anime-legend-fhd' tooltip='tip' title='FHD 1080p'></div>";
-											break;
-											case "HD 720p":
-												echo "<div class='anime-legend-hd' tooltip='tip' title='HD 720p'></div>";
-											break;
-											case "HQ 480p":
-												echo "<div class='anime-legend-hq' tooltip='tip' title='HQ 480p'></div>";
-											break;
-											case "LQ 360p":
-												echo "<div class='anime-legend-lq' tooltip='tip' title='LQ 360p'></div>";
-											break;
-										}
-									?>
+									<a href="<?php echo base_url("view/" . $item->id); ?>">
+										<div>
+											<?php
+												switch ($item->quality) {
+													case "4K 2160p":
+														echo "<div class='anime-legend-uhd' tooltip='tip' title='4K 2160p'></div>";
+													break;
+													case "FHD 1080p":
+														echo "<div class='anime-legend-fhd' tooltip='tip' title='FHD 1080p'></div>";
+													break;
+													case "HD 720p":
+														echo "<div class='anime-legend-hd' tooltip='tip' title='HD 720p'></div>";
+													break;
+													case "HQ 480p":
+														echo "<div class='anime-legend-hq' tooltip='tip' title='HQ 480p'></div>";
+													break;
+													case "LQ 360p":
+														echo "<div class='anime-legend-lq' tooltip='tip' title='LQ 360p'></div>";
+													break;
+												}
+											?>
 
-									<span><?php echo $item->title ?></span>
-
+											<span><?php echo $item->title; ?></span>
+										</div>
+									</a>
 								</td>
 								<td class="text-center">
-									<?php echo $item->episodes . " / " . $item->ovas . " / " . $item->specials; ?>
+									<a href="<?php echo base_url("view/" . $item->id); ?>">
+										<div>
+											<?php echo $item->episodes . " / " . $item->ovas . " / " . $item->specials; ?>
+										</div>
+									</a>
 								</td>
 								<td class="text-center">
-									<?php
-										if ($item->filesize == 0) {
-											echo "-";
-										} else if ($item->filesize < 1073741824) {
-											echo round($item->filesize / 1048576, 2) . " MB";
-										} else {
-											echo round($item->filesize / 1073741824, 2) . " GB";
-										}
-									?>
+									<a href="<?php echo base_url("view/" . $item->id); ?>">
+										<div>
+											<?php
+												if ($item->filesize == 0) {
+													echo "-";
+												} else if ($item->filesize < 1073741824) {
+													echo round($item->filesize / 1048576, 2) . " MB";
+												} else {
+													echo round($item->filesize / 1073741824, 2) . " GB";
+												}
+											?>
+										</div>
+									</a>
 								</td>
 								<td class="text-center">
-									<?php
-										echo date_format(
-											date_create($item->dateFinished),
-											"M d, Y"
-										);
-									?>
+									<a href="<?php echo base_url("view/" . $item->id); ?>">
+										<div>
+											<?php
+												echo date_format(
+													date_create($item->dateFinished),
+													"M d, Y"
+												);
+											?>
+										</div>
+									</a>
 								</td>
 								<td>
-									<?php
-										echo $item->releaseSeason . " ";
-										echo ($item->releaseYear == 0) ? "" : $item->releaseYear;
-									?>
+									<a href="<?php echo base_url("view/" . $item->id); ?>">
+										<div>
+											<?php
+												echo $item->releaseSeason . " ";
+												echo ($item->releaseYear == 0) ? "" : $item->releaseYear;
+											?>
+										</div>
+									</a>
 								</td>
-								<td><?php echo $item->encoder ?></td>
+								<td>
+									<a href="<?php echo base_url("view/" . $item->id); ?>">
+										<div>
+											<?php echo $item->encoder; ?>
+										</div>
+									</a>
+								</td>
 							</tr>
 
 						<?php endforeach; ?>
