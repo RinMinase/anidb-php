@@ -25,7 +25,14 @@
 									<p><strong>J - Q</strong></p>
 								</div>
 								<div class="col-xs-10 col-sm-10 col-md-8 col-lg-8">
-									<div class="progress">
+									<div class="progress"
+										tooltip="tip"
+										title="<?php
+											echo "Free : " . $freeJQ . " GB\n";
+											echo "Used : " . $usedJQ . " GB\n";
+											echo "Total : " . $totalJQ . " GB\n";
+											echo "Titles : " . $countJQ;
+										?>">
 										<div class=
 											<?php
 												if ($percentJQ >= 0 && $percentJQ < 80) echo "'progress-bar progress-bar-success'";
@@ -45,7 +52,14 @@
 									<p><strong>R - Z</strong></p>
 								</div>
 								<div class="col-xs-10 col-sm-10 col-md-8 col-lg-8">
-									<div class="progress">
+									<div class="progress"
+										tooltip="tip"
+										title="<?php
+											echo "Free: " . $freeRZ . " GB\n";
+											echo "Used: " . $usedRZ . " GB\n";
+											echo "Total: " . $totalRZ . " GB\n";
+											echo "Titles: " . $countRZ;
+										?>">
 										<div class=
 											<?php
 												if ($percentRZ >= 0 && $percentRZ < 80) echo "'progress-bar progress-bar-success'";

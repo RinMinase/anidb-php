@@ -14,7 +14,12 @@ class HDDListController extends CI_Controller {
 			$data['filesizeJQ'] += $item->filesize;
 		}
 
+		$data['toJQ'] = strtoupper($data['hddData'][0]->to);
+		$data['fromJQ'] = strtoupper($data['hddData'][0]->from);
 		$data['percentJQ'] = round( ($data['filesizeJQ'] / $data['hddData'][0]->hddSize) * 100  ,1);
+		$data['freeJQ'] = round( ($data['hddData'][0]->hddSize - $data['filesizeJQ']) / 1073741824, 2);
+		$data['usedJQ'] = round($data['filesizeJQ'] / 1073741824, 2);
+		$data['totalJQ'] = round($data['hddData'][0]->hddSize / 1073741824, 2);
 
 		$data['animeRZ'] = $this->defaultmodel->getAnimeHDDNeededData('R', 'Z');
 		$data['countRZ'] = count($data['animeRZ']);
@@ -24,7 +29,12 @@ class HDDListController extends CI_Controller {
 			$data['filesizeRZ'] += $item->filesize;
 		}
 
+		$data['toRZ'] = strtoupper($data['hddData'][1]->to);
+		$data['fromRZ'] = strtoupper($data['hddData'][1]->from);
 		$data['percentRZ'] = round( ($data['filesizeRZ'] / $data['hddData'][1]->hddSize) * 100  ,1);
+		$data['freeRZ'] = round( ($data['hddData'][1]->hddSize - $data['filesizeRZ']) / 1073741824, 2);
+		$data['usedRZ'] = round($data['filesizeRZ'] / 1073741824, 2);
+		$data['totalRZ'] = round($data['hddData'][1]->hddSize / 1073741824, 2);
 
 		$navbar['activePage'] = "hdd-list";
 		$navbar['customTitle'] = "HDD List";
