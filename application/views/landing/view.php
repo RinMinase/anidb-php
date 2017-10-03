@@ -87,11 +87,11 @@
 						if ($animeData->filesize < 1073741824) {
 							echo "File Size: ";
 							echo round($animeData->filesize / 1048576, 2) . " MB (";
-							echo $animeData->filesize . " bytes)";
+							echo number_format($animeData->filesize, 0, '.', ',') . " bytes)";
 						} else {
 							echo "File Size: ";
 							echo round($animeData->filesize / 1073741824, 2) . " GB (";
-							echo $animeData->filesize . " bytes)";
+							echo number_format($animeData->filesize, 0, '.', ',')  . " bytes)";
 						}
 					?>
 				</p>
