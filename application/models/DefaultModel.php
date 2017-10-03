@@ -228,7 +228,7 @@ class DefaultModel extends CI_Model {
 
 	public function getAnimeHDDNeededData($from, $to)	{
 		$charList = Array();
-		for($i = ord($from)+1; $i <= ord($to); $i++) {
+		for($i = ord($from); $i <= ord($to); $i++) {
 			array_push($charList, chr($i));
 		}
 
@@ -237,7 +237,6 @@ class DefaultModel extends CI_Model {
 		$this->db->where('inHDD', 1);
 		$this->db->group_start();
 
-		$this->db->like('title', $charList[0], 'after');
 		foreach ($charList as $char) {
 			$this->db->or_like('title', $char, 'after');
 		}
