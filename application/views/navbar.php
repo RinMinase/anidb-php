@@ -105,10 +105,10 @@
 						<li class="dropdown
 							<?php
 								if($activePage == "add" ||
-									$activePage == "by-name" ||
-									$activePage == "download-list" ||
-									$activePage == "hdd-list" ||
-									$activePage == "hdd-simulator") {
+									$activePage == "create-season-list" ||
+									$activePage == "edit-season-list" ||
+									$activePage == "create-summer-list" ||
+									$activePage == "manage-logs") {
 									echo " active";
 								}
 							?>
@@ -118,69 +118,59 @@
 								&nbsp;&nbsp;&nbsp;<i class="fa fa-caret-down"></i>
 							</a>
 							<ul class="dropdown-menu">
-								<li <?php if($activePage == "add") echo "class='active'"; ?>>
-									<a href=<?php echo base_url("add") ?>>
-										<i class="fa fa-plus"></i>&nbsp;&nbsp;&nbsp;Add an Entry
-									</a>
-								</li>
-								<li <?php if($activePage == "by-name") echo "class='active'"; ?>>
-									<a href=<?php echo base_url("by-name") ?>>
-										<i class="fa fa-minus"></i>&nbsp;&nbsp;&nbsp;Remove an Entry
-									</a>
-								</li>
-								<li <?php if($activePage == "download-list") echo "class='active'"; ?>>
-									<a href=<?php echo base_url("download-list") ?>>
-										<i class="fa fa-pencil"></i>&nbsp;&nbsp;&nbsp;Edit an Entry
-									</a>
-								</li>
 
-								<li class="divider"></li>
+								<?php if ($activePage == "index" || $activePage == "add"): ?>
 
-								<li <?php if($activePage == "hdd-list") echo "class='active'"; ?>>
-									<a href=<?php echo base_url("hdd-list") ?>>
-										<i class="fa fa-plus"></i>&nbsp;&nbsp;&nbsp;Add an Entry in Download List
-									</a>
-								</li>
-								<li <?php if($activePage == "hdd-simulator") echo "class='active'"; ?>>
-									<a href=<?php echo base_url("hdd-list/simulator") ?>>
-										<i class="fa fa-minus"></i>&nbsp;&nbsp;&nbsp;Remove an Entry in Download List
-									</a>
-								</li>
-
-								<?php if ($activePage == "index"): ?>
+									<li <?php if($activePage == "add") echo "class='active'"; ?>>
+										<a href=<?php echo base_url("add") ?>>
+											<i class="fa fa-plus"></i>&nbsp;&nbsp;&nbsp;Add an Entry
+										</a>
+									</li>
 
 									<li class="divider"></li>
 
-									<li <?php if($activePage == "hdd-simulator") echo "class='active'"; ?>>
-										<a href=<?php echo base_url("hdd-list/simulator") ?>>
+								<?php endif; ?>
+
+								<?php if ($activePage == "index"): ?>
+
+									<li>
+										<a href=<?php echo base_url("export/csv") ?>>
 											<i class="fa fa-file"></i>&nbsp;&nbsp;&nbsp;Export List (.csv)
 										</a>
 									</li>
-									<li <?php if($activePage == "hdd-simulator") echo "class='active'"; ?>>
-										<a href=<?php echo base_url("hdd-list/simulator") ?>>
+									<li>
+										<a href=<?php echo base_url("export/xlsx") ?>>
 											<i class="fa fa-file"></i>&nbsp;&nbsp;&nbsp;Export List (.xlsx)
 										</a>
 									</li>
 
+									<li class="divider"></li>
+
 								<?php endif; ?>
+
+								<li <?php if($activePage == "create-season-list") echo "class='active'"; ?>>
+									<a href=<?php echo base_url("download/create-list") ?>>
+										<i class="fa fa-plus"></i>&nbsp;&nbsp;&nbsp;Create a Season Download List
+									</a>
+								</li>
+								<li <?php if($activePage == "edit-season-list") echo "class='active'"; ?>>
+									<a href=<?php echo base_url("download/edit-list") ?>>
+										<i class="fa fa-pencil"></i>&nbsp;&nbsp;&nbsp;Edit a Season Download List
+									</a>
+								</li>
 
 								<li class="divider"></li>
 
-								<li <?php if($activePage == "hdd-simulator") echo "class='active'"; ?>>
-									<a href=<?php echo base_url("hdd-list/simulator") ?>>
-										<i class="fa fa-list"></i>&nbsp;&nbsp;&nbsp;Create a Download List
-									</a>
-								</li>
-								<li <?php if($activePage == "hdd-simulator") echo "class='active'"; ?>>
-									<a href=<?php echo base_url("hdd-list/simulator") ?>>
+								<li <?php if($activePage == "create-summer-list") echo "class='active'"; ?>>
+									<a href=<?php echo base_url("summer/add") ?>>
 										<i class="fa fa-list"></i>&nbsp;&nbsp;&nbsp;Create a Summer List
 									</a>
 								</li>
 
 								<li class="divider"></li>
 
-								<li <?php if($activePage == "hdd-simulator") echo "class='active'"; ?>>
-									<a href=<?php echo base_url("hdd-list/simulator") ?>>
+								<li <?php if($activePage == "manage-logs") echo "class='active'"; ?>>
+									<a href=<?php echo base_url("settings/manage-logs") ?>>
 										<i class="fa fa-list"></i>&nbsp;&nbsp;&nbsp;Manage Bugs, Future Changes, and Changelog
 									</a>
 								</li>
