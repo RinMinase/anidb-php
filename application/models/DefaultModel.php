@@ -226,4 +226,33 @@ class DefaultModel extends CI_Model {
 		$this->db->insert('anime', $data);
 	}
 
+	public function getAnimeHDDNeededData($from, $to)	{
+		$charList = Array();
+		for($i = ord($from)+1; $i <= ord($to); $i++) {
+			array_push($charList, chr($i));
+		}
+
+		$this->db->select('quality, title, filesize');
+		$this->db->from('anime');
+		$this->db->where('inHDD', 1);
+		$this->db->group_start();
+
+		$this->db->like('title', $charList[0], 'after');
+		foreach ($charList as $char) {
+			$this->db->or_like('title', $char, 'after');
+		}
+
+		$this->db->group_end();
+		$this->db->order_by('title', 'ASC');
+
+		return $this->db->get()->result();
+	}
+
+	public function getHDDData() {
+		$this->db->select('from, to, hddSize');
+		$this->db->from('hdd');
+
+		return $this->db->get()->result();
+	}
+
 }
