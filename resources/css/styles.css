@@ -42,3 +42,7 @@ div.panel-green > .panel-heading {
 .table-unbordered > tbody > tr > th {
 	border-top: 0px;
 }
+
+.tooltip-inner {
+	white-space: pre;
+}
