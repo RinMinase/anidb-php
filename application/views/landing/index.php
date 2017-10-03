@@ -43,13 +43,8 @@
 							<th class="text-center">E / O / S</th>
 							<th class="text-center">File Size</th>
 							<th class="text-center">Date Finished</th>
-							<th class="text-center">Season</th>
 							<th>Release</th>
-							<th class="text-center">Duration</th>
 							<th>Encoder</th>
-							<th>Variants</th>
-							<th>Remarks</th>
-							<th colspan="2"></th>
 						</tr>
 					</thead>
 
@@ -104,45 +99,13 @@
 										);
 									?>
 								</td>
-								<td class="text-center">
-									<?php
-										echo "<div tooltip='tip' title='1st Season : " . $item->firstSeasonTitle . "'>";
-											echo ($item->seasonNumber == "0") ? "N/A" : $item->seasonNumber;
-										echo "</div>";
-									?>
-								</td>
 								<td>
 									<?php
 										echo $item->releaseSeason . " ";
 										echo ($item->releaseYear == 0) ? "" : $item->releaseYear;
 									?>
 								</td>
-								<td class="text-center">
-									<?php
-										echo ($item->durationHour < 10) ? "0" . $item->durationHour . ":" : $item->durationHour . ":";
-										echo ($item->durationMinute < 10) ? "0" . $item->durationMinute . ":"  : $item->durationMinute . ":";
-										echo ($item->durationSecond < 10) ? "0" . $item->durationSecond : $item->durationSecond;
-									?>
-								</td>
 								<td><?php echo $item->encoder ?></td>
-								<td><?php echo $item->variants ?></td>
-								<td><?php echo $item->remarks ?></td>
-								<td>
-									<?php echo form_open("edit/" . $item->id) ?>
-										<a href=<?php echo base_url("edit/" . $item->id) ?>
-											class="btn btn-xs btn-success btn-block" tooltip="tip" title="Edit">
-											<i class="fa fa-pencil"></i>
-										</a>
-									<?php echo form_close() ?>
-								</td>
-								<td>
-									<?php echo form_open("delete/" . $item->id) ?>
-										<a href=<?php echo base_url("delete/" . $item->id) ?>
-											class="btn btn-xs btn-danger btn-block" tooltip="tip" title="Delete">
-											<i class="fa fa-trash"></i>
-										</a>
-									<?php echo form_close() ?>
-								</td>
 							</tr>
 
 						<?php endforeach; ?>
