@@ -1,7 +1,8 @@
 <div class="container">
 	<div class="page-header">
 		<div class="row">
-			<div class="col-md-8">
+
+			<div class="col-sm-12 col-md-6">
 				<h2>
 					<?php echo $animeData->title ?>
 
@@ -10,25 +11,36 @@
 					<?php endif; ?>
 				</h2>
 			</div>
-			<div class="col-md-2">
+
+			<div class="col-sm-4 col-md-2">
 				<h2>
 					<?php if (!empty($animeData->encoder)): ?><br><?php endif; ?>
-					<a href=<?php echo base_url("edit/" . $animeData->id) ?>
+					<a href=<?php echo base_url(); ?>
+						class="btn btn-primary btn-block">
+						<i class="fa fa-list"></i>&nbsp;Back to List
+					</a>
+				</h2>
+			</div>
+			<div class="col-sm-4 col-md-2">
+				<h2>
+					<?php if (!empty($animeData->encoder)): ?><br><?php endif; ?>
+					<a href=<?php echo base_url("edit/" . $animeData->id); ?>
 						class="btn btn-success btn-block">
 						<i class="fa fa-pencil"></i>&nbsp;Edit
 					</a>
 				</h2>
 			</div>
-			<div class="col-md-2">
+			<div class="col-sm-4 col-md-2">
 				<h2>
 					<?php if (!empty($animeData->encoder)): ?><br><?php endif; ?>
-					<a href=<?php echo base_url("delete/" . $animeData->id) ?>
+					<a href=<?php echo base_url("delete/" . $animeData->id); ?>
 						class="btn btn-danger btn-block">
 						<i class="fa fa-trash"></i>&nbsp;Delete
 					</a>
 				</h2>
 			</div>
 		</div>
+
 	</div>
 
 	<div class="row">
