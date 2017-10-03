@@ -1,0 +1,16 @@
+.table > tbody > tr > td {
+	padding: 0px;
+}
+
+td > a > div {
+	padding: 8px;
+}
+
+td > a:link {
+	text-decoration: none;
+	color: #000;
+}
+
+td > a:visited {
+	color: #000;
+}
