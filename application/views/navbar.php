@@ -61,6 +61,7 @@
 								if($activePage == "last-watch" ||
 									$activePage == "by-name" ||
 									$activePage == "download-list" ||
+									$activePage == "summer-list" ||
 									$activePage == "hdd-list" ||
 									$activePage == "hdd-simulator") {
 									echo " active";
@@ -71,24 +72,35 @@
 								<i class="fa fa-list"></i>&nbsp;&nbsp;&nbsp;Anime Lists
 								&nbsp;&nbsp;&nbsp;<i class="fa fa-caret-down"></i>
 							</a>
+
 							<ul class="dropdown-menu">
+
 								<li <?php if($activePage == "last-watch") echo "class='active'"; ?>>
 									<a href=<?php echo base_url("last-watch") ?>>
 										<i class="fa fa-play"></i>&nbsp;&nbsp;&nbsp;Last 20 Watched
 									</a>
 								</li>
+
 								<li class="divider"></li>
+
 								<li <?php if($activePage == "by-name") echo "class='active'"; ?>>
 									<a href=<?php echo base_url("by-name") ?>>
-										<i class="fa fa-list"></i>&nbsp;&nbsp;&nbsp;Anime List by Name
+										<i class="fa fa-font"></i>&nbsp;&nbsp;&nbsp;Anime List by Name
 									</a>
 								</li>
 								<li <?php if($activePage == "download-list") echo "class='active'"; ?>>
 									<a href=<?php echo base_url("download-list") ?>>
-										<i class="fa fa-arrow-down"></i>&nbsp;&nbsp;&nbsp;Download List
+										<i class="fa fa-download"></i>&nbsp;&nbsp;&nbsp;Download List
 									</a>
 								</li>
+								<li <?php if($activePage == "summer-list") echo "class='active'"; ?>>
+									<a href=<?php echo base_url("summer-list") ?>>
+										<i class="fa fa-list"></i>&nbsp;&nbsp;&nbsp;Summer List
+									</a>
+								</li>
+
 								<li class="divider"></li>
+
 								<li <?php if($activePage == "hdd-list") echo "class='active'"; ?>>
 									<a href=<?php echo base_url("hdd-list") ?>>
 										<i class="fa fa-hdd-o"></i>&nbsp;&nbsp;&nbsp;Hard Drive List
@@ -99,6 +111,7 @@
 										<i class="fa fa-flask"></i>&nbsp;&nbsp;&nbsp;Hard Drive Simulator
 									</a>
 								</li>
+
 							</ul>
 						</li>
 
@@ -135,12 +148,12 @@
 
 									<li>
 										<a href=<?php echo base_url("export/csv") ?>>
-											<i class="fa fa-file"></i>&nbsp;&nbsp;&nbsp;Export List (.csv)
+											<i class="fa fa-file-text-o"></i>&nbsp;&nbsp;&nbsp;Export List (.csv)
 										</a>
 									</li>
 									<li>
 										<a href=<?php echo base_url("export/xlsx") ?>>
-											<i class="fa fa-file"></i>&nbsp;&nbsp;&nbsp;Export List (.xlsx)
+											<i class="fa fa-file-excel-o"></i>&nbsp;&nbsp;&nbsp;Export List (.xlsx)
 										</a>
 									</li>
 
@@ -171,7 +184,7 @@
 
 								<li <?php if($activePage == "manage-logs") echo "class='active'"; ?>>
 									<a href=<?php echo base_url("settings/manage-logs") ?>>
-										<i class="fa fa-list"></i>&nbsp;&nbsp;&nbsp;Manage Bugs, Future Changes, and Changelog
+										<i class="fa fa-code"></i>&nbsp;&nbsp;&nbsp;Manage Bugs, Future Changes, and Changelog
 									</a>
 								</li>
 
