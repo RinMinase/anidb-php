@@ -1,0 +1,15 @@
+{
+    "name": "rin_minase/anidb",
+    "description": "Rin Minase's Anime Database",
+    "authors": [
+        {
+            "name": "Rin Minase",
+            "email": "rin.black.raison.detre@gmail.com"
+        }
+    ],
+	"homepage": "https://anidb.minase.com",
+	"support": {
+		"source": "https://www.github.com/RinMinase/anidb"
+	},
+    "require": {},
+}
