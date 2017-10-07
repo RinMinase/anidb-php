@@ -10,7 +10,7 @@ $config['language']	= 'english';
 $config['charset'] = 'UTF-8';
 $config['enable_hooks'] = FALSE;
 $config['subclass_prefix'] = 'MY_';
-$config['composer_autoload'] = FALSE;
+$config['composer_autoload'] = 'application/vendor/autoload.php';
 $config['permitted_uri_chars'] = 'a-z 0-9~%.:_\-';
 
 $config['enable_query_strings'] = FALSE;
