@@ -10,6 +10,7 @@ application/logs/*
 !application/logs/.htaccess
 
 ## Vendor Folder
+application/vendor/
 /vendor/
 
 ## Composer Lock Files
