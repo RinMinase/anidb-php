@@ -16,6 +16,7 @@ $route['addEntry'] = 'LandingPageController/addEntry';
 
 $route['last-watch'] = 'OtherListsController/last_watch';
 $route['by-name'] = 'OtherListsController/by_name';
+$route['summer-list'] = 'OtherListsController/summer_list';
 
 $route['download-list'] = 'DownloadListController/download_list';
 $route['download-list/add'] = 'DownloadListController/download_list_add';
