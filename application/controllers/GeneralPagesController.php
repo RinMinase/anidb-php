@@ -3,6 +3,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class GeneralPagesController extends CI_Controller {
 
+	public function error_404()	{ show_404(); }
+
 	public function about() {
 		$raw_data = $this->defaultmodel->getAnimeStatisticsNeededData();
 

@@ -26,3 +26,10 @@ $route['hdd-list'] = 'HDDListController/hdd_list';
 $route['hdd-list/simulator'] = 'HDDListController/hdd_simulator';
 
 $route['about'] = 'GeneralPagesController/about';
+
+/* Disable direct access to any controller */
+$route['DownloadListController/(:any)'] = 'GeneralPagesController/error_404';
+$route['HDDListController/(:any)'] = 'GeneralPagesController/error_404';
+$route['OtherListsController/(:any)'] = 'GeneralPagesController/error_404';
+$route['LandingPageController/(:any)'] = 'GeneralPagesController/error_404';
+$route['GeneralPagesController/(:any)'] = 'GeneralPagesController/error_404';
