@@ -9,7 +9,7 @@ $route['translate_uri_dashes'] = FALSE;
 /* LANDING PAGE */
 
 $route['view/(:num)'] = 'LandingPageController/view/$1';
-// $route['edit/(:num)'] = 'LandingPageController/edit/$1';
+$route['edit/(:num)'] = 'LandingPageController/edit/$1';
 // $route['delete/(:num)'] = 'LandingPageController/delete/$1';
 
 $route['index'] = 'LandingPageController/index';
