@@ -43,7 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				background-image: url(
 					<?php
 						echo "http://" . $_SERVER['SERVER_NAME'] . "/anidb/";
-						echo "resources/images/404/ocean.png";
+						echo "resources/images/404/back.png";
 					?>
 				);
 				background-color: #0C8DA0;
