@@ -7,16 +7,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<head>
 		<meta charset="utf-8">
 
-		<link rel="stylesheet" href="
-			<?php
-				echo "http://" . $_SERVER['SERVER_NAME'] . "/anidb/";
-				echo "resources/css/404/styles.css";
-			?>
-		">
-
-		<title>404 Page Not Found</title>
-
 		<style>
+
 			body { margin: 0px; }
 
 			h1, h2, p {
@@ -80,6 +72,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			}
 
 		</style>
+
+		<title>404 Page Not Found</title>
 
 	</head>
 
