@@ -67,6 +67,10 @@ class OtherListsController extends CI_Controller {
 
 	public function summer_list()	{
 
+		$navbar['activePage'] = "summer-list";
+		$navbar['customTitle'] = "Summer List";
+
+		$this->displaylibrary->display_page('other-lists/summer-list', $navbar);
 	}
 
 }
