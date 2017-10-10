@@ -66,31 +66,6 @@ class OtherListsController extends CI_Controller {
 	}
 
 	public function summer_list()	{
-		/* FuSe Testing
-		// require_once 'application/vendor/autoload.php';
-		$fuse = new \Fuse\Fuse([
-		  [
-		    "title" => "Old Man's War",
-		    "author" => "John Scalzi"
-		  ],
-		  [
-		    "title" => "The Lock Artist",
-		    "author" => "Steve Hamilton"
-		  ],
-		  [
-		    "title" => "HTML5",
-		    "author" => "Remy Sharp"
-		  ],
-		  [
-		    "title" => "Right Ho Jeeves",
-		    "author" => "P.D Woodhouse"
-		  ],
-		], [
-		  "keys" => [ "title", "author" ],
-		]);
-
-		$fuse->search('hamil');*/
-
 
 	}
 
