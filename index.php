@@ -33,6 +33,34 @@
 
 /*
  *---------------------------------------------------------------
+ * MODULE LIST (FOR GIT TRACING)
+ *---------------------------------------------------------------
+ *
+ * > Download
+ * 		>> DOWNLOAD
+ * 		>> DOWNLOAD_ADD
+ * > General
+ * 		>> ABOUT
+ * > Landing
+ * 		>> LANDING
+ * 		>> LANDING_ADD
+ * 		>> LANDING_DELETE
+ * 		>> LANDING_EDIT
+ * 		>> LANDING_VIEW
+ * > Other Lists
+ * 		>> BY_NAME
+ * 		>> LAST_WATCH
+ * 		>> SUMMER_LIST
+ * > Global Files / Multiple Modules
+ * 		>> ANIDB
+ * 		>> FOOTER
+ * 		>> NAVBAR
+ * > Settings / System Configuration
+ * 		>> FILE_SYSTEM / CONFIG
+ */
+
+/*
+ *---------------------------------------------------------------
  * APPLICATION ENVIRONMENT
  *---------------------------------------------------------------
  *
