@@ -1,4 +1,52 @@
 <div class="container-fluid">
+
+	<div class="row hidden">
+		<div class="col-md-12">
+
+			<div class="row">
+				<div class="col-md-12">
+					<div class="row">
+						<div class="col-md-9">
+							<h3>Add a Season List</h3>
+						</div>
+						<div class="col-md-3 text-right">
+							<div class="row">
+								<div class="col-md-6">
+									<button class="btn btn-success btn-block">Submit</button>
+								</div>
+								<div class="col-md-6">
+									<a href="#" class="btn btn-danger btn-block">Close</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-4">
+					<div class="form-group">
+					  <label>High Priority:</label>
+					  <textarea class="form-control" rows="5" id="comment"></textarea>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+					  <label>Normal Priority:</label>
+					  <textarea class="form-control" rows="5" id="comment"></textarea>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+					  <label>Low Priority:</label>
+					  <textarea class="form-control" rows="5" id="comment"></textarea>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
 	<div class="row">
 
 		<div class="col-md-3">
