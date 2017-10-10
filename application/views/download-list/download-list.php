@@ -1,6 +1,6 @@
 <div class="container-fluid">
 
-	<div class="row hidden">
+	<div class="row hidden" id="add_season_list">
 		<div class="col-md-12">
 
 			<div class="row">
@@ -9,7 +9,7 @@
 						<div class="col-md-9">
 							<h3>Add a Season List</h3>
 						</div>
-						<div class="col-md-3 text-right">
+						<div class="col-md-3">
 							<div class="row">
 								<div class="col-md-6">
 									<button class="btn btn-success btn-block">Submit</button>
@@ -26,22 +26,89 @@
 			<div class="row">
 				<div class="col-md-4">
 					<div class="form-group">
-					  <label>High Priority:</label>
-					  <textarea class="form-control" rows="5" id="comment"></textarea>
+						<label>High Priority:</label>
+						<textarea class="form-control" rows="5" id="comment"></textarea>
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="form-group">
-					  <label>Normal Priority:</label>
-					  <textarea class="form-control" rows="5" id="comment"></textarea>
+						<label>Normal Priority:</label>
+						<textarea class="form-control" rows="5" id="comment"></textarea>
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="form-group">
-					  <label>Low Priority:</label>
-					  <textarea class="form-control" rows="5" id="comment"></textarea>
+						<label>Low Priority:</label>
+						<textarea class="form-control" rows="5" id="comment"></textarea>
 					</div>
 				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="row hidden" id="add_title">
+		<div class="col-md-12">
+
+			<div class="row">
+				<div class="col-md-12">
+					<div class="row">
+						<div class="col-md-10">
+							<h3>Add a Title</h3>
+						</div>
+						<div class="col-md-2">
+							<a href="#" class="btn btn-danger btn-block">Close</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+
+				<div class="col-md-2 form-group">
+					<label>Priority</label>
+					<select class="form-control" name="priority">
+						<option value="3">High</option>
+						<option value="2" selected>Normal</option>
+						<option value="1">Low</option>
+					</select>
+				</div>
+
+				<div class="col-md-5 form-group"><label>Title</label>
+					<input type="text" class="form-control" name="title" required>
+				</div>
+
+				<div class="col-md-3 form-group">
+					<label>Category</label>
+					<div class="row">
+						<div class="col-md-6">
+							<select class="form-control" name="season">
+								<option value="Uncategorized">Uncategorized</option>
+								<option value="0">Winter</option>
+								<option value="1">Spring</option>
+								<option value="2">Summer</option>
+								<option value="3" selected>Fall</option>
+							</select>
+						</div>
+						<div class="col-md-6">
+							<select class="form-control" name="year">
+								<option value="2011">2010</option>
+								<option value="2012">2011</option>
+								<option value="2013">2012</option>
+								<option value="2014">2013</option>
+								<option value="2015">2014</option>
+								<option value="2016">2015</option>
+								<option value="2017">2016</option>
+								<option value="2017" selected>2017</option>
+							</select>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-2 form-group">
+					<button class="btn btn-success btn-block">Submit</button>
+				</div>
+
 			</div>
 
 		</div>
@@ -53,13 +120,13 @@
 			<div class="row">
 				<div class="col-xs-3 col-sm-2 col-md-3">
 					<div class="dropdown">
-					  <a class="btn btn-primary btn-block dropdown-toggle" data-toggle="dropdown">
-					  	<i class="fa fa-plus"></i>
-					  </a>
-					  <ul class="dropdown-menu">
-					    <li><a href="<?php echo base_url("download-list/add"); ?>">Add a Title</a></li>
-					    <li><a href="<?php echo base_url("download-list/add-list"); ?>">Add a Season List</a></li>
-					  </ul>
+						<a class="btn btn-primary btn-block dropdown-toggle" data-toggle="dropdown">
+							<i class="fa fa-plus"></i>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="<?php echo base_url("download-list/add"); ?>">Add a Title</a></li>
+							<li><a href="<?php echo base_url("download-list/add-list"); ?>">Add a Season List</a></li>
+						</ul>
 					</div>
 				</div>
 				<div class="col-xs-9 col-sm-10 col-md-9">
