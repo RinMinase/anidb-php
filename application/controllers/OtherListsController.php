@@ -71,12 +71,49 @@ class OtherListsController extends CI_Controller {
 			if (empty($id)) {
 				$data['currentList'] = $data['summerLists'][0]->id;
 				$list_info = $this->defaultmodel->getSummerListData($data['summerLists'][0]->id);
-				$data['summerData'] = $this->defaultmodel->getAnimeDataByDate($list_info->dateStart, $list_info->dateEnd);
 			}	else {
 				$data['currentList'] = $id;
 				$list_info = $this->defaultmodel->getSummerListData($id);
-				$data['summerData'] = $this->defaultmodel->getAnimeDataByDate($list_info->dateStart, $list_info->dateEnd);
 			}
+
+			$data['summerData'] = $this->defaultmodel->getAnimeDataByDate($list_info->dateStart, $list_info->dateEnd);
+
+			if (!empty($data['summerData'])) {
+
+				$data['statsUHDCount'] = $data['statsFHDCount'] = $data['statsHDCount'] = 0;
+				$data['statsHQCount'] = $data['statsLQCount'] = 0;
+				$data['statsTotalFilesize'] = 0;
+				$data['statsTotalEpisodes'] = 0;
+
+				foreach ($data['summerData'] as $item) {
+
+					switch ($item->quality) {
+						case "4K 2160p": $data['statsUHDCount']++; break;
+						case "FHD 1080p": $data['statsFHDCount']++; break;
+						case "HD 720p": $data['statsHDCount']++; break;
+						case "HQ 480p": $data['statsHQCount']++; break;
+						case "LQ 360p": $data['statsLQCount']++; break;
+					}
+
+					$data['statsTotalFilesize'] += $item->filesize;
+					$data['statsTotalEpisodes'] += $item->episodes + $item->ovas + $item->specials;
+
+				}
+
+				$data['statsTotalFilesize'] = round($data['statsTotalFilesize'] / 1073741824, 2);
+
+				$data['statsDayCount'] = date_diff(
+					date_create($list_info->dateStart),
+					date_create($list_info->dateEnd),
+					TRUE
+				)->format('%a');
+
+				$data['statsTotalTitles'] = count($data['summerData']);
+				$data['statsEpisodesPerDay'] = round($data['statsTotalEpisodes'] / $data['statsDayCount'], 2);
+				$data['statsTitlesPerDay'] = round($data['statsTotalTitles'] / $data['statsDayCount'], 2);
+
+			}
+
 		}
 
 		$navbar['activePage'] = "summer-list";
