@@ -55,63 +55,63 @@
 										<tr>
 											<th>4k 2160p</th>
 											<th>:</th>
-											<th><?php echo $statsUHDCount; ?></th>
+											<th class="text-center"><?php echo $statsUHDCount; ?></th>
 										</tr>
 										<tr>
 											<th>FHD 1080p</th>
 											<th>:</th>
-											<th><?php echo $statsFHDCount; ?></th>
+											<th class="text-center"><?php echo $statsFHDCount; ?></th>
 										</tr>
 										<tr>
 											<th>HD 720p</th>
 											<th>:</th>
-											<th><?php echo $statsHDCount; ?></th>
+											<th class="text-center"><?php echo $statsHDCount; ?></th>
 										</tr>
 										<tr>
 											<th>HQ 480p</th>
 											<th>:</th>
-											<th><?php echo $statsHQCount; ?></th>
+											<th class="text-center"><?php echo $statsHQCount; ?></th>
 										</tr>
 										<tr>
 											<th>LQ 480p</th>
 											<th>:</th>
-											<th><?php echo $statsLQCount; ?></th>
+											<th class="text-center"><?php echo $statsLQCount; ?></th>
 										</tr>
 
-										<tr><th colspan="3"></th></tr>
+										<tr><th colspan="3"><hr></th></tr>
 
 										<tr>
 											<th>Total Titles</th>
 											<th>:</th>
-											<th><?php echo $statsTotalTitles; ?></th>
+											<th class="text-center"><?php echo $statsTotalTitles; ?></th>
 										</tr>
 										<tr>
 											<th>Total Episodes</th>
 											<th>:</th>
-											<th><?php echo $statsTotalEpisodes; ?></th>
+											<th class="text-center"><?php echo $statsTotalEpisodes; ?></th>
 										</tr>
 										<tr>
 											<th>Total Days Used Up</th>
 											<th>:</th>
-											<th><?php echo $statsDayCount; ?></th>
+											<th class="text-center"><?php echo $statsDayCount; ?></th>
 										</tr>
 										<tr>
 											<th>Total File Size</th>
 											<th>:</th>
-											<th><?php echo $statsTotalFilesize; ?> GB</th>
+											<th class="text-center"><?php echo $statsTotalFilesize; ?> GB</th>
 										</tr>
 
-										<tr><th colspan="3"></th></tr>
+										<tr><th colspan="3"><hr></th></tr>
 
 										<tr>
 											<th>Titles Per Day</th>
 											<th>:</th>
-											<th><?php echo $statsTitlesPerDay; ?></th>
+											<th class="text-center"><?php echo $statsTitlesPerDay; ?></th>
 										</tr>
 										<tr>
 											<th>Episodes Per Day</th>
 											<th>:</th>
-											<th><?php echo $statsEpisodesPerDay; ?></th>
+											<th class="text-center"><?php echo $statsEpisodesPerDay; ?></th>
 										</tr>
 
 									</tbody>
