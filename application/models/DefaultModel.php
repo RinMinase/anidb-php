@@ -57,8 +57,10 @@ class DefaultModel extends CI_Model {
 			$this->db->from('anime');
 
 			if (!empty($query['title'])) {
+				$this->db->group_start();
 				$this->db->like('title', $query['title']);
 				$this->db->or_like('variants', $query['title']);
+				$this->db->group_end();
 			}
 
 			if (!empty($query['quality'])) {
@@ -70,11 +72,15 @@ class DefaultModel extends CI_Model {
 					$tempSeason = explode(" ", $query['release'])[0];
 					$tempYear = explode(" ", $query['release'])[1];
 
+					$this->db->group_start();
 					$this->db->like('releaseSeason', $tempSeason);
 					$this->db->like('releaseYear', $tempYear);
+					$this->db->group_end();
 				} else {
+					$this->db->group_start();
 					$this->db->like('releaseSeason', $query['release']);
 					$this->db->or_like('releaseYear', $query['release']);
+					$this->db->group_end();
 				}
 			}
 
@@ -114,8 +120,8 @@ class DefaultModel extends CI_Model {
 
 			if (isset($query['inhdd'])) {
 				switch($query['inhdd']) {
-					case 'true': $this->db->where('inhdd', TRUE); break;
-					case 'false': $this->db->where('inhdd', FALSE); break;
+					case 'true': $this->db->where('inHDD', TRUE); break;
+					case 'false': $this->db->where('inHDD', FALSE); break;
 				}
 			}
 
