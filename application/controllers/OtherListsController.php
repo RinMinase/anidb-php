@@ -118,8 +118,9 @@ class OtherListsController extends CI_Controller {
 
 		$navbar['activePage'] = "summer-list";
 		$navbar['customTitle'] = "Summer List";
+		$footer['customJS'] = "resources/js/summer-list/scripts.js";
 
-		$this->displaylibrary->display_page('other-lists/summer-list', $navbar, $data);
+		$this->displaylibrary->display_page('other-lists/summer-list', $navbar, $data, $footer);
 	}
 
 }
