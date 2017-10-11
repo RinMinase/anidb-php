@@ -50,6 +50,19 @@
 									<tbody>
 
 										<tr>
+											<th>Titles Per Day</th>
+											<th>:</th>
+											<th class="text-center"><?php echo $statsTitlesPerDay; ?></th>
+										</tr>
+										<tr>
+											<th>Episodes Per Day</th>
+											<th>:</th>
+											<th class="text-center"><?php echo $statsEpisodesPerDay; ?></th>
+										</tr>
+
+										<tr><th colspan="3"><hr></th></tr>
+
+										<tr>
 											<th colspan="3">Anime Per Quality</th>
 										</tr>
 										<tr>
@@ -99,19 +112,6 @@
 											<th>Total File Size</th>
 											<th>:</th>
 											<th class="text-center"><?php echo $statsTotalFilesize; ?> GB</th>
-										</tr>
-
-										<tr><th colspan="3"><hr></th></tr>
-
-										<tr>
-											<th>Titles Per Day</th>
-											<th>:</th>
-											<th class="text-center"><?php echo $statsTitlesPerDay; ?></th>
-										</tr>
-										<tr>
-											<th>Episodes Per Day</th>
-											<th>:</th>
-											<th class="text-center"><?php echo $statsEpisodesPerDay; ?></th>
 										</tr>
 
 									</tbody>
