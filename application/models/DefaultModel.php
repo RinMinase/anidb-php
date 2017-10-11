@@ -254,4 +254,37 @@ class DefaultModel extends CI_Model {
 		return $this->db->get()->result();
 	}
 
+	public function getSummerListData($id = NULL) {
+		if (empty($id)) {
+			$this->db->select('id, listTitle');
+			$this->db->from('summer');
+
+			return $this->db->get()->result();
+		} else {
+			$this->db->select('dateStart, dateEnd');
+			$this->db->from('summer');
+			$this->db->where('id', $id);
+			$this->db->order_by('listTitle', 'ASC');
+
+			return $this->db->get()->row();
+		}
+	}
+
+	public function getAnimeDataByDate($from, $to) {
+		$this->db->select('
+			quality,
+			title,
+			episodes,
+			ovas,
+			specials,
+			filesize,
+			dateFinished
+		');
+		$this->db->from('anime');
+		$this->db->where('dateFinished BETWEEN "' . $from . '" AND "' . $to . '"');
+		$this->db->order_by('dateFinished', 'DESC');
+
+		return $this->db->get()->result();
+	}
+
 }
