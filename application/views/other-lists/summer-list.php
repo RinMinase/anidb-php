@@ -50,14 +50,14 @@
 									<tbody>
 
 										<tr>
-											<th>Titles Per Day</th>
-											<th>:</th>
-											<th class="text-center"><?php echo $statsTitlesPerDay; ?></th>
+											<th colspan="3" class="text-center h3">
+												<?php echo $statsTitlesPerDay; ?> Titles Per Day
+											</th>
 										</tr>
 										<tr>
-											<th>Episodes Per Day</th>
-											<th>:</th>
-											<th class="text-center"><?php echo $statsEpisodesPerDay; ?></th>
+											<th colspan="3" class="text-center h3">
+												<?php echo $statsEpisodesPerDay; ?> Episodes Per Day
+											</th>
 										</tr>
 
 										<tr><th colspan="3"><hr></th></tr>
