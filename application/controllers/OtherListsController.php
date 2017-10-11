@@ -65,12 +65,24 @@ class OtherListsController extends CI_Controller {
 		$this->displaylibrary->display_page('other-lists/by-name', $navbar, $data);
 	}
 
-	public function summer_list()	{
+	public function summer_list($id = NULL)	{
+		$data['summerLists'] = $this->defaultmodel->getSummerListData();
+		if (!empty($data['summerLists'])) {
+			if (empty($id)) {
+				$data['currentList'] = $data['summerLists'][0]->id;
+				$list_info = $this->defaultmodel->getSummerListData($data['summerLists'][0]->id);
+				$data['summerData'] = $this->defaultmodel->getAnimeDataByDate($list_info->dateStart, $list_info->dateEnd);
+			}	else {
+				$data['currentList'] = $id;
+				$list_info = $this->defaultmodel->getSummerListData($id);
+				$data['summerData'] = $this->defaultmodel->getAnimeDataByDate($list_info->dateStart, $list_info->dateEnd);
+			}
+		}
 
 		$navbar['activePage'] = "summer-list";
 		$navbar['customTitle'] = "Summer List";
 
-		$this->displaylibrary->display_page('other-lists/summer-list', $navbar);
+		$this->displaylibrary->display_page('other-lists/summer-list', $navbar, $data);
 	}
 
 }
