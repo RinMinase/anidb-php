@@ -44,8 +44,11 @@
 			</div>
 
 			<div class="row">
-				<div class="col-xs-3 col-sm-2 col-md-3">
-					<a href="#" class="btn btn-primary btn-block"><i class="fa fa-plus"></i></a>
+				<div class="col-xs-3 col-sm-2 col-md-3" id="btn_add_summer_list">
+					<a href="#" class="btn btn-primary btn-block" onclick="showAddSummerList()"><i class="fa fa-plus"></i></a>
+				</div>
+				<div class="col-xs-3 col-sm-2 col-md-3 hidden" id="btn_hide_summer_list">
+					<a href="#" class="btn btn-danger btn-block" onclick="hideAddSummerList()"><i class="fa fa-times"></i></a>
 				</div>
 				<div class="col-xs-9 col-sm-10 col-md-9">
 					<div class="form-group has-feedback has-feedback-left">
