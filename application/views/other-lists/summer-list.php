@@ -2,6 +2,47 @@
 	<div class="row">
 
 		<div class="col-md-3">
+
+			<div class="row hidden" id="add_summer_list">
+				<div class="col-md-12">
+					<form class="hidden-sm">
+						<div class="row">
+							<div class="col-xs-6 form-group">
+								<label>From</label>
+								<input type="date" class="form-control" name="from">
+							</div>
+							<div class="col-xs-6 form-group">
+								<label>To</label>
+								<input type="date" class="form-control" name="to">
+							</div>
+							<div class="col-xs-12 form-group">
+								<button class="btn btn-primary btn-block">Confirm</button>
+							</div>
+						</div>
+					</form>
+
+					<form class="form-horizontal hidden-xs visible-sm hidden-md hidden-lg">
+						<div class="row">
+							<div class="col-sm-4 form-group">
+								<label class="control-label col-sm-2">From</label>
+								<div class="col-sm-10">
+									<input type="date" class="form-control" name="from">
+								</div>
+							</div>
+							<div class="col-sm-4 form-group">
+								<label class="control-label col-sm-2">To</label>
+								<div class="col-sm-10">
+									<input type="date" class="form-control" name="to">
+								</div>
+							</div>
+							<div class="col-sm-5 form-group">
+								<button class="btn btn-primary btn-block">Confirm</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+
 			<div class="row">
 				<div class="col-xs-3 col-sm-2 col-md-3">
 					<a href="#" class="btn btn-primary btn-block"><i class="fa fa-plus"></i></a>
