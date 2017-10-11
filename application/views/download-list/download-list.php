@@ -15,7 +15,7 @@
 									<button class="btn btn-success btn-block">Submit</button>
 								</div>
 								<div class="col-md-6">
-									<a href="#" class="btn btn-danger btn-block">Close</a>
+									<a href="#" class="btn btn-danger btn-block" onclick="removeAddSeasonList()">Close</a>
 								</div>
 							</div>
 						</div>
@@ -57,7 +57,7 @@
 							<h3>Add a Title</h3>
 						</div>
 						<div class="col-md-2">
-							<a href="#" class="btn btn-danger btn-block">Close</a>
+							<a href="#" class="btn btn-danger btn-block" onclick="removeAddTitle()">Close</a>
 						</div>
 					</div>
 				</div>
@@ -124,8 +124,8 @@
 							<i class="fa fa-plus"></i>
 						</a>
 						<ul class="dropdown-menu">
-							<li><a href="<?php echo base_url("download-list/add"); ?>">Add a Title</a></li>
-							<li><a href="<?php echo base_url("download-list/add-list"); ?>">Add a Season List</a></li>
+							<li><a href="#" onclick="showAddTitle()">Add a Title</a></li>
+							<li><a href="#" onclick="showAddSeasonList()">Add a Season List</a></li>
 						</ul>
 					</div>
 				</div>
