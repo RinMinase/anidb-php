@@ -6,8 +6,34 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="row">
-						<div class="col-md-9">
+						<div class="col-md-5">
 							<h3>Add a Season List</h3>
+						</div>
+						<div class="col-md-4">
+							<div class="form-horizontal">
+								<label class="control-label col-md-2">Category</label>
+								<div class="col-md-5">
+									<select class="form-control" name="season">
+										<option value="Uncategorized">Uncategorized</option>
+										<option value="0">Winter</option>
+										<option value="1">Spring</option>
+										<option value="2">Summer</option>
+										<option value="3" selected>Fall</option>
+									</select>
+								</div>
+								<div class="col-md-5">
+									<select class="form-control" name="year">
+										<option value="2011">2010</option>
+										<option value="2012">2011</option>
+										<option value="2013">2012</option>
+										<option value="2014">2013</option>
+										<option value="2015">2014</option>
+										<option value="2016">2015</option>
+										<option value="2017">2016</option>
+										<option value="2017" selected>2017</option>
+									</select>
+								</div>
+							</div>
 						</div>
 						<div class="col-md-3">
 							<div class="row">
