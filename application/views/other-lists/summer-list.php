@@ -19,15 +19,16 @@
 
 					<div class="list-group">
 						<?php foreach ($summerLists as $item): ?>
-							<a href="<?php echo base_url("summer-list/" . $item->id) ?>"
+							<a
 								<?php
 									if ($item->id == $currentList) {
 										echo " class='list-group-item list-group-item-info'";
 									} else {
+										echo " href='" . base_url("summer-list/" . $item->id) . "'";
 										echo " class='list-group-item'";
 									}
 								?>
-							">
+							>
 								<?php echo $item->listTitle; ?>
 							</a>
 						<?php endforeach; ?>
