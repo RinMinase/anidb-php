@@ -23,6 +23,7 @@ $route['addEntry'] = 'LandingPageController/addEntry';
 $route['last-watch'] = 'OtherListsController/last_watch';
 $route['by-name'] = 'OtherListsController/by_name';
 $route['summer-list'] = 'OtherListsController/summer_list';
+$route['summer-list/(:num)'] = 'OtherListsController/summer_list/$1';
 $route['summer-list/add'] = 'OtherListsController/summer_list_add';
 
 
