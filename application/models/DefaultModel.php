@@ -112,7 +112,7 @@ class DefaultModel extends CI_Model {
 				$this->db->order_by('quality', 'ASC');
 			}
 
-			if (!empty($query['inhdd']) || $query['inhdd'] == 'false') {
+			if (isset($query['inhdd'])) {
 				switch($query['inhdd']) {
 					case 'true': $this->db->where('inhdd', TRUE); break;
 					case 'false': $this->db->where('inhdd', FALSE); break;
