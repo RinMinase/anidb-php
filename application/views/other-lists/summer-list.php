@@ -73,7 +73,7 @@
 											<th class="text-center"><?php echo $statsHQCount; ?></th>
 										</tr>
 										<tr>
-											<th>LQ 480p</th>
+											<th>LQ 360p</th>
 											<th>:</th>
 											<th class="text-center"><?php echo $statsLQCount; ?></th>
 										</tr>
