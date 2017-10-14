@@ -173,7 +173,7 @@ class DefaultModel extends CI_Model {
 			$this->db->select('status, season, year');
 			$this->db->from('downloads');
 
-			$this->db->order_by('year', 'ASC');
+			$this->db->order_by('year', 'DESC');
 			$this->db->order_by('season', 'ASC');
 			$this->db->order_by('status', 'DESC');
 		} else {
@@ -183,8 +183,6 @@ class DefaultModel extends CI_Model {
 			$this->db->where('year', $year);
 			$this->db->where('season', $season);
 
-			$this->db->order_by('year', 'ASC');
-			$this->db->order_by('season', 'ASC');
 			$this->db->order_by('status', 'DESC');
 			$this->db->order_by('priority', 'DESC');
 			$this->db->order_by('title', 'ASC');
