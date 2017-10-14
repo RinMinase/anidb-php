@@ -23,6 +23,7 @@ class DefaultModel extends CI_Model {
 		$this->db->from('anime');
 
 		if (empty($query)) {
+			$this->db->order_by('quality', 'ASC');
 			$this->db->order_by('title', 'ASC');
 
 			return $this->db->get()->result();
@@ -78,6 +79,7 @@ class DefaultModel extends CI_Model {
 						}
 					} else {
 						$this->db->order_by('quality', 'ASC');
+						$this->db->order_by('title', 'ASC');
 					}
 
 				} else {
@@ -85,10 +87,12 @@ class DefaultModel extends CI_Model {
 						$this->db->order_by($query['sort'], 'ASC');
 					} else {
 						$this->db->order_by('quality', 'ASC');
+						$this->db->order_by('title', 'ASC');
 					}
 				}
 			} else {
 				$this->db->order_by('quality', 'ASC');
+				$this->db->order_by('title', 'ASC');
 			}
 
 			if (isset($query['inhdd'])) {
