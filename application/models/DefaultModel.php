@@ -148,10 +148,6 @@ class DefaultModel extends CI_Model {
 		}
 	}
 
-	public function getAnimeDataNew($select, $order, $like, $limit) {
-
-	}
-
 	public function getAnimeDataAddNeededData() {
 		$this->db->select('title');
 		$this->db->from('anime');
