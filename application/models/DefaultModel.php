@@ -68,29 +68,23 @@ class DefaultModel extends CI_Model {
 
 			if (!empty($query['sort'])) {
 				if ( count( explode(" ", $query['sort']) ) > 1 ) {
+					$sort = explode(" ", $query['sort'])[0];
+					$order = strtolower(explode(" ", $query['sort'])[1]);
 
-					$tempSort = explode(" ", $query['sort'])[0];
-					$tempSortOrder = strtolower(explode(" ", $query['sort'])[1]);
-
-					if ($this->isValidOrderColumn($tempSort)) {
-						switch($tempSortOrder) {
-							case "desc": $this->db->order_by($tempSort, 'DESC'); break;
-							default: $this->db->order_by($tempSort, 'ASC'); break;
-						}
-					} else {
-						$this->db->order_by('quality', 'ASC');
-						$this->db->order_by('title', 'ASC');
+					if ($this->isValidOrderColumn($sort)) {
+						if ($order == "desc") $this->db->order_by($sort, 'DESC');
+						else $this->db->order_by($sort, 'ASC');
+						$sortOverride = TRUE;
 					}
-
 				} else {
 					if ($this->isValidOrderColumn($query['sort'])) {
 						$this->db->order_by($query['sort'], 'ASC');
-					} else {
-						$this->db->order_by('quality', 'ASC');
-						$this->db->order_by('title', 'ASC');
+						$sortOverride = TRUE;
 					}
 				}
-			} else {
+			}
+
+			if (empty($sortOverride)) {
 				$this->db->order_by('quality', 'ASC');
 				$this->db->order_by('title', 'ASC');
 			}
