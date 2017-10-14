@@ -5,26 +5,20 @@ class DefaultModel extends CI_Model {
 
 	public function getAnimeData($query = NULL) {
 		$this->db->select('
-				id,
-				watchStatus,
-				quality,
-				title,
-				episodes,
-				ovas,
-				specials,
-				filesize,
-				seasonNumber,
-				firstSeasonTitle,
-				dateFinished,
-				releaseSeason,
-				releaseYear,
-				durationHour,
-				durationMinute,
-				durationSecond,
-				encoder,
-				variants,
-				remarks,
-				inHDD
+			id,
+			quality,
+			title,
+			episodes,
+			ovas,
+			specials,
+			filesize,
+			dateFinished,
+			releaseSeason,
+			releaseYear,
+			durationHour,
+			durationMinute,
+			durationSecond,
+			encoder
 		');
 		$this->db->from('anime');
 
