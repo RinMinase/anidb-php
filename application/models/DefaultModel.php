@@ -8,14 +8,33 @@ class DefaultModel extends CI_Model {
 	private function _duration() { return 'durationHour, durationMinute, durationSecond,'; }
 
 	public function getAnimeData($query = NULL) {
+		function isValidOrderColumn($columnName) {
+			switch($columnName) {
+				case 'quality':
+				case 'title':
+				case 'episodes':
+				case 'ovas':
+				case 'specials':
+				case 'filesize':
+				case 'datefinished':
+				case 'seasonnumber':
+				case 'releaseseason':
+				case 'releaseyear':
+				case 'encoder':
+					return true;
+				default:
+					return false;
+			}
+		}
+
 		$this->db->select('
 			id,
 			quality,
-			title,'
-			. $this->_episodes() .
+			title,' .
+			$this->_episodes() .
 			'filesize,
-			dateFinished,'
-			. $this->_season() .
+			dateFinished,' .
+			$this->_season() .
 			$this->_duration() .
 			'encoder
 		');
@@ -69,13 +88,13 @@ class DefaultModel extends CI_Model {
 					$sort = explode(" ", $query['sort'])[0];
 					$order = strtolower(explode(" ", $query['sort'])[1]);
 
-					if ($this->isValidOrderColumn($sort)) {
+					if (isValidOrderColumn($sort)) {
 						if ($order == "desc") $this->db->order_by($sort, 'DESC');
 						else $this->db->order_by($sort, 'ASC');
 						$sortOverride = TRUE;
 					}
 				} else {
-					if ($this->isValidOrderColumn($query['sort'])) {
+					if (isValidOrderColumn($query['sort'])) {
 						$this->db->order_by($query['sort'], 'ASC');
 						$sortOverride = TRUE;
 					}
@@ -95,25 +114,6 @@ class DefaultModel extends CI_Model {
 			}
 
 			return $this->db->get()->result();
-		}
-	}
-
-	private function isValidOrderColumn($columnName) {
-		switch($columnName) {
-			case 'quality':
-			case 'title':
-			case 'episodes':
-			case 'ovas':
-			case 'specials':
-			case 'filesize':
-			case 'datefinished':
-			case 'seasonnumber':
-			case 'releaseseason':
-			case 'releaseyear':
-			case 'encoder':
-				return true;
-			default:
-				return false;
 		}
 	}
 
