@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class DisplayLibrary {
+class Display {
 
 	public function display_page(
 		$page,
