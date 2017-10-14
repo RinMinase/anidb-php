@@ -29,7 +29,6 @@ class GeneralPagesController extends CI_Controller {
 				case "HQ 480p": $data['totalHQ']++; break;
 				case "LQ 360p": $data['totalLQ']++; break;
 			}
-
 		}
 
 		$reference_date = new DateTime('2000-01-01');
