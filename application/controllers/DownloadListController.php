@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class DownloadListController extends CI_Controller {
 
 	public function download_list($year = NULL, $season = NULL) {
-		$raw_stats_query = $this->defaultmodel->getDownloadData();
+		$raw_stats_query = $this->downloads->getDownloadData();
 
 		foreach($raw_stats_query as $item) {
 
@@ -60,7 +60,7 @@ class DownloadListController extends CI_Controller {
 		}
 
 		if (empty($year) && empty($season)) {
-			$raw_data_query = $this->defaultmodel->getDownloadData(0, 0);
+			$raw_data_query = $this->downloads->getDownloadData(0, 0);
 			$data['currentList'] = "unsorted";
 		} else {
 			switch (strtolower($season)) {
@@ -119,7 +119,7 @@ class DownloadListController extends CI_Controller {
 	}
 
 	public function download_list_add() {
-		$data = $this->defaultmodel->getAnimeData();
+		$data = $this->downloads->getAnimeData();
 
 		$this->displaylibrary->print_pretty($data);
 	}

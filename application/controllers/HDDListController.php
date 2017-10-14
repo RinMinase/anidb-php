@@ -4,9 +4,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class HDDListController extends CI_Controller {
 
 	public function hdd_list() {
-		$data['hddData'] = $this->defaultmodel->getHDDData();
+		$data['hddData'] = $this->hdd->getHDDData();
 
-		$data['animeJQ'] = $this->defaultmodel->getAnimeHDDNeededData('J', 'Q');
+		$data['animeJQ'] = $this->anime->getAnimeDataByLetterRange('J', 'Q');
 		$data['countJQ'] = count($data['animeJQ']);
 
 		$data['filesizeJQ'] = 0;
@@ -21,7 +21,7 @@ class HDDListController extends CI_Controller {
 		$data['usedJQ'] = round($data['filesizeJQ'] / 1073741824, 2);
 		$data['totalJQ'] = round($data['hddData'][0]->hddSize / 1073741824, 2);
 
-		$data['animeRZ'] = $this->defaultmodel->getAnimeHDDNeededData('R', 'Z');
+		$data['animeRZ'] = $this->anime->getAnimeDataByLetterRange('R', 'Z');
 		$data['countRZ'] = count($data['animeRZ']);
 
 		$data['filesizeRZ'] = 0;

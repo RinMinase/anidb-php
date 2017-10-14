@@ -7,7 +7,7 @@ class LandingPageController extends CI_Controller {
 		$data['query'] = $this->input->get('q');
 
 		if (empty($data['query'])) {
-			$data['animeData'] = $this->defaultmodel->getAnimeData();
+			$data['animeData'] = $this->anime->getAnimeData();
 		} else {
 
 			$raw_query = explode(',', strtolower($data['query']));
@@ -31,9 +31,9 @@ class LandingPageController extends CI_Controller {
 			}
 
 			if (empty($keyword)) {
-				$data['animeData'] = $this->defaultmodel->getAnimeData();
+				$data['animeData'] = $this->anime->getAnimeData();
 			} else {
-				$data['animeData'] = $this->defaultmodel->getAnimeData($keyword);
+				$data['animeData'] = $this->anime->getAnimeData($keyword);
 			}
 
 		}
@@ -48,7 +48,7 @@ class LandingPageController extends CI_Controller {
 	}
 
 	public function add() {
-		$data['titleData'] = $this->defaultmodel->getAnimeDataAddNeededData();
+		$data['titleData'] = $this->anime->getAnimeDataForAdd();
 
 		$navbar['activePage'] = "add";
 		$navbar['customTitle'] = "Add an Entry";
@@ -57,13 +57,13 @@ class LandingPageController extends CI_Controller {
 	}
 
 	public function view($id)	{
-		$data['animeData'] = $this->defaultmodel->getAnimeDataViewById($id);
+		$data['animeData'] = $this->anime->getAnimeDataById($id);
 		if (!empty($data['animeData']->prequel)) {
-			$data['prequelId'] = $this->defaultmodel->getAnimeDataViewByTitle($data['animeData']->prequel);
+			$data['prequelId'] = $this->anime->getAnimeDataByTitle($data['animeData']->prequel);
 		}
 
 		if (!empty($data['animeData']->sequel)) {
-			$data['sequelId'] = $this->defaultmodel->getAnimeDataViewByTitle($data['animeData']->sequel);
+			$data['sequelId'] = $this->anime->getAnimeDataByTitle($data['animeData']->sequel);
 		}
 
 		$navbar['activePage'] = "view";

@@ -6,7 +6,7 @@ class GeneralPagesController extends CI_Controller {
 	public function error_404()	{ show_404(); }
 
 	public function about() {
-		$raw_data = $this->defaultmodel->getAnimeStatisticsNeededData();
+		$raw_data = $this->anime->getAnimeDataForStatistics();
 
 		$total_hours = $total_minutes = $total_seconds = 0;
 		$total_filesize = 0;

@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class OtherListsController extends CI_Controller {
 
 	public function last_watch() {
-		$data['last20AnimeData'] = $this->defaultmodel->getLast20AnimeData();
+		$data['last20AnimeData'] = $this->anime->getAnimeDataBy20();
 
 		$data['totalEpisodes'] = 0;
 		foreach ($data['last20AnimeData'] as $item) {
@@ -32,7 +32,7 @@ class OtherListsController extends CI_Controller {
 	}
 
 	public function by_name() {
-		$raw_data = $this->defaultmodel->getAnimeByNameNeededData();
+		$raw_data = $this->anime->getAnimeForByName();
 
 		for ($i=0; $i < 27; $i++) {
 			$data['animeDataByName'][$i]['animeFilesize'] = 0;
@@ -66,17 +66,20 @@ class OtherListsController extends CI_Controller {
 	}
 
 	public function summer_list($id = NULL)	{
-		$data['summerLists'] = $this->defaultmodel->getSummerListData();
+		$data['summerLists'] = $this->summer->getSummerData();
 		if (!empty($data['summerLists'])) {
 			if (empty($id)) {
 				$data['currentList'] = $data['summerLists'][0]->id;
-				$list_info = $this->defaultmodel->getSummerListData($data['summerLists'][0]->id);
+				$list_info = $this->summer->getSummerData($data['summerLists'][0]->id);
 			}	else {
 				$data['currentList'] = $id;
-				$list_info = $this->defaultmodel->getSummerListData($id);
+				$list_info = $this->summer->getSummerData($id);
 			}
 
-			$data['summerData'] = $this->defaultmodel->getAnimeDataByDate($list_info->dateStart, $list_info->dateEnd);
+			$data['summerData'] = $this->anime->getAnimeDataByDateRange(
+				$list_info->dateStart,
+				$list_info->dateEnd
+			);
 
 			if (!empty($data['summerData'])) {
 
