@@ -208,4 +208,8 @@ class Anime extends CI_Model {
 		return $this->db->get()->result();
 	}
 
+	public function insertAnimeData($data) {
+		$this->db->insert('anime', $data);
+	}
+
 }
