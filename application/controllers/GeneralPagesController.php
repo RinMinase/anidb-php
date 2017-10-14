@@ -47,7 +47,7 @@ class GeneralPagesController extends CI_Controller {
 		$navbar['customTitle'] = "About Page";
 		$navbar['customCSS'] = "resources/css/about/styles.css";
 
-		$this->displaylibrary->display_page('general/about', $navbar, $data);
+		$this->display->display_page('general/about', $navbar, $data);
 	}
 
 }

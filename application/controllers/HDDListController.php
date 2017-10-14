@@ -39,7 +39,7 @@ class HDDListController extends CI_Controller {
 		$navbar['activePage'] = "hdd-list";
 		$navbar['customTitle'] = "HDD List";
 
-		$this->displaylibrary->display_page('hdd-list/hdd-list', $navbar, $data);
+		$this->display->display_page('hdd-list/hdd-list', $navbar, $data);
 	}
 
 	public function hdd_simulator() {
@@ -47,7 +47,7 @@ class HDDListController extends CI_Controller {
 		$navbar['customTitle'] = "Disk Simulator";
 		$navbar['customCSS'] = "resources/css/hdd-simulator/styles.css";
 
-		$this->displaylibrary->display_page('hdd-list/hdd-simulator', $navbar);
+		$this->display->display_page('hdd-list/hdd-simulator', $navbar);
 	}
 
 }

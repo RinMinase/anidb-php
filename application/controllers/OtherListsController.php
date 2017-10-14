@@ -28,7 +28,7 @@ class OtherListsController extends CI_Controller {
 		$navbar['activePage'] = "last-watch";
 		$navbar['customTitle'] = "Last 20 Watched";
 
-		$this->displaylibrary->display_page('other-lists/last-watch', $navbar, $data);
+		$this->display->display_page('other-lists/last-watch', $navbar, $data);
 	}
 
 	public function by_name() {
@@ -62,7 +62,7 @@ class OtherListsController extends CI_Controller {
 		$navbar['activePage'] = "by-name";
 		$navbar['customTitle'] = "Anime by Name";
 
-		$this->displaylibrary->display_page('other-lists/by-name', $navbar, $data);
+		$this->display->display_page('other-lists/by-name', $navbar, $data);
 	}
 
 	public function summer_list($id = NULL)	{
@@ -123,7 +123,7 @@ class OtherListsController extends CI_Controller {
 		$navbar['customTitle'] = "Summer List";
 		$footer['customJS'] = "resources/js/summer-list/scripts.js";
 
-		$this->displaylibrary->display_page('other-lists/summer-list', $navbar, $data, $footer);
+		$this->display->display_page('other-lists/summer-list', $navbar, $data, $footer);
 	}
 
 }

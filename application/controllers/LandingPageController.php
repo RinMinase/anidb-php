@@ -44,7 +44,7 @@ class LandingPageController extends CI_Controller {
 		// $footer['customJS'][0] = "resources/data-tables-1.10.16/jquery.data-tables.min.js";
 		// $footer['customJS'][1] = "resources/js/index/scripts.js";
 
-		$this->displaylibrary->display_page('landing/index', $navbar, $data);
+		$this->display->display_page('landing/index', $navbar, $data);
 	}
 
 	public function add() {
@@ -53,7 +53,7 @@ class LandingPageController extends CI_Controller {
 		$navbar['activePage'] = "add";
 		$navbar['customTitle'] = "Add an Entry";
 
-		$this->displaylibrary->display_page('landing/add', $navbar, $data);
+		$this->display->display_page('landing/add', $navbar, $data);
 	}
 
 	public function view($id)	{
@@ -69,7 +69,7 @@ class LandingPageController extends CI_Controller {
 		$navbar['activePage'] = "view";
 		$navbar['customTitle'] = $data['animeData']->title;
 
-		$this->displaylibrary->display_page('landing/view', $navbar, $data);
+		$this->display->display_page('landing/view', $navbar, $data);
 	}
 
 	public function addEntry() {

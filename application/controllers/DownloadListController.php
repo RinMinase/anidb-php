@@ -115,13 +115,13 @@ class DownloadListController extends CI_Controller {
 		$navbar['customCSS'] = "resources/css/download-list/styles.css";
 		$footer['customJS'] = "resources/js/download-list/scripts.js";
 
-		$this->displaylibrary->display_page('download-list/download-list', $navbar, $data, $footer);
+		$this->display->display_page('download-list/download-list', $navbar, $data, $footer);
 	}
 
 	public function download_list_add() {
 		$data = $this->downloads->getAnimeData();
 
-		$this->displaylibrary->print_pretty($data);
+		$this->display->print_pretty($data);
 	}
 
 }
