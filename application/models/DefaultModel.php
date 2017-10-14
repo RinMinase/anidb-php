@@ -144,7 +144,7 @@ class DefaultModel extends CI_Model {
 	}
 
 	public function getLast20AnimeData() {
-		$this->db->select('quality, episodes, ovas, specials, title, filesize, dateFinished');
+		$this->db->select('quality,' . $this->_episodes() . 'title, filesize, dateFinished');
 		$this->db->from('anime');
 		$this->db->order_by('dateFinished', 'DESC');
 		$this->db->limit(20);
@@ -153,7 +153,7 @@ class DefaultModel extends CI_Model {
 	}
 
 	public function getAnimeStatisticsNeededData() {
-		$this->db->select('quality, episodes, ovas, specials, filesize, durationHour, durationMinute, durationSecond');
+		$this->db->select('quality,' . $this->_episodes() . 'filesize,' . $this->_duration());
 		$this->db->from('anime');
 		$this->db->order_by('quality', 'ASC');
 
@@ -242,15 +242,7 @@ class DefaultModel extends CI_Model {
 	}
 
 	public function getAnimeDataByDate($from, $to) {
-		$this->db->select('
-			quality,
-			title,
-			episodes,
-			ovas,
-			specials,
-			filesize,
-			dateFinished
-		');
+		$this->db->select('quality, title,' . $this->_episodes() . 'filesize, dateFinished');
 		$this->db->from('anime');
 		$this->db->where('dateFinished BETWEEN "' . $from . '" AND "' . $to . '"');
 		$this->db->order_by('dateFinished', 'DESC');
