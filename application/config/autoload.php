@@ -7,4 +7,4 @@ $autoload['drivers'] = array();
 $autoload['helper'] = array('form', 'url');
 $autoload['config'] = array();
 $autoload['language'] = array();
-$autoload['model'] = array('defaultmodel', 'anime', 'downloads', 'hdd', 'summer');
+$autoload['model'] = array('anime', 'downloads', 'hdd', 'summer');
