@@ -57,6 +57,11 @@
  * 		>> NAVBAR
  * > Settings / System Configuration
  * 		>> FILE_SYSTEM / CONFIG
+ * > Models
+ * 		>> MDL_ANIME
+ * 		>> MDL_DOWNLOADS
+ * 		>> MDL_HDD
+ * 		>> MDL_SUMMER
  */
 
 /*
