@@ -3,22 +3,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class DefaultModel extends CI_Model {
 
+	private function _episodes() { return 'episodes, ovas, specials,'; }
+	private function _season() { return 'releaseSeason, releaseYear,'; }
+	private function _duration() { return 'durationHour, durationMinute, durationSecond,'; }
+
 	public function getAnimeData($query = NULL) {
 		$this->db->select('
 			id,
 			quality,
-			title,
-			episodes,
-			ovas,
-			specials,
-			filesize,
-			dateFinished,
-			releaseSeason,
-			releaseYear,
-			durationHour,
-			durationMinute,
-			durationSecond,
-			encoder
+			title,'
+			. $this->_episodes() .
+			'filesize,
+			dateFinished,'
+			. $this->_season() .
+			$this->_duration() .
+			'encoder
 		');
 		$this->db->from('anime');
 
@@ -27,7 +26,6 @@ class DefaultModel extends CI_Model {
 			$this->db->order_by('title', 'ASC');
 
 			return $this->db->get()->result();
-
 		} else {
 
 			if (!empty($query['title'])) {
