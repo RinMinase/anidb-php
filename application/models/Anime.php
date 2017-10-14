@@ -198,4 +198,14 @@ class Anime extends CI_Model {
 		return $this->db->get()->result();
 	}
 
+	public function getAnimeDataForAdd() {
+		$this->db->select('title');
+		$this->db->from('anime');
+		$this->db->where('seasonNumber !=', 0);
+		$this->db->order_by('firstSeasonTitle', 'ASC');
+		$this->db->order_by('seasonNumber', 'ASC');
+
+		return $this->db->get()->result();
+	}
+
 }
