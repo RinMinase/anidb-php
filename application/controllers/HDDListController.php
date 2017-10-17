@@ -44,6 +44,11 @@ class HDDListController extends CI_Controller {
 			$mergedData = "[" . $splicedOldData . $newData . "]";
 
 			$data['hddData'] = json_decode($mergedData);
+
+			usort($data['hddData'], function ($a, $b) {
+				return ord($a->from) > ord($b->from);
+			});
+
 		}
 
 		// $this->display->print_pretty($data['hddData']);
