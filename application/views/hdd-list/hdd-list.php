@@ -6,40 +6,35 @@
 					<h4>Disks</h4>
 				</div>
 				<div class="panel-body">
-					<div class="row">
-						<div class="col-md-12">
 
-							<?php foreach ($animeByHDD as $item): ?>
-								<div class="row">
-									<div class="col-xs-2 col-sm-2 col-md-4 col-lg-4">
-										<p><strong><?php echo $item['from'] ?> - <?php echo $item['to'] ?></strong></p>
-									</div>
-									<div class="col-xs-10 col-sm-10 col-md-8 col-lg-8">
-										<div class="progress"
-											tooltip="tip"
-											title="<?php
-												echo "Free : " . $item['free'] . " GB\n";
-												echo "Used : " . $item['used'] . " GB\n";
-												echo "Total : " . $item['total'] . " GB\n";
-												echo "Titles : " . $item['count'];
-											?>">
-											<div class=
-												<?php
-													if ($item['percent'] >= 0 && $item['percent'] < 80) echo "'progress-bar progress-bar-success'";
-													else if ($item['percent'] >= 80 && $item['percent'] < 90) echo "'progress-bar progress-bar-warning'";
-													else echo "'progress-bar progress-bar-danger'";
-												?>
-												style="width:<?php echo round($item['percent'], 0); ?>%">
+					<?php foreach ($animeByHDD as $item): ?>
+						<div class="row">
+							<div class="col-xs-2 col-sm-2 col-md-4 col-lg-4">
+								<p><strong><?php echo $item['from'] ?> - <?php echo $item['to'] ?></strong></p>
+							</div>
+							<div class="col-xs-10 col-sm-10 col-md-8 col-lg-8">
+								<div class="progress"
+									tooltip="tip"
+									title="<?php
+										echo "Free : " . $item['free'] . " GB\n";
+										echo "Used : " . $item['used'] . " GB\n";
+										echo "Total : " . $item['total'] . " GB\n";
+										echo "Titles : " . $item['count'];
+									?>">
+									<div class=
+										<?php
+											if ($item['percent'] >= 0 && $item['percent'] < 80) echo "'progress-bar progress-bar-success'";
+											else if ($item['percent'] >= 80 && $item['percent'] < 90) echo "'progress-bar progress-bar-warning'";
+											else echo "'progress-bar progress-bar-danger'";
+										?>
+										style="width:<?php echo round($item['percent'], 0); ?>%">
 
-												<?php echo $item['percent'] . "%"; ?>
-											</div>
-										</div>
+										<?php echo $item['percent'] . "%"; ?>
 									</div>
 								</div>
-							<?php endforeach; ?>
-
+							</div>
 						</div>
-					</div>
+					<?php endforeach; ?>
 
 				</div>
 			</div>
