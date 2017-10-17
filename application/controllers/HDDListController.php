@@ -6,35 +6,24 @@ class HDDListController extends CI_Controller {
 	public function hdd_list() {
 		$data['hddData'] = $this->hdd->getHDDData();
 
-		$data['animeJQ'] = $this->anime->getAnimeDataByLetterRange('J', 'Q');
-		$data['countJQ'] = count($data['animeJQ']);
+		foreach ($data['hddData'] as $item) {
+			$temp['animeData'] = $this->anime->getAnimeDataByLetterRange($item->from, $item->to);
+			$temp['count'] = count($temp['animeData']);
 
-		$data['filesizeJQ'] = 0;
-		foreach ($data['animeJQ'] as $item) {
-			$data['filesizeJQ'] += $item->filesize;
+			$temp['filesize'] = 0;
+			foreach ($temp['animeData'] as $subitem) {
+				$temp['filesize'] += $subitem->filesize;
+			}
+
+			$temp['to'] = strtoupper($item->to);
+			$temp['from'] = strtoupper($item->from);
+			$temp['percent'] = round( ($temp['filesize'] / $item->hddSize) * 100  ,1);
+			$temp['free'] = round( ($item->hddSize - $temp['filesize']) / 1073741824, 2);
+			$temp['used'] = round($temp['filesize'] / 1073741824, 2);
+			$temp['total'] = round($item->hddSize / 1073741824, 2);
+
+			$data['animeByHDD'][] = $temp;
 		}
-
-		$data['toJQ'] = strtoupper($data['hddData'][0]->to);
-		$data['fromJQ'] = strtoupper($data['hddData'][0]->from);
-		$data['percentJQ'] = round( ($data['filesizeJQ'] / $data['hddData'][0]->hddSize) * 100  ,1);
-		$data['freeJQ'] = round( ($data['hddData'][0]->hddSize - $data['filesizeJQ']) / 1073741824, 2);
-		$data['usedJQ'] = round($data['filesizeJQ'] / 1073741824, 2);
-		$data['totalJQ'] = round($data['hddData'][0]->hddSize / 1073741824, 2);
-
-		$data['animeRZ'] = $this->anime->getAnimeDataByLetterRange('R', 'Z');
-		$data['countRZ'] = count($data['animeRZ']);
-
-		$data['filesizeRZ'] = 0;
-		foreach ($data['animeRZ'] as $item) {
-			$data['filesizeRZ'] += $item->filesize;
-		}
-
-		$data['toRZ'] = strtoupper($data['hddData'][1]->to);
-		$data['fromRZ'] = strtoupper($data['hddData'][1]->from);
-		$data['percentRZ'] = round( ($data['filesizeRZ'] / $data['hddData'][1]->hddSize) * 100  ,1);
-		$data['freeRZ'] = round( ($data['hddData'][1]->hddSize - $data['filesizeRZ']) / 1073741824, 2);
-		$data['usedRZ'] = round($data['filesizeRZ'] / 1073741824, 2);
-		$data['totalRZ'] = round($data['hddData'][1]->hddSize / 1073741824, 2);
 
 		$navbar['activePage'] = "hdd-list";
 		$navbar['customTitle'] = "HDD List";
