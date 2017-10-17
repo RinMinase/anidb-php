@@ -12,39 +12,42 @@
 
 					<div class="row">
 						<div class="col-md-12">
+							<form method="post" action="<?php echo base_url("hdd-list/simulator"); ?>">
+								<input type="hidden" name="oldData" value='<?php echo json_encode($hddData); ?>'>
 
-							<h4>Add</h4>
+								<h4>Add</h4>
 
-							<div class="row">
-								<div class="col-xs-12 col-sm-6 col-md-12">
-									<div class="form-horizontal">
-										<div class="form-group">
-											<label class="control-label col-xs-3 col-sm-4 col-md-5 col-lg-4">From :</label>
-											<div class="col-xs-9 col-sm-8 col-md-7 col-lg-8">
-												<input type="text" name="drive-letter-from" class="form-control">
+								<div class="row">
+									<div class="col-xs-12 col-sm-6 col-md-12">
+										<div class="form-horizontal">
+											<div class="form-group">
+												<label class="control-label col-xs-3 col-sm-4 col-md-5 col-lg-4">From :</label>
+												<div class="col-xs-9 col-sm-8 col-md-7 col-lg-8">
+													<input type="text" name="from" class="form-control">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-xs-12 col-sm-6 col-md-12">
+										<div class="form-horizontal">
+											<div class="form-group">
+												<label class="control-label col-xs-3 col-sm-4 col-md-5 col-lg-4">To :</label>
+												<div class="col-xs-9 col-sm-8 col-md-7 col-lg-8">
+													<input type="text" name="to" class="form-control">
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="col-xs-12 col-sm-6 col-md-12">
-									<div class="form-horizontal">
+								<div class="row">
+									<div class="col-md-12">
 										<div class="form-group">
-											<label class="control-label col-xs-3 col-sm-4 col-md-5 col-lg-4">To :</label>
-											<div class="col-xs-9 col-sm-8 col-md-7 col-lg-8">
-												<input type="text" name="drive-letter-to" class="form-control">
-											</div>
+											<button class="btn btn-primary btn-block">Add</button>
 										</div>
 									</div>
 								</div>
-							</div>
-							<div class="row">
-								<div class="col-md-12">
-									<div class="form-group">
-										<a href="#" class="btn btn-primary btn-block">Add</a>
-									</div>
-								</div>
-							</div>
 
+							</form>
 						</div>
 					</div>
 

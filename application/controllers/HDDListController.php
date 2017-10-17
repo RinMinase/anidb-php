@@ -32,7 +32,21 @@ class HDDListController extends CI_Controller {
 	}
 
 	public function hdd_simulator() {
-		$data['hddData'] = $this->hdd->getHDDData();
+		if ( empty($this->input->post('from')) || empty($this->input->post('to')) ) {
+			$data['hddData'] = $this->hdd->getHDDData();
+		} else {
+			$oldData = $this->input->post('oldData');
+			$newFrom = $this->input->post('from');
+			$newTo = $this->input->post('to');
+
+			$newData = ',{"from":"' . $newFrom . '","to":"' . $newTo . '","hddSize":"1000169533440"}';
+			$splicedOldData = substr($oldData, 1, -1);
+			$mergedData = "[" . $splicedOldData . $newData . "]";
+
+			$data['hddData'] = json_decode($mergedData);
+		}
+
+		// $this->display->print_pretty($data['hddData']);
 
 		foreach ($data['hddData'] as $item) {
 			$temp['animeData'] = $this->anime->getAnimeDataByLetterRange($item->from, $item->to);
