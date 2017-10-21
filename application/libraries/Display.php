@@ -12,6 +12,11 @@ class Display {
 		get_instance()->load->view('navbar', $navbar_data);
 		get_instance()->load->view($page, $page_data);
 		get_instance()->load->view('footer', $footer_data);
+
+		$enable_profiler = FALSE;
+		if ($enable_profiler) {
+			get_instance()->output->enable_profiler(TRUE);
+		}
 	}
 
 	public function print_pretty($data = NULL) {
