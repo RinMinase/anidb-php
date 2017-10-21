@@ -113,7 +113,7 @@
 113,0,LQ 360p,Mayoi Neko Overrun!,13,0,0,837972378,1,Mayoi Neko Overrun!,,,,2012-04-21,Spring,2010,,,,,,HD 720p,1,0,0,0,0
 114,0,LQ 360p,Nagasarete Airantou,26,0,0,1489281199,1,Nagasarete Airantou,,,,2012-05-02,,,,,,,,HD 720p,1,0,0,0,0
 115,0,LQ 360p,Nanaka 6-17,12,0,1,646679926,1,Nanaka 6-17,,,,2013-04-22,,,5,25,51,,,HQ 480p,1,0,0,0,0
-116,0,LQ 360p,Naruto,220,0,0,12100644006,1,Naruto,,,,2013-04-19,,,83,10,1,,,,1,0,0,0,0
+116,0,LQ 360p,Naruto,220,0,0,12100644006,1,Naruto,,Naruto Shippuuden,,2013-04-19,,,83,10,1,,,,1,0,0,0,0
 117,0,LQ 360p,Onegai Teacher,12,0,0,675892106,1,Onegai Teacher,,,,2012-04-22,,,4,25,15,,,,1,0,0,0,0
 118,0,LQ 360p,Onii-chan No Koto Nanka Zenzen Suki Janain Dakara Ne,12,0,0,965276887,1,Onii-chan No Koto Nanka Zenzen Suki Janain Dakara Ne,,,,2012-04-18,Winter,2011,4,19,38,,,HD 720p,1,0,0,0,0
 119,0,LQ 360p,Ore-tachi Ni Tsubasa Wa Nai,12,0,0,1030103823,1,Ore-tachi Ni Tsubasa Wa Nai,,,,2012-04-21,Spring,2011,4,52,58,,,,1,0,0,0,0
@@ -199,7 +199,7 @@
 199,0,HD 720p,Witch Craft Works,12,0,0,7558955796,1,Witch Craft Works,,,,2014-07-27,Winter,2014,4,43,57,,,,1,0,0,0,0
 200,0,HD 720p,Working!! 2,13,0,0,3831116094,2,Working!!,Working!!,,,2013-08-11,,,5,10,59,,,,1,0,0,0,0
 201,0,HD 720p,Yozakura Quartet Hana no Uta,13,0,0,4252455463,1,Yozakura Quartet Hana no Uta,,,,2014-06-21,Fall,2013,5,7,23,,,,1,0,0,0,0
-202,0,HD 720p,Yuru Yuri ??,12,0,0,4019725939,2,Yuru Yuri,Yuru Yuri,,,2012-10-22,Summer,2012,,,,,,,1,0,0,0,0
+202,0,HD 720p,Yuru Yuri ??,12,0,0,4019725939,2,Yuru Yuri,Yuru Yuri,Yuru Yuri San Hai!,,2012-10-22,Summer,2012,,,,,,,1,0,0,0,0
 203,0,HD 720p,Zankyou no Terror,11,0,0,5709360250,1,Zankyou no Terror,,,,2015-05-31,,,4,12,3,,,,1,0,0,0,0
 204,0,HD 720p,Zero no Tsukaima,13,0,0,6183871455,1,Zero no Tsukaima,,Zero no Tsukaima - Futatsuki no Kishi (Season 2),,2013-11-06,,,5,7,55,,,,1,0,0,0,0
 205,0,HD 720p,Zero no Tsukaima - Futatsuki no Kishi (Season 2),12,0,0,5536278510,2,Zero no Tsukaima,Zero no Tsukaima,Zero no Tsukaima - Princess no Rondo (Season 3),,2013-11-08,,,4,43,59,,,,1,0,0,0,0
@@ -239,5 +239,10 @@
 239,0,LQ 360p,Tsubasa Reservoir Chronicle,26,0,0,4668399616,1,Tsubasa Reservoir Chronicle,,,,2012-09-04,,,10,49,57,,,,1,0,0,0,0
 240,0,LQ 360p,Uta-Kata,12,1,0,609900379,1,Uta-Kata,,,,2012-05-07,,,5,7,40,,,,1,0,0,0,0
 241,0,LQ 360p,Working!!,13,0,0,726197992,1,Working!!,,Working!! 2,,2012-12-30,Spring,2010,,,,,,HD 720p,1,0,0,0,0
-242,1,LQ 360p,Naruto Shippuuden,96,0,0,4831397928,1,Naruto Shippuuden,,,,NULL,,,,,,,,,1,0,0,0,0
-243,1,HQ 480p,One Piece,798,0,0,1.74992E+11,1,One Piece,,,,NULL,,,,,,,,,1,0,0,0,0
+242,1,LQ 360p,Naruto Shippuuden,96,0,0,4831397928,2,Naruto,Naruto,,,0000-00-00,,,,,,,,,1,0,0,0,0
+243,1,HQ 480p,One Piece,798,0,0,1.74992E+11,1,One Piece,,,,0000-00-00,,,,,,,,,1,0,0,0,0
+244,0,FHD 1080p,ReZero kara Hajimeru Isekai Seikatsu,25,0,0,20535137246,1,ReZero kara Hajimeru Isekai Seikatsu,,,,2017-08-27,,,10,40,40,BlurayDesuYo,Re:Zero kara Hajimeru Isekai Seikatsu,,1,0,0,0,0
+245,0,FHD 1080p,Tokyo Ravens,24,0,0,39510945127,1,Tokyo Ravens,,,,2017-08-25,Winter,2013,9,28,4,FFF,,,1,0,0,0,0
+246,0,FHD 1080p,Spirited Away,1,0,0,14918758264,1,Spirited Away,,,,2017-09-21,,,2,4,32,Coalgirls,,,1,0,0,0,0
+247,0,FHD 1080p,Yuru Yuri San Hai!,12,0,0,9890052998,3,Yuru Yuri,Yuru Yuri ??,,,2017-08-15,,,4,47,15,FFF,,,1,0,0,0,0
+248,0,HD 720p,World Trigger,73,0,0,9236555666,1,World Trigger,,,,2016-12-29,,,28,11,34,Project-GXS,,,1,0,0,0,0
