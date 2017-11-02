@@ -41,7 +41,7 @@
 41,0,HD 720p,Kimi no Iru Machi,12,0,0,2802892114,1,Kimi no Iru Machi,,,,2014-05-18,Summer,2013,4,7,57,,,,1,0,0,0,0
 42,0,HD 720p,Kiseijuu - Sei no Kakuritsu,24,0,0,8174459847,1,Kiseijuu - Sei no Kakuritsu,,,,2015-08-08,Fall,2014,9,8,54,Underwater,Parasyte,,1,0,0,0,0
 43,0,HD 720p,Kiss X Sis,12,7,0,7783211114,1,Kiss X Sis,,,,2012-11-14,Spring,2010,,,,,,,1,0,0,0,0
-44,0,HD 720p,Kitakubu Katsudou Kiroku,12,0,0,4075620960,1,Kitakubu Katsudou Kiroku,,,,2014-07-06,Summer,2013,4,45,25,,,,1,0,0,0,0
+44,0,HD 720p,Kitakubu Katsudou Kiroku,12,0,9,2874136068,1,Kitakubu Katsudou Kiroku,,,,2017-10-26,Summer,2013,4,52,7,Femme,,,1,0,0,0,0
 45,0,HD 720p,Kobato,24,0,0,5486616265,1,Kobato,,,,2013-04-26,,,9,47,54,,,,1,0,0,0,0
 46,0,HD 720p,Kokoro Connect,13,0,0,3884499924,1,Kokoro Connect,,,,2012-12-23,Summer,2012,,,,,,,1,0,0,0,0
 47,0,HD 720p,K-On!,14,0,7,5053981140,1,K-On!,,K-On!!,K-On! Movie - Eiga K-On!,2013-10-18,Spring,2009,5,56,45,,,,1,0,0,0,0
@@ -260,8 +260,19 @@
 260,0,FHD 1080p,Hoshi wo Ou Kodomo,1,0,0,7526646706,1,Hoshi wo Ou Kodomo,,,,2016-12-31,,,1,55,59,THORA,Children Who Chase Lost Voices,,1,0,0,0,0
 261,0,FHD 1080p,Honeyworks - Zutto Mae Kara Suki Deshita,1,0,0,1526298706,1,Zutto Mae Kara Suki Deshita,,Suki ni Naru Sono Shunkan wo,,2016-10-31,,,1,3,44,HorribleSubs,,Not Hsubs,1,0,0,0,0
 262,0,FHD 1080p,Honeyworks - Suki ni Naru Sono Shunkan wo,1,0,0,1516589478,2,Zutto Mae Kara Suki Deshita,Zutto Mae Kara Suki Deshita,,,2017-08-15,,,1,3,6,HorribleSubs,,Not Hsubs,1,0,0,0,0
-263,0,HD 720p,Hibike Euphonium,13,0,7,7639053774,1,Hibike Euphonium,,,,2016-11-02,Spring,2015,5,23,26,FFF,,,1,0,0,0,0
+263,0,HD 720p,Hibike Euphonium,13,0,7,7639053774,1,Hibike Euphonium,,,Hibike Euphonium Movie,2016-11-02,Spring,2015,5,23,26,FFF,,,1,0,0,0,0
 264,0,HD 720p,Koe no Katachi,1,0,0,952149088,1,Koe no Katachi,,,,2017-07-23,,,2,10,3,TT,A Silent Voice,Not Hsubs,1,0,0,0,0
 265,0,HD 720p,Hunter x Hunter,148,0,0,16534010972,1,Hunter x Hunter,,,,2017-04-14,,,58,15,39,shamsherchy,,,1,0,0,0,0
 266,0,HD 720p,Fuuka,12,0,0,1793862330,1,Fuuka,,,,2017-09-30,,,4,50,3,,,,1,0,0,0,0
 267,0,HD 720p,Love Live! Sunshine,13,0,0,5422234254,2,Love Live! School Idol Project,Love Live! School Idol Project,,,2017-09-18,Spring,2014,5,7,40,FFF,,,1,0,0,0,0
+268,0,LQ 360p,Fairy Tail,175,,,13561255673,1,Fairy Tail,,,,2017-10-31,,,71,11,10,,,,1,0,0,0,0
+269,0,HD 720p,Junketsu no Maria,12,,,1581422108,1,Junketsu no Maria,,,,2017-09-16,Winter,2015,4,45,11,Project-GXS,,,1,0,0,0,0
+270,0,UHD 2160p,Kimi no Na Wa,1,,,24758123927,1,Kimi no Na Wa,,,,2017-11-02,,,1,46,35,"LittleBakas!, NAZOrip",Your Name,,1,0,0,0,0
+271,0,HD 720p,Kono Subarashii Sekai ni Shukufuku wo!,10,,,4245089059,1,Kono Subarashii Sekai ni Shukufuku wo!,,Kono Subarashii Sekai ni Shukufuku wo! 2,,2016-10-21,,,3,59,45,FFF,KonoSuba,FHD 1080p,1,0,0,0,0
+272,0,HD 720p,Kono Subarashii Sekai ni Shukufuku wo! 2,11,,,6287645990,2,Kono Subarashii Sekai ni Shukufuku wo!,Kono Subarashii Sekai ni Shukufuku wo!,,,2017-08-24,,,4,31,58,,KonoSuba 2,FHD 1080p,1,0,0,0,0
+273,0,HD 720p,Akagami no Shirayukihime,12,1,,1532791629,1,Akagami no Shirayukihime,,Akagami no Shirayukihime S2,,2017-09-29,,,5,15,35,,,,1,0,0,0,0
+274,0,HD 720p,Akagami no Shirayukihime S2,12,,,2590854492,2,Akagami no Shirayukihime,Akagami no Shirayukihime,,,2017-10-03,Winter,2016,4,51,31,,,,1,0,0,0,0
+275,0,HD 720p,Hibike Euphonium Movie,1,,,1747656268,0,Hibike Euphonium,Hibike Euphonium,,,2016-11-02,,,1,43,4,FFF,,,1,0,0,0,0
+276,0,FHD 1080p,One Punch Man,12,,6,27738892882,1,One Punch Man,,,,2017-09-12,,,6,4,33,Beatrice-Raws,,,1,0,0,0,0
+277,0,FHD 1080p,Plastic Memories,13,,,18821166597,1,Plastic Memories,,,,2017-09-13,Spring,2015,5,13,57,SallySubs,,,1,0,0,0,0
+278,0,FHD 1080p,Nanatsu no Taizai,24,,,16627119198,1,Nanatsu no Taizai,,,,2016-12-23,Fall,2014,8,44,21,,,,1,0,0,0,0
