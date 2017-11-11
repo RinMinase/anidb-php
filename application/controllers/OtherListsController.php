@@ -47,7 +47,7 @@ class OtherListsController extends CI_Controller {
 				$data['animeDataByName'][0]['animeFilesize'] += $item->filesize;
 
 				if (empty($data['animeDataByName'][0]['animeLetter'])) {
-					$data['animeDataByName'][0]['animeLetter'] = chr($currentLetter);
+					$data['animeDataByName'][0]['animeLetter'] = "#";
 				}
 			} else if ($currentLetter >= 65 && $currentLetter <= 90) {
 				array_push($data['animeDataByName'][$currentLetter - 64]['animeData'], $item);
