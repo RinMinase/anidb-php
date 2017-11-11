@@ -154,6 +154,13 @@ class Anime extends CI_Model {
 
 	public function getAnimeDataByLetterRange($from, $to)	{
 		$charList = Array();
+
+		if ($from == 'a') {
+			for ($i = 0; $i < 10; $i++) {
+				array_push($charList, chr(48 + $i));
+			}
+		}
+
 		for($i = ord($from); $i <= ord($to); $i++) {
 			array_push($charList, chr($i));
 		}
