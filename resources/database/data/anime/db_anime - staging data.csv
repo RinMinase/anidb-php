@@ -134,7 +134,7 @@
 134,0,FHD 1080p,Sora no Method,13,1,0,11861784407,1,Sora no Method,,,,2016-04-29,Fall,2014,5,20,47,LNS,,,1,0,0,0,0
 135,0,FHD 1080p,Sora no Woto,13,1,0,7783857683,1,Sora no Woto,,,,2014-11-16,,,5,47,11,Elysium,,,1,0,0,0,0
 136,0,FHD 1080p,Suzumiya Haruhi-chan no Yuuutsu,25,0,0,4798949167,0,Suzumiya Haruhi no Yuuutsu,Suzumiya Haruhi no Yuuutsu,,,2012-10-22,,,,,,,,,1,0,0,0,0
-137,0,FHD 1080p,Sword Art Online,25,1,0,32904117049,1,Sword Art Online,,,,2014-05-11,Summer,2012,11,33,55,,,,1,0,0,0,0
+137,0,FHD 1080p,Sword Art Online,25,1,0,32904117049,1,Sword Art Online,,Sword Art Online II,,2014-05-11,Summer,2012,11,33,55,,,,1,0,0,0,0
 138,0,FHD 1080p,Tamako Market,12,0,6,10951028615,1,Tamako Market,,,Tamako Love Story,2014-04-04,Winter,2013,5,5,53,,,,1,0,0,0,0
 139,0,FHD 1080p,Tamako Love Story,1,0,0,2906899030,0,Tamako Market,Tamako Market,,,2014-11-06,Spring,2014,1,23,42,Coalgirls,,,1,0,0,0,0
 140,0,FHD 1080p,To LOVE-Ru - Motto To LOVE-Ru (Season 2),12,0,0,21757774737,2,To LOVE-Ru,To LOVE-Ru,To LOVE-Ru - To LOVE-Ru Darkness (Season 3),,2015-04-27,,,4,45,21,Zurako,,,1,0,0,0,0
@@ -231,9 +231,9 @@
 231,0,LQ 360p,Shugo Chara Party!,25,0,0,1837072136,3,Shugo Chara,Shugo Chara Doki,,,2012-11-08,,,10,8,16,,,HD 720p,1,0,0,0,0
 232,0,LQ 360p,Shukufuku no Campanella,13,0,0,1510151928,1,Shukufuku no Campanella,,,,2012-04-27,Summer,2010,,,,,,,1,0,0,0,0
 233,0,LQ 360p,Sora no Otoshimono,12,0,0,1199775908,1,Sora no Otoshimono,,,,2012-04-14,Fall,2010,4,43,58,,,,1,0,0,0,0
-234,0,LQ 360p,Special A,24,0,0,1308831115,1,Special A,,,,2012-05-13,,,9,27,57,,,HD 720p,1,0,0,0,0
+234,0,HQ 480p,Special A,24,0,0,2782145536,1,Special A,,,,2017-09-20,,,9,27,57,Project-GXS,,,1,0,0,0,0
 235,0,LQ 360p,Strawberry Panic!,26,0,0,1706022101,1,Strawberry Panic!,,,,2013-02-23,Spring,2006,,,,,,HQ 480p,1,0,0,0,0
-236,0,LQ 360p,Tayutama - Kiss On My Deity,12,0,0,730883652,1,Tayutama - Kiss On My Deity,,,,2012-04-24,,,4,32,14,,,,1,0,0,0,0
+236,0,LQ 360p,Tayutama - Kiss On My Deity,12,0,6,2227065587,1,Tayutama - Kiss On My Deity,,,,2017-09-22,,,5,7,32,Project-GXS,,,1,0,0,0,0
 237,0,LQ 360p,Tenjou Tenge,24,2,0,1691012642,1,Tenjou Tenge,,,,2012-11-20,,,10,11,20,,,,1,0,0,0,0
 238,0,LQ 360p,True Tears,13,0,0,500860079,1,True Tears,,,,2012-12-08,,,4,38,16,,,,1,0,0,0,0
 239,0,LQ 360p,Tsubasa Reservoir Chronicle,26,0,0,4668399616,1,Tsubasa Reservoir Chronicle,,,,2012-09-04,,,10,49,57,,,,1,0,0,0,0
@@ -275,4 +275,26 @@
 275,0,HD 720p,Hibike Euphonium Movie,1,,,1747656268,0,Hibike Euphonium,Hibike Euphonium,,,2016-11-02,,,1,43,4,FFF,,,1,0,0,0,0
 276,0,FHD 1080p,One Punch Man,12,,6,27738892882,1,One Punch Man,,,,2017-09-12,,,6,4,33,Beatrice-Raws,,,1,0,0,0,0
 277,0,FHD 1080p,Plastic Memories,13,,,18821166597,1,Plastic Memories,,,,2017-09-13,Spring,2015,5,13,57,SallySubs,,,1,0,0,0,0
-278,0,FHD 1080p,Nanatsu no Taizai,24,,,16627119198,1,Nanatsu no Taizai,,,,2016-12-23,Fall,2014,8,44,21,,,,1,0,0,0,0
+278,0,FHD 1080p,Nanatsu no Taizai,24,2,,17173320152,1,Nanatsu no Taizai,,Nanatsu no Taizai - Seisen no Shirushi,,2017-11-07,Fall,2014,9,32,21,,,,1,0,0,0,0
+279,0,HD 720p,Death Note,37,,,8519257107,1,Death Note,,,,2017-11-07,Fall,2006,14,9,11,Project-GXS,,,1,0,0,0,0
+280,0,HD 720p,3-gatsu no Lion,22,,,6539796249,1,3-gatsu no Lion,,,,2017-09-07,,,9,35,11,Commie,,,1,0,0,0,0
+281,0,HQ 480p,Bamboo Blade,26,,,3349508624,1,Bamboo Blade,,,,2017-09-28,Fall,2007,10,33,9,Project-GXS,,,1,0,0,0,0
+282,0,HD 720p,Chuunibyou demo Koi ga Shitai! The Movie,1,,,1936365890,0,Chuunibyou demo Koi ga Shitai!,Chuunibyou demo Koi ga Shitai!,,,2017-10-31,,,1,30,0,FTW,,,1,0,0,0,0
+283,0,HD 720p,Chuunibyou demo Koi ga Shitai! The Movie Lite,1,,,118126284,0,Chuunibyou demo Koi ga Shitai!,Chuunibyou demo Koi ga Shitai!,,,2017-10-31,,,0,5,37,FTW,,,1,0,0,0,0
+284,0,HD 720p,D-Frag!,12,1,,1631400541,1,D-Frag!,,,,2017-09-15,Winter,2014,5,10,13,Project-GXS,,,1,0,0,0,0
+285,0,HD 720p,God Eater,13,1,,2262965412,1,God Eater,,,,2017-05-05,Summer,2015,5,21,25,,,BD 720p,1,0,0,0,0
+286,0,HD 720p,Kuroshitsuji,10,,,1302075919,1,Kuroshitsuji,,,,2017-01-02,,,4,1,56,Project-GXS,Black Buttler,,1,0,0,0,0
+287,0,HD 720p,Kuzu no Honkai,12,,,4041223453,1,Kuzu no Honkai,,,,2017-07-08,,,4,35,0,Commie,,,1,0,0,0,0
+288,0,HD 720p,Mikakunin de Shinkoukei,12,,,3832297436,1,Mikakunin de Shinkoukei,,,,2017-09-25,Winter,2014,4,44,9,Underwater,Engaged to the Unidentified,,1,0,0,0,0
+289,0,HD 720p,Nanatsu no Taizai - Seisen no Shirushi,4,,,1634279712,2,Nanatsu no Taizai,Nanatsu no Taizai,,,2017-11-07,Summer,2016,1,36,59,Bakemono,Nanatsu no Taizai - Signs of Holy War,,1,0,0,0,0
+290,0,HD 720p,Orange,13,,,4600470484,1,Orange,,,Orange Mirai,2017-08-03,Summer,2016,5,21,57,HorribleSubs,,Not Hsubs,1,0,0,0,0
+291,0,HD 720p,Orange Mirai,13,,,1432845308,0,Orange,Orange,,,2017-11-08,,,1,2,5,Kokashi,,,1,0,0,0,0
+292,0,HD 720p,"Ore ga Ojousama Gakkou ni ""Shomin Sample"" Toshite Gets Sareta Ken",12,,,1452954748,1,"Ore ga Ojousama Gakkou ni ""Shomin Sample"" Toshite Gets Sareta Ken",,,,2017-09-18,Fall,2015,4,48,1,Project-GXS,,BD 1080p,1,0,0,0,0
+293,0,FHD 1080p,Persona 3 Movie 1 - Spring of Birth,1,,,1494774022,3,Persona 1 - Trinity Soul,Persona 4 - The Animation,Persona 3 Movie 2 - Midsummer Knight's Dream,,2016-12-29,,,1,38,32,Project-GXS,,,1,0,0,0,0
+294,0,FHD 1080p,Persona 3 Movie 2 - Midsummer Knight's Dream,1,,,1271892280,4,Persona 1 - Trinity Soul,Persona 3 Movie 1 - Spring of Birth,Persona 3 Movie 3 - Falling Down,,2016-12-29,,,1,38,3,Project-GXS,,,1,0,0,0,0
+295,0,FHD 1080p,Persona 3 Movie 3 - Falling Down,1,,,1398307276,5,Persona 1 - Trinity Soul,Persona 3 Movie 2 - Midsummer Knight's Dream,Persona 3 Movie 4 - Winter of Rebirth,,2016-12-30,,,1,26,57,Project-GXS,,,1,0,0,0,0
+296,0,FHD 1080p,Persona 3 Movie 4 - Winter of Rebirth,1,,,2104681081,6,Persona 1 - Trinity Soul,Persona 3 Movie 3 - Falling Down,,,2016-12-31,,,1,45,28,Project-GXS,,,1,0,0,0,0
+297,0,HD 720p,Rakudai Kishi no Cavalry,12,,,3658044556,1,Rakudai Kishi no Cavalry,,,,2017-09-14,Fall,2015,4,43,0,HorribleSubs,,Not Hsubs,1,0,0,0,0
+298,0,HD 720p,Servamp,12,,,5484348757,1,Servamp,,,,2017-10-01,Spring,2016,4,44,55,HorribleSubs,,Not Hsubs,1,0,0,0,0
+299,0,HD 720p,Sword Art Online II,24,,,2697805828,2,Sword Art Online,Sword Art Online,,,2017-04-04,,,9,28,3,,,BD 1080p,1,0,0,0,0
+300,0,HD 720p,Watashi ga Motete Dousunda,12,,,4135601130,1,Watashi ga Motete Dousunda,,,,2017-09-03,,,4,49,37,HorribleSubs,,Not Hsubs,1,0,0,0,0
