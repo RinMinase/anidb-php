@@ -53,7 +53,12 @@
 
 							<div class="panel-heading">
 								<h4 class="panel-title">
-									<a href=<?php echo "#panel-" . $item['animeLetter'] ?> data-toggle="collapse">
+									<a href=
+										<?php
+											echo "#panel-";
+											echo ($item['animeLetter'] == "#") ? "1" : $item['animeLetter'];
+										?>
+										data-toggle="collapse">
 										<?php echo $item['animeLetter'] ?>&nbsp;&nbsp;
 										<span class="badge"><?php echo count($item['animeData']); ?></span>
 									</a>
@@ -63,7 +68,12 @@
 								</h4>
 							</div>
 
-							<div id=<?php echo "panel-" . $item['animeLetter'] ?> class="panel-collapse collapse">
+							<div id=
+								<?php
+									echo "panel-";
+									echo ($item['animeLetter'] == "#") ? "1" : $item['animeLetter'];
+								?>
+								class="panel-collapse collapse">
 								<div class="panel-body">
 
 									<div class="table-responsive">
