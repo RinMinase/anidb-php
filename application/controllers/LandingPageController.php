@@ -52,8 +52,10 @@ class LandingPageController extends CI_Controller {
 
 		$navbar['activePage'] = "add";
 		$navbar['customTitle'] = "Add an Entry";
-		$navbar['customCSS'] = "resources/dropzone-5.2.0/dropzone.min.css";
-		$footer['customJS'] = "resources/dropzone-5.2.0/dropzone.min.js";
+		$navbar['customCSS'][0] = "resources/dropzone-5.2.0/dropzone.min.css";
+		$navbar['customCSS'][1] = "resources/css/add/styles.css";
+		$footer['customJS'][0] = "resources/dropzone-5.2.0/dropzone.min.js";
+		$navbar['customJS'][1] = "resources/js/add/scripts.css";
 
 		$this->display->display_page('landing/add', $navbar, $data, $footer);
 	}
