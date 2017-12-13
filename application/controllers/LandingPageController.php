@@ -52,8 +52,10 @@ class LandingPageController extends CI_Controller {
 
 		$navbar['activePage'] = "add";
 		$navbar['customTitle'] = "Add an Entry";
+		$navbar['customCSS'] = "resources/dropzone-5.2.0/dropzone.min.css";
+		$footer['customJS'] = "resources/dropzone-5.2.0/dropzone.min.js";
 
-		$this->display->display_page('landing/add', $navbar, $data);
+		$this->display->display_page('landing/add', $navbar, $data, $footer);
 	}
 
 	public function view($id)	{
