@@ -1,4 +1,4 @@
-var title;
+var title, encoder;
 var filesize = 0;
 
 Dropzone.options.dropzone = {
@@ -27,6 +27,12 @@ Dropzone.options.dropzone = {
 
 			/** FILESIZE */
 			$('input[name=filesize]').val(filesize);
+
+			/** ENCODER */
+			if (!encoder) {
+				encoder = file.name.split(']', 1)[0].slice(1);
+				$('input[name=encoder]').val(encoder);
+			}
 
 			this.removeFile(file);
 		});
