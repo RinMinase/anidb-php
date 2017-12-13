@@ -11,8 +11,8 @@ Dropzone.options.dropzone = {
 	init: function() {
 
 		this.on("drop", function() {
-			title = null;
-			filesize = 0;
+			title = encoder = null;
+			filesize = episodes = ovas = resolution = 0;
 		});
 
 		this.on("addedfile", function(file) {
