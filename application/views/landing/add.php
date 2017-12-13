@@ -37,7 +37,7 @@
 							<option value="FHD 1080p" selected>FHD 1080p</option>
 							<option value="HD 720p">HD 720p</option>
 							<option value="HQ 480p">HQ 480p</option>
-							<option value="LQ 480p">LQ 480p</option>
+							<option value="LQ 360p">LQ 360p</option>
 						</select>
 					</div>
 
