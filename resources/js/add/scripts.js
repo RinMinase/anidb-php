@@ -1,5 +1,5 @@
 var title, encoder;
-var filesize = 0;
+var filesize = episodes = ovas = 0;
 
 Dropzone.options.dropzone = {
 	paramName: "file",
@@ -27,6 +27,18 @@ Dropzone.options.dropzone = {
 
 			/** FILESIZE */
 			$('input[name=filesize]').val(filesize);
+
+			/** OVAS, EPISODES */
+			if (
+				file.name.search("OVA") > -1 ||
+				file.name.search("OAD") > -1 ||
+				file.name.search(/\d\.5|\d\-5/) > -1) {
+				ovas++;
+				$('input[name=ovas]').val(ovas);
+			} else {
+				episodes++;
+				$('input[name=episodes]').val(episodes);
+			}
 
 			/** ENCODER */
 			if (!encoder) {
