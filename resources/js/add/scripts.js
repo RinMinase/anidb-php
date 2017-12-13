@@ -4,4 +4,12 @@ Dropzone.options.dropzone = {
 	addRemoveLinks: true,
 	parallelUploads: 30,
 	uploadMultiple: true,
+
+	init: function() {
+
+		this.on("sending", function(file) {
+			this.removeFile(file);
+		});
+
+	}
 }
