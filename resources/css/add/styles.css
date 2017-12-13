@@ -1,0 +1,17 @@
+.dropzone {
+	border: 2px dashed #0087F7;
+	border-radius: 5px;
+	background: #FFF;
+	min-height: 0px;
+	width: 100%;
+	height: 100%;
+	padding: 25px;
+}
+
+.dropzone .dz-message {
+	margin: 0px;
+}
+
+.dropzone .dz-message p {
+	margin-bottom: 0px;
+}

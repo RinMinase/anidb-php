@@ -1,10 +1,27 @@
 <div class="container">
 
 	<div class="page-header">
-		<a href=<?php echo base_url() ?> class="btn btn-primary">
-			<i class="fa fa-chevron-left"></i>&nbsp;&nbsp;Back
-		</a>
-	  <h2>Add New Entry</h2>
+		<div class="row">
+			<div class="col-sm-8">
+				<a href=<?php echo base_url() ?> class="btn btn-primary">
+					<i class="fa fa-chevron-left"></i>&nbsp;&nbsp;Back
+				</a>
+				<h2>Add New Entry</h2>
+			</div>
+			<div class="col-sm-4 hidden-xs">
+				<div class="pull-right">
+					<form action="/" class="dropzone" id="dropzone">
+						<div class="dz-message">
+							<p>Drop files here or<br>click to upload</p>
+							<div class="fallback">
+								<input type="file" multiple="multiple" />
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
 	</div>
 
 	<div class="row">
@@ -153,6 +170,7 @@
 					<div class="col-xs-12 col-sm-12 col-md-4 form-group">
 						<label>Prequel</label>
 						<select class="form-control" name="prequel">
+							<option value="" selected></option>
 							<?php foreach ($titleData as $item): ?>
 								<option value="<?php echo $item->title; ?>">
 									<?php echo $item->title; ?>
@@ -163,6 +181,7 @@
 					<div class="col-xs-12 col-sm-12 col-md-4 form-group">
 						<label>Sequel</label>
 						<select class="form-control" name="sequel">
+							<option value="" selected></option>
 							<?php foreach ($titleData as $item): ?>
 								<option value="<?php echo $item->title; ?>">
 									<?php echo $item->title; ?>
@@ -170,7 +189,7 @@
 							<?php endforeach; ?>
 						</select>
 					</div>
-					<div class="col-xs-12 col-sm-12 col-md-4 form-group">
+					<!-- <div class="col-xs-12 col-sm-12 col-md-4 form-group">
 						<label>Side-Story (comma-separated)</label>
 						<select multiple class="form-control" name="offquel">
 							<?php foreach ($titleData as $item): ?>
@@ -179,10 +198,10 @@
 								</option>
 							<?php endforeach; ?>
 						</select>
-					</div>
+					</div> -->
 				</div>
 
-				<div class="row">
+				<!-- <div class="row">
 					<div class="col-xs-6 col-sm-3 col-md-3 form-group">
 						<label>Audio Rating</label>
 						<input type="text" class="form-control" name="ratingAudio">
@@ -199,7 +218,7 @@
 						<label>Plot Rating</label>
 						<input type="text" class="form-control" name="ratingAudio">
 					</div>
-				</div>
+				</div> -->
 
 				<div class="row">
 					<div class="col-xs-12 col-sm-6 col-sm-offset-6 col-md-4 col-md-offset-0">
