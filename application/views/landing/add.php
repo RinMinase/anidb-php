@@ -103,7 +103,7 @@
 					</div>
 					<div class="col-xs-9 col-sm-8 col-md-8 form-group">
 						<label>First Season Title</label>
-						<input type="text" class="form-control" name="title">
+						<input type="text" class="form-control" name="firstSeasonTitle">
 					</div>
 				</div>
 
