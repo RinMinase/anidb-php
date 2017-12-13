@@ -10,6 +10,11 @@ Dropzone.options.dropzone = {
 
 	init: function() {
 
+		this.on("drop", function() {
+			title = null;
+			filesize = 0;
+		});
+
 		this.on("addedfile", function(file) {
 			filesize += file.size;
 
