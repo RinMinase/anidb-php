@@ -51,7 +51,6 @@ Dropzone.options.dropzone = {
 			/** RESOLUTION */
 			if (checkResolution(file.name) > resolution) {
 				resolution = checkResolution(file.name);
-				console.log("resolution: " + resolution);
 
 				switch(resolution) {
 					case 2160: $('select[name=quality]').val("4k 2160p"); break;
