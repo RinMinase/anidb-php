@@ -26,6 +26,10 @@ php server:start localhost:80
 * [PHP 7.0.6](http://php.net/) - The language used
 * [CodeIgniter](https://codeigniter.com/) - The framework used
 * [Composer](https://getcomposer.org/) - Dependency Management
-* [Boostrap 3](http://getbootstrap.com/) - The layouting framework used
+* [Boostrap 3.3.7](http://getbootstrap.com/) - The layouting framework used
+* [FontAwesome 4.7.0](http://fontawesome.io/) - The vector icons used
+* [FuseJS 3.0.5](http://fusejs.io/) - The fuzzy search library used
+* [Dropzone 5.2.0](http://www.dropzonejs.com/) - The drag'n'drop library used
+* [Bootstrap-DatePicker](https://github.com/uxsolutions/bootstrap-datepicker) - The date picker library used
 
 
