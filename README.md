@@ -1,3 +1,5 @@
+[![Waffle.io - Columns and their card count](https://badge.waffle.io/RinMinase/anidb.svg?columns=all)](https://waffle.io/RinMinase/anidb)
+
 # Rin Minase's Anime Database
 
 A system designed to simplify the previously used spreadsheet tallying manual system.
