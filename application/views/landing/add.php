@@ -85,7 +85,12 @@
 					<div class="col-xs-12 col-sm-3 col-md-3 form-group">
 						<label>Date Finished</label>
 						<div class="input-group date">
-							<input type="text" class="form-control" name="dateFinished" onkeydown="return false;" value="<?php echo date('m/d/Y') ?>">
+							<input type="text"
+								class="form-control"
+								name="dateFinished"
+								onkeydown="return false;"
+								value="<?php echo date('m/d/Y') ?>"
+							>
 							<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
 						</div>
 					</div>
