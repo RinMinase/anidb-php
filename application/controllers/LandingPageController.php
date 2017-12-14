@@ -52,12 +52,15 @@ class LandingPageController extends CI_Controller {
 
 		$navbar['activePage'] = "add";
 		$navbar['customTitle'] = "Add an Entry";
+
 		$navbar['customCSS'][0] = "resources/dropzone-5.2.0/dropzone.min.css";
 		$navbar['customCSS'][1] = "resources/bootstrap-datepicker-1.6.4/bootstrap-datepicker.min.css";
 		$navbar['customCSS'][2] = "resources/css/add/styles.css";
+
 		$footer['customJS'][0] = "resources/dropzone-5.2.0/dropzone.min.js";
 		$footer['customJS'][1] = "resources/bootstrap-datepicker-1.6.4/bootstrap-datepicker.min.js";
-		$footer['customJS'][2] = "resources/js/add/scripts.js";
+		$footer['customJS'][2] = "resources/fusejs-3.0.5/fuse.min.js";
+		$footer['customJS'][3] = "resources/js/add/scripts.js";
 
 		$this->display->display_page('landing/add', $navbar, $data, $footer);
 	}
