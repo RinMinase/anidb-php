@@ -119,7 +119,7 @@
 					<div class="col-xs-12 col-sm-6 col-md-5 form-group">
 						<label>Season Released</label>
 						<div class="row">
-							<div class="col-xs-6 col-sm-8 col-md-8">
+							<div class="col-xs-6 col-sm-5 col-md-5">
 								<select class="form-control" name="releaseSeason">
 									<option value="Winter">Winter</option>
 									<option value="Spring">Spring</option>
@@ -127,7 +127,7 @@
 									<option value="Fall">Fall</option>
 								</select>
 							</div>
-							<div class="col-xs-6 col-sm-4 col-md-4">
+							<div class="col-xs-4 col-sm-4 col-md-4">
 								<select class="form-control" name="releaseYear">
 									<?php
 										for ($i=(int)date('Y') + 1; $i >= 1990; $i--) {
@@ -139,6 +139,14 @@
 										}
 									?>
 								</select>
+							</div>
+							<div class="col-xs-2 col-sm-3 col-md-3">
+								<button type="button"
+									class="btn btn-primary btn-block"
+									data-toggle="modal"
+									data-target="#seasonReleasedModal">
+									<i class="fa fa-search"></i>
+								</button>
 							</div>
 						</div>
 					</div>
