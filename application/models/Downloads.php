@@ -24,4 +24,12 @@ class Downloads extends CI_Model {
 
 		return $this->db->get()->result();
 	}
+
+	public function getDownloadDataBySoundexTitle($soundexTitle)	{
+		$this->db->select('title, season, year');
+		$this->db->from('downloads');
+		$this->db->where('SOUNDEX(title) = SOUNDEX(' . $soundexTitle . ')');
+
+		return $this->db->get()->result();
+	}
 }
