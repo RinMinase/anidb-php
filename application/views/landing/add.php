@@ -129,14 +129,15 @@
 							</div>
 							<div class="col-xs-6 col-sm-4 col-md-4">
 								<select class="form-control" name="releaseYear">
-									<option value="2011">2010</option>
-									<option value="2012">2011</option>
-									<option value="2013">2012</option>
-									<option value="2014">2013</option>
-									<option value="2015">2014</option>
-									<option value="2016">2015</option>
-									<option value="2017">2016</option>
-									<option value="2017" selected>2017</option>
+									<?php
+										for ($i=(int)date('Y') + 1; $i >= 1990; $i--) {
+											echo "<option value='" . $i . "'";
+											if ($i == (int)date('Y')) {
+												echo " selected";
+											}
+											echo ">" . $i . "</option>";
+										}
+									?>
 								</select>
 							</div>
 						</div>
