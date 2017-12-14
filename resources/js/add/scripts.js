@@ -2,7 +2,6 @@ $('.input-group.date').datepicker({
 	format: "mm/dd/yyyy",
 	maxViewMode: 2,
 	todayBtn: "linked",
-	clearBtn: true,
 	autoclose: true,
 	todayHighlight: true
 });
