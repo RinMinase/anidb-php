@@ -1,6 +1,9 @@
 <IfModule mod_rewrite.c>
 	RewriteEngine On
+	
 	RewriteBase /anidb/
+	# If your project is in server root then should be: RewriteBase /
+	# If project is in folder then it should be: RewriteBase /folder_name/
 
 	# Prevents access to the system folder
 	# RewriteCond %{REQUEST_URI} ^system.*
