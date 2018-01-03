@@ -140,7 +140,7 @@ class Anime extends CI_Model {
 		$this->db->from('anime');
 		$this->db->where('title', $title);
 
-		return $this->db->get()->row()->id;
+		return (empty($this->db->get()->row()->id)) ? -1 : $this->db->get()->row()->id;
 	}
 
 	public function getAnimeDataBy20() {
