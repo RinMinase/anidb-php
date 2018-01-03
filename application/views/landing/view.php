@@ -61,9 +61,13 @@
 		<div class="col-md-6">
 			<?php if (!empty($animeData->prequel)): ?>
 				<p>Prequel:
-					<a href="<?php echo base_url("view/" . $prequelId); ?>">
-						<?php echo $animeData->prequel; ?>
-					</a>
+					<?php
+						if ($prequelId != -1) {
+							echo "<a href=" . base_url("view/" . $prequelId) . $animeData->prequel . "</a>";
+						} else {
+							echo "<a>" . $animeData->prequel . "</a>";
+						}
+					?>
 				</p>
 			<?php endif; ?>
 			<?php if (!empty($animeData->sequel)): ?>
