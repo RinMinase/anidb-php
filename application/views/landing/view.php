@@ -72,9 +72,13 @@
 			<?php endif; ?>
 			<?php if (!empty($animeData->sequel)): ?>
 				<p>Sequel:
-					<a href="<?php echo base_url("view/" . $sequelId); ?>">
-						<?php echo $animeData->sequel; ?>
-					</a>
+					<?php
+						if ($sequelId != -1) {
+							echo "<a href=" . base_url("view/" . $sequelId) . $animeData->sequel . "</a>";
+						} else {
+							echo "<a>" . $animeData->sequel . "</a>";
+						}
+					?>
 				</p>
 			<?php endif; ?>
 			<?php if (!empty($animeData->offquel)): ?>
