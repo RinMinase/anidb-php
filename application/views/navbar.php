@@ -51,7 +51,7 @@
 					<ul class="nav navbar-nav">
 
 						<li <?php if($activePage == "index") echo "class='active'"; ?>>
-							<a href=<?php echo base_url() ?>>
+							<a <?php if($activePage != "index") echo "href=" . base_url(); ?>>
 								<i class="fa fa-home"></i>&nbsp;&nbsp;&nbsp;Home
 							</a>
 						</li>
