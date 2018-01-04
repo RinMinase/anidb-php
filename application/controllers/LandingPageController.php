@@ -63,6 +63,15 @@ class LandingPageController extends CI_Controller {
 		$footer['customJS'][3] = "resources/js/add/scripts.js";
 
 		$this->display->display_page('landing/add', $navbar, $data, $footer);
+
+		// $this->load->library('image_lib', array(
+		// 	"source_image" => "resources/images/user.jpg",
+		// 	"new_image" => "resources/images/user-new.jpg",
+		// 	"width" => 75,
+		// 	"height" => 50,
+		// ));
+
+		// $this->image_lib->resize();
 	}
 
 	public function view($id)	{
