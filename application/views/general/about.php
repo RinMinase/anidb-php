@@ -178,6 +178,7 @@
 								<div class="col-sm-7 col-xs-7 col-md-7 col-lg-7">
 									<div class="progress">
 										<div class="progress-bar progress-bar-green"></div>
+										<div class="progress-bar progress-bar-alt-green"></div>
 									</div>
 								</div>
 							</div>
@@ -218,6 +219,20 @@
 										<div class="progress-bar progress-bar-green"></div>
 										<div class="progress-bar progress-bar-alt-green"></div>
 										<div class="progress-bar progress-bar-green"></div>
+										<div class="progress-bar progress-bar-alt-green"></div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-sm-5 col-xs-5 col-md-5 col-lg-5">
+									<p><strong>Batch</strong></p>
+								</div>
+								<div class="col-sm-7 col-xs-7 col-md-7 col-lg-7">
+									<div class="progress">
+										<div class="progress-bar progress-bar-green"></div>
+										<div class="progress-bar progress-bar-alt-green"></div>
+										<div class="progress-bar progress-bar-green"></div>
 									</div>
 								</div>
 							</div>
@@ -231,7 +246,6 @@
 										<div class="progress-bar progress-bar-green"></div>
 										<div class="progress-bar progress-bar-alt-green"></div>
 										<div class="progress-bar progress-bar-green"></div>
-										<div class="progress-bar progress-bar-alt-green"></div>
 									</div>
 								</div>
 							</div>
@@ -298,6 +312,8 @@
 								<div class="col-sm-7 col-xs-7 col-md-7 col-lg-7">
 									<div class="progress">
 										<div class="progress-bar progress-bar-green"></div>
+										<div class="progress-bar progress-bar-alt-green"></div>
+										<div class="progress-bar progress-bar-green"></div>
 									</div>
 								</div>
 							</div>
@@ -325,9 +341,45 @@
 								</div>
 							</div>
 
+							<div class="row">
+								<div class="col-sm-5 col-xs-5 col-md-5 col-lg-5">
+									<p><strong>Apache Isis</strong></p>
+								</div>
+								<div class="col-sm-7 col-xs-7 col-md-7 col-lg-7">
+									<div class="progress">
+										<div class="progress-bar progress-bar-green"></div>
+										<div class="progress-bar progress-bar-alt-green"></div>
+										<div class="progress-bar progress-bar-green"></div>
+									</div>
+								</div>
+							</div>
+
 						</div>
 
 						<div class="col-sm-6 col-md-4">
+
+							<div class="row">
+								<div class="col-sm-5 col-xs-5 col-md-5 col-lg-5">
+									<p><strong>Docker</strong></p>
+								</div>
+								<div class="col-sm-7 col-xs-7 col-md-7 col-lg-7">
+									<div class="progress">
+										<div class="progress-bar progress-bar-green"></div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-sm-5 col-xs-5 col-md-5 col-lg-5">
+									<p><strong>Strider CI</strong></p>
+								</div>
+								<div class="col-sm-7 col-xs-7 col-md-7 col-lg-7">
+									<div class="progress">
+										<div class="progress-bar progress-bar-green"></div>
+										<div class="progress-bar progress-bar-alt-green"></div>
+									</div>
+								</div>
+							</div>
 
 							<div class="row">
 								<div class="col-sm-5 col-xs-5 col-md-5 col-lg-5">
@@ -373,6 +425,17 @@
 									<div class="progress">
 										<div class="progress-bar progress-bar-green"></div>
 										<div class="progress-bar progress-bar-alt-green"></div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-sm-5 col-xs-5 col-md-5 col-lg-5">
+									<p><strong>Redis</strong></p>
+								</div>
+								<div class="col-sm-7 col-xs-7 col-md-7 col-lg-7">
+									<div class="progress">
+										<div class="progress-bar progress-bar-green"></div>
 									</div>
 								</div>
 							</div>
