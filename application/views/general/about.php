@@ -343,6 +343,17 @@
 
 							<div class="row">
 								<div class="col-sm-5 col-xs-5 col-md-5 col-lg-5">
+									<p><strong>Django</strong></p>
+								</div>
+								<div class="col-sm-7 col-xs-7 col-md-7 col-lg-7">
+									<div class="progress">
+										<div class="progress-bar progress-bar-green"></div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-sm-5 col-xs-5 col-md-5 col-lg-5">
 									<p><strong>Apache Isis</strong></p>
 								</div>
 								<div class="col-sm-7 col-xs-7 col-md-7 col-lg-7">
